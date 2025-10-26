@@ -1,0 +1,128 @@
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.Development.json
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.json
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.endpoints.json
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.exe
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.deps.json
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.runtimeconfig.json
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.dll
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.pdb
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rpswa.dswa.cache.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.GeneratedMSBuildEditorConfig.editorconfig
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfoInputs.cache
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfo.cs
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.CoreCompileInputs.cache
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cache
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjimswa.dswa.cache.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\scopedcss\bundle\WebApiShope.styles.css
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json.cache
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.development.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.dll
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\refint\WebApiShope.dll
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll
+M:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.runtime.json
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-bhdnxsegdq.gz
+M:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-g7mc1czaqn.gz
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rpswa.dswa.cache.json
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.GeneratedMSBuildEditorConfig.editorconfig
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfoInputs.cache
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfo.cs
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.CoreCompileInputs.cache
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cache
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.dll
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\refint\WebApiShope.dll
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.Development.json
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.json
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.runtime.json
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.endpoints.json
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.exe
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.deps.json
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.runtimeconfig.json
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.dll
+E:\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.pdb
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjimswa.dswa.cache.json
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\scopedcss\bundle\WebApiShope.styles.css
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json.cache
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.development.json
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-ifmahsckt3.gz
+E:\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-utvdjjtwjq.gz
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.runtime.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.endpoints.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.exe
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.deps.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.runtimeconfig.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.dll
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.pdb
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfoInputs.cache
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfo.cs
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.CoreCompileInputs.cache
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\scopedcss\bundle\WebApiShope.styles.css
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-oik4716o44.gz
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.dll
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\refint\WebApiShope.dll
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll
+C:\Users\330683525\Desktop\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-wil7extce5.gz
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.Development.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.runtime.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.endpoints.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.exe
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.deps.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.runtimeconfig.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.dll
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.pdb
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rpswa.dswa.cache.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfoInputs.cache
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfo.cs
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.CoreCompileInputs.cache
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cache
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjimswa.dswa.cache.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\scopedcss\bundle\WebApiShope.styles.css
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json.cache
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.development.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.dll
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\refint\WebApiShope.dll
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-wh6iao6xqx.gz
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-ma7decdoe7.gz
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\kywtz0k3b1-926qatez2q.gz
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\0x50lmts09-1eieqkzgbu.gz
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\p2q1bi05pu-el05w88rxu.gz
+E:\New folder\web api\lesson1\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-fhd1zcrwcu.gz

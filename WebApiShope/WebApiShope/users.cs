@@ -1,6 +1,6 @@
 ﻿namespace WebApiShope
 {
-    public class users
+    public class Users
     {
         public int UserID { get; set; }
         public string UserName { get; set; }

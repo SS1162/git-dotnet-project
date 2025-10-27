@@ -1,78 +1,65 @@
-﻿          // sesion storege
-//sessionStorage.setItem([])
-
-
-          //get request
+﻿ 
+//get request
 async function getReaspone(){
    
     try {
-        const resulte = await fetch("https://localhost:44399/api/users")
-    if (resulte.ok) {
+        const postResulte = await fetch("https://localhost:44399/api/users")
+        if (postResulte.ok) {
             
-            const array = await resulte.json()
-            console.log(resulte)
-            console.log(array)
+            const array = await postResulte.json()
             alert(array)
         }
         else {
-            throw new Error(`HTTP error status ${resulte.status}`)
+            throw new Error(`HTTP error status ${postResulte.status}`)
         }
     }
     catch (e) {
         alert(e)
     }
 }
+function BuildObjectFromUserInput() {
+    const userName = document.querySelector("#name")
+    const userPassward = document.querySelector("#passward")
+    const userFirstName = document.querySelector("#first_name")
+    const userLastName = document.querySelector("#last_name")
 
-
-
-async function PostReaspone() {
-
-             //get information fron users
-    const name = document.querySelector("#name")
-    const passward = document.querySelector("#passward")
-    const first_name = document.querySelector("#first_name")
-    const last_name = document.querySelector("#last_name")
-
-     const PostData = {
-        UserName: name.value,
-        UserPassward: passward.value,
-        UserFirstName: first_name.value,
-        UserLastName: last_name.value
+    const userDetailsInObject = {
+        UserName: userName.value,
+        UserPassward: userPassward.value,
+        UserFirstName: userFirstName.value,
+        UserLastName: userLastName.value
     }
+    return userDetailsInObject
+}
 
 
 
-              //sesion storege
-    //const temp = JSON.parse((sessionStorage.getItem())
-    //temp.pop(PostData)
-    //sessionStorage.setItem(JSON.stringify(temp))
-            
-
+async function Register() {
+   
+    const userDetailsInObject = BuildObjectFromUserInput()
                //fetch request
     try {
-        const PostRespones = await fetch("https://localhost:44399/api/users/login", {
+        const PostRespones = await fetch("https://localhost:44399/api/users", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(PostData)
+            body: JSON.stringify(userDetailsInObject)
         })
 
         if (PostRespones.ok) {
-            const PostRespones2 = await PostRespones.json()
-            alert(`נרשמתה בהצלחה ${name.value}`)
+            const PostResponesData = await PostRespones.json()
+            alert(`נרשמתה בהצלחה ${userDetailsInObject["UserName"]}`)
             
         }
         else {
-            throw new Error(`HTTP error status ${resulte.status}`)
+            throw new Error(`HTTP error status ${PostRespones.status}`)
         }
     }
 
     catch (error) {
         alert(error)
     }
-
-
 }
 
 
@@ -84,30 +71,34 @@ button.addEventListener("click",(e)=>{
 
 })
 
+function BuildLoginObjectFromUserInput() {
+    const userName = document.querySelector("#name2")
+    const userPassward = document.querySelector("#passward2")
 
-
-async function PostGetReaspone() {
-   
-    //get information fron users
-    const name = document.querySelector("#name2")
-    const passward = document.querySelector("#passward2")
-    
-
-    const PostGetData = {
-        UserName: name.value,
-        UserPassward: passward.value
+    const LoginObject = {
+        UserName: userName.value,
+        UserPassward: userPassward.value
     }
+    return LoginObject
+}
+
+async function Login() {
+   
+    const LoginObject =BuildLoginObjectFromUserInput()
+   
     //fetch request
     try {
-        const PostRespones = await fetch("https://localhost:44399/api/users", {
+        const PostRespones = await fetch("https://localhost:44399/api/users/loginFunction", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(PostGetData)
+            body: JSON.stringify(LoginObject)
         })
+
+
         if (!PostRespones.ok) {
-            throw new Error(`HTTP error status ${resulte.status}`)
+            throw new Error(`HTTP error status ${PostRespones.status}`)
         }
 
         if (PostRespones.status===204) {
@@ -119,9 +110,8 @@ async function PostGetReaspone() {
             //sesion storege
             
             window.location.href = await  "NewFolder/enter.html"
-            const session = await PostRespones.json()
-            console.log(session)
-            sessionStorage.setItem("users", JSON.stringify(session))
+            const forSession = await PostRespones.json()
+            sessionStorage.setItem("users", JSON.stringify(forSession))
         }
     }
 
@@ -130,28 +120,6 @@ async function PostGetReaspone() {
     }
     }
 
-
-
-    //if (PostRespones.status !== 201) {
-    //    alert(PostRespones.status)
-    //}
-    //else {
-    //move to the new page
-    //window.location.href = "https://example.com";
-    //}
-
-
-
-    
-
-
-    //sesion storege
-    //sessionStorage.setItem(JSON.stringify(temp))
-
-
-    //to use the information of the sesion storege
-    //const temp = JSON.parse((sessionStorage.getItem())
-    //temp.pop(PostData)
 
 
 

@@ -3,8 +3,9 @@
     "",
     "\\WebApiShope",
     "\\WebApiShope\\WebApiShope",
+    "\\WebApiShope\\WebApiShope\\Controllers",
     "\\WebApiShope\\WebApiShope\\wwwroot"
   ],
-  "SelectedNode": "\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
+  "SelectedNode": "\\WebApiShope\\WebApiShope\\wwwroot\\home.html",
   "PreviewInSolutionExplorer": false
 }

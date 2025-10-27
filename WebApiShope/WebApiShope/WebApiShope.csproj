@@ -11,7 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\.editorconfig" />
     <None Include="wwwroot\NewFolder\enter.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\1\Dropbox\My PC %28DESKTOP-R5RADSP%29\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\.editorconfig" />
   </ItemGroup>
 
 </Project>

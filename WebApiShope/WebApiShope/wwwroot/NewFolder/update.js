@@ -1,53 +1,59 @@
-﻿async function Update() {
+﻿
+function BuildObjectFromUserInput() {
+    const userName = document.querySelector("#name")
+    const userPassward = document.querySelector("#passward")
+    const userFirstName = document.querySelector("#first_name")
+    const userLastName = document.querySelector("#last_name")
 
-    //get information fron users
-    const name = document.querySelector("#name")
-    const passward = document.querySelector("#passward")
-    const first_name = document.querySelector("#first_name")
-    const last_name = document.querySelector("#last_name")
-
-    const PostData = {
-        UserName: name.value,
-        UserPassward: passward.value,
-        UserFirstName: first_name.value,
-        UserLastName: last_name.value
+    const userDetailsInObject = {
+        UserName: userName.value,
+        UserPassward: userPassward.value,
+        UserFirstName: userFirstName.value,
+        UserLastName: userLastName.value
     }
+    return userDetailsInObject
+}
+
+
+
+async function Update() {
+
+    const userDetailsInObject = BuildObjectFromUserInput()
 
  
-    const object = sessionStorage.getItem("users")
-    const name2 = JSON.parse(object)
-    console.log(name2)
-    console.log(name2["userID"])
+    const currentUserFromSession = sessionStorage.getItem("users")
+    const currentUserInObject = JSON.parse(currentUserFromSession)
+    
  
     //fetch request
     try {
-        const PostRespones = await fetch(`https://localhost:44399/api/users/${name2["userID"]}`, {
+        const UpdateRespones = await fetch(`https://localhost:44399/api/users/${currentUserInObject["userID"]}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(PostData)
+            body: JSON.stringify(userDetailsInObject)
         })
 
-        if (PostRespones.ok) {
+        if (UpdateRespones.ok) {
             alert(` עדכון פרטים בוצע בהצלחה`)
 
         }
         else {
-            throw new Error(`HTTP error status ${resulte.status}`)
+            throw new Error(`HTTP error status ${UpdateRespones.status}`)
         }
     }
 
     catch (error) {
         alert(error)
     }
-    const PostData = {
-        UserName: name.value,
-        UserID: name2["userID"],
-        UserPassward: passward.value,
-        UserFirstName: first_name.value,
-        UserLastName: last_name.value
+    const updateObjectForSession = {
+        UserName: userDetailsInObject["UserName"],
+        UserID: currentUserInObject["userID"],
+        UserPassward: userDetailsInObject["UserPassward"],
+        UserFirstName: userDetailsInObject["UserFirstName"],
+        UserLastName: userDetailsInObject["UserLastName"]
     }
-    sessionStorage.setItem("users", JSON.stringify(PostData))
+    sessionStorage.setItem("users", JSON.stringify(updateObjectForSession))
 
 }

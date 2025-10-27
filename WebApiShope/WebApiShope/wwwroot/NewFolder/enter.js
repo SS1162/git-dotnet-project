@@ -1,7 +1,5 @@
 ﻿
-const messege = document.querySelector(".messege")
-const object = sessionStorage.getItem("users")
-const name = JSON.parse(object)
-console.log(name)
-console.log(name["userName"])
-messege.textContent = `התחברתה בהצלחה ${name["userName"]} שלום`
+const messegeToUser = document.querySelector(".messege")
+const userDetails = sessionStorage.getItem("users")
+const curentUser = JSON.parse(userDetails)
+messegeToUser.textContent = `התחברתה בהצלחה ${curentUser["userName"]} שלום`

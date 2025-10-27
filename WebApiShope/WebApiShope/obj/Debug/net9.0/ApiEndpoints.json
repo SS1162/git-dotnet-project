@@ -21,21 +21,21 @@
   },
   {
     "ContainingType": "WebApiShope.Controllers.UsersController",
-    "Method": "Post2",
+    "Method": "Post",
     "RelativePath": "api/Users",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "LogInUser",
-        "Type": "WebApiShope.LoginUser",
+        "Name": "user",
+        "Type": "WebApiShope.Users",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiShope.LoginUser",
+        "Type": "WebApiShope.Users",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "WebApiShope.Users",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -86,7 +86,7 @@
       },
       {
         "Name": "value",
-        "Type": "WebApiShope.users",
+        "Type": "WebApiShope.Users",
         "IsRequired": true
       }
     ],
@@ -122,21 +122,21 @@
   },
   {
     "ContainingType": "WebApiShope.Controllers.UsersController",
-    "Method": "Post",
-    "RelativePath": "api/Users/login",
+    "Method": "PostLogin",
+    "RelativePath": "api/Users/loginFunction",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "WebApiShope.users",
+        "Name": "LogInUser",
+        "Type": "WebApiShope.LoginUser",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiShope.users",
+        "Type": "WebApiShope.LoginUser",
         "MediaTypes": [
           "text/plain",
           "application/json",

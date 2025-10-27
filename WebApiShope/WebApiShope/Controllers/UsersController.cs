@@ -18,36 +18,32 @@ namespace WebApiShope.Controllers
         {
             return new string[] { "value1", "value2" };
         }
-        //[HttpGet("Login")]
-        //public IEnumerable<string> Get2()
-        //{
-        //    return new string[] { "value4", "value5" };
-        //}
-
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult<Users> Get(int id)
         {
-            return "value";
+            using (StreamReader reader = System.IO.File.OpenText(filePath))
+            {
+                string? currentUserInFile;
+                while ((currentUserInFile = reader.ReadLine()) != null)
+                {
+                    Users userFromFile = JsonSerializer.Deserialize<Users>(currentUserInFile);
+                    if (userFromFile.UserID == id)
+                        return userFromFile;
+                }
+            }
+            return NoContent();
+
         }
 
 
-        //get user login
-
-        
-
-
-
         // POST api/<UsersController>
-        
-
-        
 
         //POST request
-       
 
-        [HttpPost]
-        public ActionResult<LoginUser> Post2([FromBody] LoginUser LogInUser)
+        [HttpPost("loginFunction")]
+        
+        public ActionResult<LoginUser> PostLogin([FromBody] LoginUser LogInUser)
         {
 
             using (StreamReader reader = System.IO.File.OpenText(filePath))
@@ -55,17 +51,17 @@ namespace WebApiShope.Controllers
                 string? currentUserInFile;
                 while ((currentUserInFile = reader.ReadLine()) != null)
                 {
-                    users use = JsonSerializer.Deserialize<users>(currentUserInFile);
-                    if (use.UserName == LogInUser.UserName && use.UserPassward == LogInUser.UserPassward)
-                        return CreatedAtAction(nameof(Get), new { id = use.UserID }, use);
+                    Users userFromFile = JsonSerializer.Deserialize<Users>(currentUserInFile);
+                    if (userFromFile.UserName == LogInUser.UserName && userFromFile.UserPassward == LogInUser.UserPassward)
+                        return CreatedAtAction(nameof(Get), new { id = userFromFile.UserID }, userFromFile);
                 }
             }
             return NoContent();
         }
 
 
-        [HttpPost("login")]
-        public ActionResult<users> Post([FromBody] users user)
+        [HttpPost]
+        public ActionResult<Users> Post([FromBody] Users user)
         {
             int numberOfUsers = System.IO.File.ReadLines(filePath).Count();
             user.UserID = numberOfUsers + 1;
@@ -75,7 +71,7 @@ namespace WebApiShope.Controllers
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] users value)
+        public void Put(int id, [FromBody] Users value)
         {
             string textToReplace = string.Empty;
             using (StreamReader reader = System.IO.File.OpenText(filePath))
@@ -85,8 +81,8 @@ namespace WebApiShope.Controllers
                 while ((currentUserInFile = reader.ReadLine()) != null)
                 {
 
-                    users user = JsonSerializer.Deserialize<users>(currentUserInFile);
-                    if (user.UserID == id)
+                    Users userFromFile = JsonSerializer.Deserialize<Users>(currentUserInFile);
+                    if (userFromFile.UserID == id)
                         textToReplace = currentUserInFile;
                 }
             }

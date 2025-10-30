@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\dot_net\\git-dot.net-project\\webapishope\\webapishope\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
-      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\dot_net\\git-dot.net-project\\webapishope\\webapishope\\wwwroot\\newfolder\\enter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\wwwroot\\newfolder\\enter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -54,26 +50,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".editorconfig",
-              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\.editorconfig",
-              "RelativeDocumentMoniker": "WebApiShope\\.editorconfig",
-              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\.editorconfig",
-              "RelativeToolTip": "WebApiShope\\.editorconfig",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-27T22:42:27.178Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "users.txt",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\users.txt",
               "RelativeDocumentMoniker": "WebApiShope\\users.txt",
@@ -85,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "enter.js",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\NewFolder\\enter.js",
               "RelativeDocumentMoniker": "WebApiShope\\wwwroot\\NewFolder\\enter.js",
@@ -93,11 +82,12 @@
               "RelativeToolTip": "WebApiShope\\wwwroot\\NewFolder\\enter.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T12:42:55.545Z"
+              "WhenOpened": "2025-10-23T12:42:55.545Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "update.js",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\NewFolder\\update.js",
               "RelativeDocumentMoniker": "WebApiShope\\wwwroot\\NewFolder\\update.js",
@@ -109,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "update.html",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\NewFolder\\update.html",
               "RelativeDocumentMoniker": "WebApiShope\\wwwroot\\NewFolder\\update.html",
@@ -121,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "UserEnter.cs",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\UserEnter.cs",
               "RelativeDocumentMoniker": "WebApiShope\\UserEnter.cs",
@@ -133,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "home.js",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\home.js",
               "RelativeDocumentMoniker": "WebApiShope\\wwwroot\\home.js",
@@ -145,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "users.cs",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\users.cs",
               "RelativeDocumentMoniker": "WebApiShope\\users.cs",
@@ -157,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\Program.cs",
               "RelativeDocumentMoniker": "WebApiShope\\Program.cs",
@@ -169,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "WebApiShope\\Controllers\\UsersController.cs",
@@ -181,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "home.html",
               "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\dot_net\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\home.html",
               "RelativeDocumentMoniker": "WebApiShope\\wwwroot\\home.html",
@@ -190,10 +180,6 @@
               "ViewState": "AgIAAB4AAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-09-10T15:19:36.772Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

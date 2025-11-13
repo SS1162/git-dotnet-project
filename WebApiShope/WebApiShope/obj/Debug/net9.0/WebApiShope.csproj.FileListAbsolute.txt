@@ -162,3 +162,47 @@ C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\W
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-fw9ukrfqw0.gz
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-3savzaulzl.gz
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\0x50lmts09-y9je9hresg.gz
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.AssemblyReference.cache
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rpswa.dswa.cache.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.GeneratedMSBuildEditorConfig.editorconfig
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfoInputs.cache
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfo.cs
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.CoreCompileInputs.cache
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cache
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.sourcelink.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.dll
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\refint\WebApiShope.dll
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.Development.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.runtime.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.endpoints.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.exe
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.deps.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.runtimeconfig.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.dll
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.pdb
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Entities.dll
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Repositories.dll
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Services.dll
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Services.pdb
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Entities.pdb
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Repositories.pdb
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjimswa.dswa.cache.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\scopedcss\bundle\WebApiShope.styles.css
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-9er4t5hkmo.gz
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-fw9ukrfqw0.gz
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\kywtz0k3b1-926qatez2q.gz
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\0x50lmts09-y9je9hresg.gz
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\p2q1bi05pu-el05w88rxu.gz
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-3savzaulzl.gz
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json.cache
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.development.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiSh.AC9D74B4.Up2Date
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll

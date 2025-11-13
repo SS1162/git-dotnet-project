@@ -1,0 +1,6 @@
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\enter.js
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\home.html
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\update.js
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\enter.html
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\update.html
+M:\web api\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\home.js

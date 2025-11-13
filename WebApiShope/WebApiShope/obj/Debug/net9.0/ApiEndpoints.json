@@ -28,14 +28,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "WebApiShope.Users",
+        "Name": "userFromUser",
+        "Type": "Entities.Users",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiShope.Users",
+        "Type": "Entities.Users",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiShope.Users",
+        "Type": "Entities.Users",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -86,7 +86,7 @@
       },
       {
         "Name": "value",
-        "Type": "WebApiShope.Users",
+        "Type": "Entities.Users",
         "IsRequired": true
       }
     ],
@@ -129,14 +129,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "LogInUser",
-        "Type": "WebApiShope.LoginUser",
+        "Name": "logInUser",
+        "Type": "Entities.LoginUser",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiShope.LoginUser",
+        "Type": "Entities.LoginUser",
         "MediaTypes": [
           "text/plain",
           "application/json",

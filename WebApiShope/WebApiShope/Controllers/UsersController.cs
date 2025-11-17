@@ -12,9 +12,16 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private UsersService usersService=new UsersService();
-       // GET: api/<UsersController>
-       [HttpGet]
+        private IUsersService iusersService;
+
+        private IPasswordService ipasswordService;
+        public UsersController(IUsersService iusersService, IPasswordService ipasswordService)
+        {
+            this.iusersService = iusersService;
+            this.ipasswordService= ipasswordService;
+        }
+        // GET: api/<UsersController>
+        [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -26,7 +33,7 @@ namespace WebApiShope.Controllers
         public ActionResult<Users> Get(int id)
         {
             
-            Users user= usersService.GetByIDUsersService(id);
+            Users user= iusersService.GetByIDUsersService(id);
             if (user == null)
             {
                 return NoContent();
@@ -45,14 +52,13 @@ namespace WebApiShope.Controllers
         
         public ActionResult<LoginUser> PostLogin([FromBody] LoginUser logInUser)
         {
-            LoginUser user = usersService.LoginUsersService(logInUser);
+            LoginUser user = iusersService.LoginUsersService(logInUser);
             if (user == null)
             { return NoContent(); }
             else
             {
                 return CreatedAtAction(nameof(Get), new { id = user.UserID }, user);
             }
-                
 
         }
 
@@ -60,17 +66,29 @@ namespace WebApiShope.Controllers
         [HttpPost]
         public ActionResult<Users> Post([FromBody] Users userFromUser)
         {
-            Users userFromDatabase = usersService.AddNewUsersService(userFromUser);
+            Password passwordForCheckStrength = new Password();
+            passwordForCheckStrength.UserPassward = userFromUser.UserPassward;
+            if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) <2)
+            {
+                return BadRequest();
+            }
+            Users userFromDatabase = iusersService.AddNewUsersService(userFromUser);
             if (userFromDatabase == null)
                 return NoContent();
             return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserID }, userFromDatabase);
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public void Put(int id,Users value)
+        public ActionResult Put(int id,Users value)
         {
-
-            usersService.UpdateUsersService(id, value);
+            Password passwordForCheckStrength = new Password();
+            passwordForCheckStrength.UserPassward = value.UserPassward;
+            if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) < 2)
+            {
+                return BadRequest();
+            }
+            iusersService.UpdateUsersService(id, value);
+            return Ok();
         }
 
         // DELETE api/<UsersController>/5

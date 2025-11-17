@@ -13,7 +13,9 @@ namespace Entities
 
         public int UserID { get; set; }
         [EmailAddress]
+        [Required]
         public string UserName { get; set; }
+        [Required]
         public string UserPassward { get; set; }
 
 

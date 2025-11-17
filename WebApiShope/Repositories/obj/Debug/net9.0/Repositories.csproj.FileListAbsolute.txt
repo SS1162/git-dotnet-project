@@ -14,3 +14,19 @@ M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Deb
 M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\refint\Repositories.dll
 M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.pdb
 M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\ref\Repositories.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\bin\Debug\net9.0\Repositories.deps.json
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\bin\Debug\net9.0\Repositories.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\bin\Debug\net9.0\Repositories.pdb
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\bin\Debug\net9.0\Entities.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\bin\Debug\net9.0\Entities.pdb
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.csproj.AssemblyReference.cache
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.AssemblyInfoInputs.cache
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.AssemblyInfo.cs
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.csproj.CoreCompileInputs.cache
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.sourcelink.json
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Reposito.787EC4B2.Up2Date
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\refint\Repositories.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\Repositories.pdb
+E:\project_from_git\git-dot.net-project\WebApiShope\Repositories\obj\Debug\net9.0\ref\Repositories.dll

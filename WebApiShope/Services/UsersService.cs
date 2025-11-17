@@ -2,28 +2,32 @@
 using Repositories;
 namespace Services
 {
-    public class UsersService
+    public class UsersService : IUsersService
     {//get by id
-        private RepositoriesUsers repositoriesUsers = new RepositoriesUsers();
+        private IRepositoriesUsers irepositoriesUsers;
+        public UsersService(IRepositoriesUsers irepositoriesUsers)
+        {
+            this.irepositoriesUsers = irepositoriesUsers;
+        }
         public Users GetByIDUsersService(int id)
         {
-            return repositoriesUsers.GetByIDUsersRepositories(id);
+            return irepositoriesUsers.GetByIDUsersRepositories(id);
         }
         //post new user
         public Users AddNewUsersService(Users user)
         {
-            return repositoriesUsers.AddNewUsersRepositories(user);
+            return irepositoriesUsers.AddNewUsersRepositories(user);
         }
 
         //post login user
         public LoginUser LoginUsersService(LoginUser logInUser)
         {
-            return repositoriesUsers.LoginUsersRepositories(logInUser);
+            return irepositoriesUsers.LoginUsersRepositories(logInUser);
         }
 
         public void UpdateUsersService(int id, Users value)
         {
-            repositoriesUsers.UpdateUsersRepositories(id,value);
+            irepositoriesUsers.UpdateUsersRepositories(id, value);
         }
 
     }

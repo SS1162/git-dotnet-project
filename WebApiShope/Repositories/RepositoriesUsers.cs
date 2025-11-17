@@ -3,12 +3,13 @@ using System.Text.Json;
 namespace Repositories
 {
 
-    public class RepositoriesUsers
+    public class RepositoriesUsers : IRepositoriesUsers
     {
         string filePath = "..\\Repositories\\users.txt";
         //M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\users.txt
         //Post new user 
-        public Users AddNewUsersRepositories(Users user) {
+        public Users AddNewUsersRepositories(Users user)
+        {
 
             int numberOfUsers = System.IO.File.ReadLines(filePath).Count();
             user.UserID = numberOfUsers + 1;
@@ -19,7 +20,7 @@ namespace Repositories
         }
 
         //Get by ID  new user 
-        public Users GetByIDUsersRepositories(int id )
+        public Users GetByIDUsersRepositories(int id)
         {
 
             using (StreamReader reader = System.IO.File.OpenText(filePath))
@@ -55,7 +56,7 @@ namespace Repositories
         }
 
         //Put 
-        public void UpdateUsersRepositories(int id,Users value)
+        public void UpdateUsersRepositories(int id, Users value)
         {
             string textToReplace = string.Empty;
             using (StreamReader reader = System.IO.File.OpenText(filePath))

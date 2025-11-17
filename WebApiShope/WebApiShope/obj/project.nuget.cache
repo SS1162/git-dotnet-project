@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Xl2+wLNsGLU=",
+  "dgSpecHash": "42sKd+Cdfu8=",
   "success": true,
-  "projectFilePath": "M:\\web api\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\330683525\\.nuget\\packages\\zxcvbn-core\\7.0.92\\zxcvbn-core.7.0.92.nupkg.sha512"
+  ],
   "logs": []
 }

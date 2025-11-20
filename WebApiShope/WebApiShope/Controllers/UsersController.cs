@@ -11,7 +11,7 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        string filePath = "users.txt";
+        private readonly string filePath = Path.Combine(Directory.GetCurrentDirectory(), "users.txt");
        // GET: api/<UsersController>
        [HttpGet]
         public IEnumerable<string> Get()
@@ -32,7 +32,7 @@ namespace WebApiShope.Controllers
                         return userFromFile;
                 }
             }
-            return NoContent();
+            return NotFound();
 
         }
 
@@ -53,10 +53,10 @@ namespace WebApiShope.Controllers
                 {
                     Users userFromFile = JsonSerializer.Deserialize<Users>(currentUserInFile);
                     if (userFromFile.UserName == LogInUser.UserName && userFromFile.UserPassward == LogInUser.UserPassward)
-                        return CreatedAtAction(nameof(Get), new { id = userFromFile.UserID }, userFromFile);
+                        return Ok(userFromFile);
                 }
             }
-            return NoContent();
+            return Unauthorized();
         }
 
 
@@ -71,7 +71,7 @@ namespace WebApiShope.Controllers
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Users value)
+        public ActionResult Put(int id, [FromBody] Users value)
         {
             string textToReplace = string.Empty;
             using (StreamReader reader = System.IO.File.OpenText(filePath))
@@ -92,14 +92,9 @@ namespace WebApiShope.Controllers
                 string text = System.IO.File.ReadAllText(filePath);
                 text = text.Replace(textToReplace, JsonSerializer.Serialize(value));
                 System.IO.File.WriteAllText(filePath, text);
+                return NoContent();
             }
-
-        }
-
-        // DELETE api/<UsersController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return NotFound();
         }
     }
 }

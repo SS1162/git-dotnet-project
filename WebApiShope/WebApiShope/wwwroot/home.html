@@ -6,9 +6,19 @@
     <script src="home.js" defer></script>
                   <!--form style-->
     <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+            
+        }
         body{
            direction:rtl;
            display:flex;
+           justify-content:center;
+           align-items:center;
+           width:99%;
+           height:95vh;
            gap:5%;
         }
         .button{
@@ -19,6 +29,47 @@
         .new_user{
             display:none;
         }
+        .form {
+            width: 50%;
+            height: 60%;
+          border:solid 1px black;
+            display: flex;
+            align-items:center;
+            gap: 5%;
+            padding: 3%;
+            box-shadow: rgba(69, 66, 66, 0.474) 10px 10px initial;
+            border-radius:20px;
+            font-size:1.7rem;
+
+        }
+        input{
+            width:150%;
+            height:30px;
+        }
+        label {
+            width: 150%;
+        }
+        .login {
+            width: 150%;
+            background-color: blue;
+            height: 35px;
+            border-radius: 25%;
+            border-radius: 25%;
+            color: white;
+            font-size: 1.3rem;
+            margin-top:17%;
+        }
+        .loginFrom {
+/*            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction:column;*/
+        }
+        .button {
+            margin-top: 5%;
+            width: 150%;
+            text-align:center;
+        }
   </style>
 </head>
 <body>
@@ -26,39 +77,42 @@
     <button onclick="PostReaspone()">post</button>-->
 
                       <!--form html-->
-    <div>
-        <label for="name2">שם משתמש</label>
+    <div class="form">
+        <div class="loginFrom">
+            <label for="name2">שם משתמש</label>
+            <br />
+            <input name="name2" id="name2" type="email" />
+            <br />
+            <label for="passward2">סיסמה</label>
+            <br />
+            <input name="passward2" id="passward2" type="password" />
+            <br />
+            <button class="login" onclick=" Login()"> כניסה</button>
+            <br />
+            <div class="button"><u>משתמש חדש</u></div>
+        </div>
         <br />
-        <input name="name2" id="name2" type="email" />
-        <br />
-        <label for="passward2">סיסמה</label>
-        <br />
-        <input name="passward2" id="passward2" type="password" />
-        <br />
-        <button onclick=" Login()"> כניסה</button>
-        <br />
-        <div class="button"><u>משתמש חדש</u></div>
+        <div class="new_user">
+            <label for="name">שם משתמש</label>
+            <br />
+            <input name="name" id="name" type="email" />
+            <br />
+            <label for="passward">סיסמה</label>
+            <br />
+            <input name="passward" id="passward" type="password" />
+            <br />
+            <label for="first_name">שם פרטי</label>
+            <br />
+            <input name="first_name" id="first_name" type="text" />
+            <br />
+            <label for="last_name">שם משפחה</label>
+            <br />
+            <input name="last_name" id="last_name" type="text" />
+            <br />
+            <button id="new_user" onclick="Register()"> הירשם</button>
+        </div>
+        <bubtton onclick="CheckPasswordStrength()">check the password strength </bubtton>
+        <progress class="bur" max=4 value="0"></progress>
     </div>
-    <br />
-    <div class="new_user">
-        <label for="name">שם משתמש</label>
-        <br />
-        <input name="name" id="name" type="email" />
-        <br />
-        <label for="passward">סיסמה</label>
-        <br />
-        <input name="passward" id="passward" type="password" />
-        <br />
-        <label for="first_name">שם פרטי</label>
-        <br />
-        <input name="first_name" id="first_name" type="text" />
-        <br />
-        <label for="last_name">שם משפחה</label>
-        <br />
-        <input name="last_name" id="last_name" type="text" />
-        <br />
-        <button id="new_user" onclick="Register()"> הירשם</button>
-    </div>
-    
 </body>
 </html>

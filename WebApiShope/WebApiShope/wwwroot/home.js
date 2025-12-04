@@ -118,7 +118,53 @@ async function Login() {
     catch (error) {
         alert(error)
     }
+}
+
+function BuildCheckPasswordObjectFromUserInput() {
+    
+    const userPassward = document.querySelector("#passward")
+
+    const checkPasswordObject = {
+        UserPassward: userPassward.value
     }
+    return checkPasswordObject
+}
+
+
+
+//check password strength
+async function CheckPasswordStrength() {
+    const checkPasswordObject = BuildCheckPasswordObjectFromUserInput()
+
+    //fetch request
+    try {
+        const PostRespones = await fetch("https://localhost:44399/api/password", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(checkPasswordObject)
+        })
+
+
+        if (!PostRespones.ok) {
+            throw new Error(`HTTP error status ${PostRespones.status}`)
+        }
+
+      
+        else {
+            const PasswordStrength = await PostRespones.json()
+            const bur = document.querySelector(".bur")
+            bur.value = PasswordStrength
+            alert(PostRespones.status + ' ' + PasswordStrength)
+            
+        }
+    }
+
+    catch (error) {
+        alert(error)
+    }
+}
 
 
 

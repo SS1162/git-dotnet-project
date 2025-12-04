@@ -1,12 +1,12 @@
-wwwroot\home.js
-wwwroot\NewFolder\update.html
-wwwroot\NewFolder\enter.js
-wwwroot\NewFolder\enter.html
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\enter.js
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\home.html
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\update.js
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\enter.html
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\update.html
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\home.js
 wwwroot\home.html
+wwwroot\home.js
+wwwroot\NewFolder\enter.html
+wwwroot\NewFolder\enter.js
+wwwroot\NewFolder\update.html
 wwwroot\NewFolder\update.js
-C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\home.js
-C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\update.html
-C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\enter.html
-C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\home.html
-C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\update.js
-C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\dot_net\git-dot.net-project\WebApiShope\WebApiShope\wwwroot\NewFolder\enter.js

@@ -25,9 +25,9 @@ function BuildObjectFromUserInput() {
 
     const userDetailsInObject = {
         UserName: userName.value,
-        UserPassward: userPassward.value,
-        UserFirstName: userFirstName.value,
-        UserLastName: userLastName.value
+        Password: userPassward.value,
+        FirstName: userFirstName.value,
+        LastName: userLastName.value
     }
     return userDetailsInObject
 }

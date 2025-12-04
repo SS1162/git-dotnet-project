@@ -1,83 +1,57 @@
 ﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 namespace Repositories
 {
 
     public class RepositoriesUsers : IRepositoriesUsers
     {
-        string filePath = "..\\Repositories\\users.txt";
+        MyShop330683525Context _MyShop330683525Context;
+
+        public RepositoriesUsers(MyShop330683525Context _MyShop330683525Context)
+        {
+            this._MyShop330683525Context = _MyShop330683525Context;
+        }
+
         //M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\users.txt
         //Post new user 
-        public Users AddNewUsersRepositories(Users user)
+        async public Task<User> AddNewUsersRepositories(User user)
         {
+            await _MyShop330683525Context.Users.AddAsync(user);
+            await _MyShop330683525Context.SaveChangesAsync();
 
-            int numberOfUsers = System.IO.File.ReadLines(filePath).Count();
-            user.UserID = numberOfUsers + 1;
-            string userJson = JsonSerializer.Serialize(user);
-            System.IO.File.AppendAllText(filePath, userJson + Environment.NewLine);
+
             return user;
-
         }
 
         //Get by ID  new user 
-        public Users GetByIDUsersRepositories(int id)
+        public async Task<User?> GetByIDUsersRepositories(int id)
         {
 
-            using (StreamReader reader = System.IO.File.OpenText(filePath))
-            {
-                string? currentUserInFile;
-                while ((currentUserInFile = reader.ReadLine()) != null)
-                {
-                    Users userFromFile = JsonSerializer.Deserialize<Users>(currentUserInFile);
-                    if (userFromFile.UserID == id)
-                        return userFromFile;
-                }
-                return null;
-            }
+            var user = await _MyShop330683525Context.Users.FindAsync(id);
+
+            return user;
 
         }
 
         ////Post login user
 
-        public LoginUser LoginUsersRepositories(LoginUser LogInUser)
+        public async Task<User?> LoginUsersRepositories(LoginUser LogInUser)
         {
-
-            using (StreamReader reader = System.IO.File.OpenText(filePath))
-            {
-                string? currentUserInFile;
-                while ((currentUserInFile = reader.ReadLine()) != null)
-                {
-                    Users userFromFile = JsonSerializer.Deserialize<Users>(currentUserInFile);
-                    if (userFromFile.UserName == LogInUser.UserName && userFromFile.UserPassward == LogInUser.UserPassward)
-                        return LogInUser;
-                }
-                return null;
-            }
+            var user = await _MyShop330683525Context.Users.FirstOrDefaultAsync(x => LogInUser.UserName == x.UserName &&
+            LogInUser.UserPassward == x.Password);
+            return user;
         }
 
         //Put 
-        public void UpdateUsersRepositories(int id, Users value)
+        public async void UpdateUsersRepositories(int id, User user)
         {
-            string textToReplace = string.Empty;
-            using (StreamReader reader = System.IO.File.OpenText(filePath))
-            {
+            //var userForUpdate= await _MyShop330683525Context.Users.FindAsync(id);
+            // userForUpdate.
+            _MyShop330683525Context.Users.Update(user);
+            _MyShop330683525Context.SaveChanges();
 
-                string currentUserInFile;
-                while ((currentUserInFile = reader.ReadLine()) != null)
-                {
 
-                    Users userFromFile = JsonSerializer.Deserialize<Users>(currentUserInFile);
-                    if (userFromFile.UserID == id)
-                        textToReplace = currentUserInFile;
-                }
-            }
-
-            if (textToReplace != string.Empty)
-            {
-                string text = System.IO.File.ReadAllText(filePath);
-                text = text.Replace(textToReplace, JsonSerializer.Serialize(value));
-                System.IO.File.WriteAllText(filePath, text);
-            }
         }
 
     }

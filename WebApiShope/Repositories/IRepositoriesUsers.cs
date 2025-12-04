@@ -4,9 +4,9 @@ namespace Repositories
 {
     public interface IRepositoriesUsers
     {
-        Users AddNewUsersRepositories(Users user);
-        Users GetByIDUsersRepositories(int id);
-        LoginUser LoginUsersRepositories(LoginUser LogInUser);
-        void UpdateUsersRepositories(int id, Users value);
+        Task<User> AddNewUsersRepositories(User user);
+        Task<User?> GetByIDUsersRepositories(int id);
+        Task<User?> LoginUsersRepositories(LoginUser LogInUser);
+        void UpdateUsersRepositories(int id, User user);
     }
 }

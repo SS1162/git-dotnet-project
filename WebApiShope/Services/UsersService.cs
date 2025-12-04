@@ -9,23 +9,23 @@ namespace Services
         {
             this.irepositoriesUsers = irepositoriesUsers;
         }
-        public Users GetByIDUsersService(int id)
+        public async Task<User> GetByIDUsersService(int id)
         {
-            return irepositoriesUsers.GetByIDUsersRepositories(id);
+            return await irepositoriesUsers.GetByIDUsersRepositories(id);
         }
         //post new user
-        public Users AddNewUsersService(Users user)
+        public async Task<User> AddNewUsersService(User user)
         {
-            return irepositoriesUsers.AddNewUsersRepositories(user);
+            return await irepositoriesUsers.AddNewUsersRepositories(user);
         }
 
         //post login user
-        public LoginUser LoginUsersService(LoginUser logInUser)
+        public async Task<User> LoginUsersService(LoginUser logInUser)
         {
-            return irepositoriesUsers.LoginUsersRepositories(logInUser);
+            return await irepositoriesUsers.LoginUsersRepositories(logInUser);
         }
 
-        public void UpdateUsersService(int id, Users value)
+        public void UpdateUsersService(int id, User value)
         {
             irepositoriesUsers.UpdateUsersRepositories(id, value);
         }

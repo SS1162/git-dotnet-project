@@ -7,9 +7,9 @@ function BuildObjectFromUserInput() {
 
     const userDetailsInObject = {
         UserName: userName.value,
-        UserPassward: userPassward.value,
-        UserFirstName: userFirstName.value,
-        UserLastName: userLastName.value
+        Password: userPassward.value,
+        FirstName: userFirstName.value,
+        LastName: userLastName.value
     }
     return userDetailsInObject
 }
@@ -27,7 +27,7 @@ async function Update() {
  
     //fetch request
     try {
-        const UpdateRespones = await fetch(`https://localhost:44399/api/users/${currentUserInObject["userID"]}`, {
+        const UpdateRespones = await fetch(`https://localhost:44399/api/users/${currentUserInObject["userId"]}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

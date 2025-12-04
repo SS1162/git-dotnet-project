@@ -30,17 +30,16 @@ namespace WebApiShope.Controllers
 
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
-        public ActionResult<Users> Get(int id)
+        public async Task<ActionResult<User>> Get(int id)
         {
             
-            Users user= iusersService.GetByIDUsersService(id);
+            User user= await iusersService.GetByIDUsersService(id);
             if (user == null)
             {
                 return NoContent();
             }
             else
                 return user;
-
         }
 
 
@@ -50,44 +49,48 @@ namespace WebApiShope.Controllers
 
         [HttpPost("loginFunction")]
         
-        public ActionResult<LoginUser> PostLogin([FromBody] LoginUser logInUser)
+        public async Task<ActionResult<User>> PostLogin([FromBody] LoginUser logInUser)
         {
-            LoginUser user = iusersService.LoginUsersService(logInUser);
+            User user = await iusersService.LoginUsersService(logInUser);
             if (user == null)
-            { return NoContent(); }
+            {
+                return Unauthorized();
+
+            }
             else
             {
-                return CreatedAtAction(nameof(Get), new { id = user.UserID }, user);
+                return CreatedAtAction(nameof(Get), new { id = user.UserId }, user);
             }
 
         }
 
 
         [HttpPost]
-        public ActionResult<Users> Post([FromBody] Users userFromUser)
+        public async Task<ActionResult<User>> Post([FromBody] User userFromUser)
         {
             Password passwordForCheckStrength = new Password();
-            passwordForCheckStrength.UserPassward = userFromUser.UserPassward;
+            passwordForCheckStrength.UserPassward = userFromUser.Password;
             if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) <2)
             {
                 return BadRequest();
             }
-            Users userFromDatabase = iusersService.AddNewUsersService(userFromUser);
+
+            User userFromDatabase = await iusersService.AddNewUsersService(userFromUser);
             if (userFromDatabase == null)
                 return NoContent();
-            return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserID }, userFromDatabase);
+            return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserId }, userFromDatabase);
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id,Users value)
+        public   ActionResult Put(int id, [FromBody] User user)
         {
             Password passwordForCheckStrength = new Password();
-            passwordForCheckStrength.UserPassward = value.UserPassward;
+            passwordForCheckStrength.UserPassward = user.Password;
             if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) < 2)
             {
                 return BadRequest();
             }
-            iusersService.UpdateUsersService(id, value);
+            iusersService.UpdateUsersService(id, user);
             return Ok();
         }
 

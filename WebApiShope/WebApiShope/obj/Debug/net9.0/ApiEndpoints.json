@@ -150,13 +150,13 @@
     "Parameters": [
       {
         "Name": "userFromUser",
-        "Type": "Entities.Users",
+        "Type": "Entities.User",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.Users",
+        "Type": "Entities.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -182,7 +182,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.Users",
+        "Type": "Entities.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -206,8 +206,8 @@
         "IsRequired": true
       },
       {
-        "Name": "value",
-        "Type": "Entities.Users",
+        "Name": "user",
+        "Type": "Entities.User",
         "IsRequired": true
       }
     ],
@@ -251,7 +251,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.LoginUser",
+        "Type": "Entities.User",
         "MediaTypes": [
           "text/plain",
           "application/json",

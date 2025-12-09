@@ -300,4 +300,10 @@ E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0
 E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-n350s6bwi4.gz
 E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-45uml5en9f.gz
-E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-h9oi9deike.gz
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.OpenApi.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cs
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-2m5udnyv8i.gz

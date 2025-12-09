@@ -12,13 +12,13 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IUsersService iusersService;
+        private readonly IUsersService _usersService;
 
-        private IPasswordService ipasswordService;
-        public UsersController(IUsersService iusersService, IPasswordService ipasswordService)
+        private readonly IPasswordService _passwordService;
+        public UsersController(IUsersService usersService, IPasswordService passwordService)
         {
-            this.iusersService = iusersService;
-            this.ipasswordService= ipasswordService;
+            _usersService = usersService;
+            _passwordService = passwordService;
         }
         // GET: api/<UsersController>
         [HttpGet]
@@ -33,13 +33,13 @@ namespace WebApiShope.Controllers
         public async Task<ActionResult<User>> Get(int id)
         {
             
-            User user= await iusersService.GetByIDUsersService(id);
+            User user= await _usersService.GetUserById(id);
             if (user == null)
             {
-                return NoContent();
+                return NotFound();
             }
             else
-                return user;
+                return Ok(user);
         }
 
 
@@ -51,7 +51,7 @@ namespace WebApiShope.Controllers
         
         public async Task<ActionResult<User>> PostLogin([FromBody] LoginUser logInUser)
         {
-            User user = await iusersService.LoginUsersService(logInUser);
+            User user = await _usersService.Login(logInUser);
             if (user == null)
             {
                 return Unauthorized();
@@ -59,7 +59,7 @@ namespace WebApiShope.Controllers
             }
             else
             {
-                return CreatedAtAction(nameof(Get), new { id = user.UserId }, user);
+                return Ok(user);
             }
 
         }
@@ -70,28 +70,28 @@ namespace WebApiShope.Controllers
         {
             Password passwordForCheckStrength = new Password();
             passwordForCheckStrength.UserPassward = userFromUser.Password;
-            if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) <2)
+            if (_passwordService.CheckPasswordStrength(passwordForCheckStrength) <2)
             {
                 return BadRequest();
             }
 
-            User userFromDatabase = await iusersService.AddNewUsersService(userFromUser);
+            User userFromDatabase = await _usersService.AddUser(userFromUser);
             if (userFromDatabase == null)
                 return NoContent();
             return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserId }, userFromDatabase);
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public   ActionResult Put(int id, [FromBody] User user)
+        public async Task<ActionResult> Put(int id, [FromBody] User user)
         {
             Password passwordForCheckStrength = new Password();
             passwordForCheckStrength.UserPassward = user.Password;
-            if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) < 2)
+            if (_passwordService.CheckPasswordStrength(passwordForCheckStrength) < 2)
             {
                 return BadRequest();
             }
-            iusersService.UpdateUsersService(id, user);
-            return Ok();
+            await _usersService.UpdateUser(id, user);
+            return NoContent();
         }
 
         // DELETE api/<UsersController>/5

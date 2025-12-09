@@ -4,30 +4,30 @@ namespace Services
 {
     public class UsersService : IUsersService
     {//get by id
-        private IRepositoriesUsers irepositoriesUsers;
-        public UsersService(IRepositoriesUsers irepositoriesUsers)
+        private readonly IRepositoriesUsers _repositoriesUsers;
+        public UsersService(IRepositoriesUsers repositoriesUsers)
         {
-            this.irepositoriesUsers = irepositoriesUsers;
+            _repositoriesUsers = repositoriesUsers;
         }
-        public async Task<User> GetByIDUsersService(int id)
+        public async Task<User> GetUserById(int id)
         {
-            return await irepositoriesUsers.GetByIDUsersRepositories(id);
+            return await _repositoriesUsers.GetUserById(id);
         }
         //post new user
-        public async Task<User> AddNewUsersService(User user)
+        public async Task<User> AddUser(User user)
         {
-            return await irepositoriesUsers.AddNewUsersRepositories(user);
+            return await _repositoriesUsers.AddUser(user);
         }
 
         //post login user
-        public async Task<User> LoginUsersService(LoginUser logInUser)
+        public async Task<User> Login(LoginUser logInUser)
         {
-            return await irepositoriesUsers.LoginUsersRepositories(logInUser);
+            return await _repositoriesUsers.Login(logInUser);
         }
 
-        public void UpdateUsersService(int id, User value)
+        public async Task UpdateUser(int id, User value)
         {
-            irepositoriesUsers.UpdateUsersRepositories(id, value);
+            await _repositoriesUsers.UpdateUser(id, value);
         }
 
     }

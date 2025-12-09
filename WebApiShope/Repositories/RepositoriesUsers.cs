@@ -6,52 +6,43 @@ namespace Repositories
 
     public class RepositoriesUsers : IRepositoriesUsers
     {
-        MyShop330683525Context _MyShop330683525Context;
+        private readonly MyShop330683525Context _context;
 
-        public RepositoriesUsers(MyShop330683525Context _MyShop330683525Context)
+        public RepositoriesUsers(MyShop330683525Context context)
         {
-            this._MyShop330683525Context = _MyShop330683525Context;
+            _context = context;
         }
 
         //M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\users.txt
         //Post new user 
-        async public Task<User> AddNewUsersRepositories(User user)
+        public async Task<User> AddUser(User user)
         {
-            await _MyShop330683525Context.Users.AddAsync(user);
-            await _MyShop330683525Context.SaveChangesAsync();
-
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
 
             return user;
         }
 
         //Get by ID  new user 
-        public async Task<User?> GetByIDUsersRepositories(int id)
+        public async Task<User?> GetUserById(int id)
         {
-
-            var user = await _MyShop330683525Context.Users.FindAsync(id);
-
+            var user = await _context.Users.FindAsync(id);
             return user;
-
         }
 
         ////Post login user
-
-        public async Task<User?> LoginUsersRepositories(LoginUser LogInUser)
+        public async Task<User?> Login(LoginUser logInUser)
         {
-            var user = await _MyShop330683525Context.Users.FirstOrDefaultAsync(x => LogInUser.UserName == x.UserName &&
-            LogInUser.UserPassward == x.Password);
+            var user = await _context.Users.FirstOrDefaultAsync(x => logInUser.UserName == x.UserName &&
+            logInUser.UserPassward == x.Password);
             return user;
         }
 
         //Put 
-        public async void UpdateUsersRepositories(int id, User user)
+        public async Task UpdateUser(int id, User user)
         {
-            //var userForUpdate= await _MyShop330683525Context.Users.FindAsync(id);
-            // userForUpdate.
-            _MyShop330683525Context.Users.Update(user);
-            _MyShop330683525Context.SaveChanges();
-
-
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
         }
 
     }

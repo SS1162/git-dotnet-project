@@ -28,9 +28,9 @@ namespace Repositories
         public async Task<User?> GetByIDUsersRepositories(int id)
         {
 
-            var user = await _MyShop330683525Context.Users.FindAsync(id);
+           return  await _MyShop330683525Context.Users.FindAsync(id);
 
-            return user;
+        
 
         }
 

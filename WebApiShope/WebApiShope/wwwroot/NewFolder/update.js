@@ -1,11 +1,16 @@
 ﻿
 function BuildObjectFromUserInput() {
+
+    const currentUserFromSession = sessionStorage.getItem("users")
+    const currentUserInObject = JSON.parse(currentUserFromSession)
+
     const userName = document.querySelector("#name")
     const userPassward = document.querySelector("#passward")
     const userFirstName = document.querySelector("#first_name")
     const userLastName = document.querySelector("#last_name")
 
     const userDetailsInObject = {
+        UserId: currentUserInObject["userId"],
         UserName: userName.value,
         Password: userPassward.value,
         FirstName: userFirstName.value,
@@ -36,6 +41,14 @@ async function Update() {
         })
 
         if (UpdateRespones.ok) {
+            const updateObjectForSession = {
+                UserName: userDetailsInObject["UserName"],
+                userId: userDetailsInObject["UserId"],
+                UserPassward: userDetailsInObject["Password"],
+                UserFirstName: userDetailsInObject["FirstName"],
+                UserLastName: userDetailsInObject["LastName"]
+            }
+            sessionStorage.setItem("users", JSON.stringify(updateObjectForSession))
             alert(` עדכון פרטים בוצע בהצלחה`)
 
         }
@@ -47,13 +60,7 @@ async function Update() {
     catch (error) {
         alert(error)
     }
-    const updateObjectForSession = {
-        UserName: userDetailsInObject["UserName"],
-        UserID: currentUserInObject["userID"],
-        UserPassward: userDetailsInObject["UserPassward"],
-        UserFirstName: userDetailsInObject["UserFirstName"],
-        UserLastName: userDetailsInObject["UserLastName"]
-    }
-    sessionStorage.setItem("users", JSON.stringify(updateObjectForSession))
+
+ 
 
 }

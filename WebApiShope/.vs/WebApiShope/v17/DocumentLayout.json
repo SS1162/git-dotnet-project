@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|solutionrelative:services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\repositories\\iproductsrepositoriy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|solutionrelative:repositories\\iproductsrepositoriy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\repositories\\productsrepositoriy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|solutionrelative:repositories\\productsrepositoriy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\services\\iproductsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|solutionrelative:services\\iproductsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\repositories\\ordersrepositoriy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|solutionrelative:repositories\\ordersrepositoriy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\repositories\\repositoriesusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|solutionrelative:repositories\\repositoriesusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\repositories\\myshop330683525context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|solutionrelative:repositories\\myshop330683525context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\repositories\\irepositoriesusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9A61B89-DCFF-4CB1-9BB1-FAE78A8CB9FB}|Repositories\\Repositories.csproj|solutionrelative:repositories\\irepositoriesusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\wwwroot\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\wwwroot\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|solutionrelative:services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\services\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|solutionrelative:services\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\wwwroot\\newfolder\\update.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\wwwroot\\newfolder\\update.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A19FF4EA-5C9F-4DCD-A5C7-8531F405073D}|Entities\\Entities.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A19FF4EA-5C9F-4DCD-A5C7-8531F405073D}|Entities\\Entities.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A19FF4EA-5C9F-4DCD-A5C7-8531F405073D}|Entities\\Entities.csproj|e:\\project_from_git\\git-dot.net-project\\webapishope\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A19FF4EA-5C9F-4DCD-A5C7-8531F405073D}|Entities\\Entities.csproj|solutionrelative:entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,125 +74,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "home.js",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\home.js",
-              "RelativeDocumentMoniker": "WebApiShope\\wwwroot\\home.js",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\home.js",
-              "RelativeToolTip": "WebApiShope\\wwwroot\\home.js",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-12-01T15:35:24.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "update.js",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\NewFolder\\update.js",
-              "RelativeDocumentMoniker": "WebApiShope\\wwwroot\\NewFolder\\update.js",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\wwwroot\\NewFolder\\update.js",
-              "RelativeToolTip": "WebApiShope\\wwwroot\\NewFolder\\update.js",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCAAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-12-01T15:32:07.644Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PasswordService.cs",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\PasswordService.cs",
-              "RelativeDocumentMoniker": "Services\\PasswordService.cs",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\PasswordService.cs",
-              "RelativeToolTip": "Services\\PasswordService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Title": "OrdersRepositoriy.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\OrdersRepositoriy.cs",
+              "RelativeDocumentMoniker": "Repositories\\OrdersRepositoriy.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\OrdersRepositoriy.cs",
+              "RelativeToolTip": "Repositories\\OrdersRepositoriy.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAjwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T15:06:35.015Z",
+              "WhenOpened": "2025-12-07T18:09:43.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "WebApiShope\\Controllers\\UsersController.cs",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "WebApiShope\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAcwEYAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "WebApiShope\\Controllers\\OrdersController.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "WebApiShope\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwC8AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T11:58:48.103Z",
+              "WhenOpened": "2025-12-07T18:04:24.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IRepositoriesUsers.cs",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\IRepositoriesUsers.cs",
-              "RelativeDocumentMoniker": "Repositories\\IRepositoriesUsers.cs",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\IRepositoriesUsers.cs",
-              "RelativeToolTip": "Repositories\\IRepositoriesUsers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Title": "IProductsService.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\IProductsService.cs",
+              "RelativeDocumentMoniker": "Services\\IProductsService.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\IProductsService.cs",
+              "RelativeToolTip": "Services\\IProductsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T11:40:15.197Z"
+              "WhenOpened": "2025-12-07T17:58:31.225Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsersService.cs",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\UsersService.cs",
-              "RelativeDocumentMoniker": "Services\\UsersService.cs",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\UsersService.cs",
-              "RelativeToolTip": "Services\\UsersService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwB0AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IProductsRepositoriy.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\IProductsRepositoriy.cs",
+              "RelativeDocumentMoniker": "Repositories\\IProductsRepositoriy.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\IProductsRepositoriy.cs",
+              "RelativeToolTip": "Repositories\\IProductsRepositoriy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T11:35:51.211Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Entities\\User.cs",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\User.cs",
-              "RelativeToolTip": "Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T10:32:07.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Product.cs",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "Entities\\Product.cs",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Product.cs",
-              "RelativeToolTip": "Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T10:31:51.1Z"
+              "WhenOpened": "2025-12-07T17:57:54.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ProductsRepositoriy.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\ProductsRepositoriy.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProductsRepositoriy.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\ProductsRepositoriy.cs",
+              "RelativeToolTip": "Repositories\\ProductsRepositoriy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T17:57:44.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebApiShope\\Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebApiShope\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T17:52:09.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsService.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\ProductsService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductsService.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\ProductsService.cs",
+              "RelativeToolTip": "Services\\ProductsService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T17:47:19.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApiShope\\Controllers\\UsersController.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApiShope\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwD0AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T18:05:18.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "WebApiShope\\Controllers\\CategoriesController.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "WebApiShope\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T17:38:46.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Program.cs",
+              "RelativeDocumentMoniker": "WebApiShope\\Program.cs",
+              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Program.cs",
+              "RelativeToolTip": "WebApiShope\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T16:56:20.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MyShop330683525Context.cs",
               "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\MyShop330683525Context.cs",
               "RelativeDocumentMoniker": "Repositories\\MyShop330683525Context.cs",
               "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\MyShop330683525Context.cs",
               "RelativeToolTip": "Repositories\\MyShop330683525Context.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T07:48:37.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RepositoriesUsers.cs",
-              "DocumentMoniker": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\RepositoriesUsers.cs",
-              "RelativeDocumentMoniker": "Repositories\\RepositoriesUsers.cs",
-              "ToolTip": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\RepositoriesUsers.cs",
-              "RelativeToolTip": "Repositories\\RepositoriesUsers.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA9wDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T11:34:21.279Z",
+              "WhenOpened": "2025-12-07T16:51:40.292Z",
               "EditorCaption": ""
             }
           ]

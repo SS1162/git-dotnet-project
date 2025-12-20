@@ -9,7 +9,17 @@ public partial class Category
 {
     public short CategoryId { get; set; }
 
+    public short MainCategoryId { get; set; }
+
     public string CategoryName { get; set; }
+
+    public string CategoryPrompt { get; set; }
+
+    public string ImgUrl { get; set; }
+
+    public string CategoryDescreption { get; set; }
+
+    public virtual MainCategory MainCategory { get; set; }
 
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }

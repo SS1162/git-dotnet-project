@@ -307,3 +307,7 @@ E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0
 E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cs
 E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-2m5udnyv8i.gz
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\AutoMapper.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\DTO.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\DTO.pdb

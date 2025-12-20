@@ -6,10 +6,41 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "paging",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "minPrice",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxPrice",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "mainCategoryID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Entities.Category, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DTO.CategoryDTO, DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -20,22 +51,22 @@
     ]
   },
   {
-    "ContainingType": "WebApiShope.Controllers.OrdersController",
+    "ContainingType": "WebApiShope.Controllers.CategoriesController",
     "Method": "Post",
-    "RelativePath": "api/Orders",
+    "RelativePath": "api/Categories",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "order",
-        "Type": "Entities.Order",
+        "Name": "category",
+        "Type": "DTO.AddCategoryDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.Order",
+        "Type": "DTO.CategoryDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -46,9 +77,9 @@
     ]
   },
   {
-    "ContainingType": "WebApiShope.Controllers.OrdersController",
-    "Method": "Get",
-    "RelativePath": "api/Orders/{id}",
+    "ContainingType": "WebApiShope.Controllers.CategoriesController",
+    "Method": "GetByID",
+    "RelativePath": "api/Categories/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -61,7 +92,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.Order",
+        "Type": "DTO.CategoryDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -70,6 +101,138 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.CategoriesController",
+    "Method": "Put",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "category",
+        "Type": "DTO.CategoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.CategoriesController",
+    "Method": "Delete",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.MainCategoriesController",
+    "Method": "Get",
+    "RelativePath": "api/MainCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DTO.MainCategoriesDTO, DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.MainCategoriesController",
+    "Method": "Post",
+    "RelativePath": "api/MainCategories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "manegerMainCategory",
+        "Type": "DTO.ManegerMainCategoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DTO.MainCategoriesDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.MainCategoriesController",
+    "Method": "Put",
+    "RelativePath": "api/MainCategories/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mainCategory",
+        "Type": "DTO.MainCategoriesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.MainCategoriesController",
+    "Method": "Delete",
+    "RelativePath": "api/MainCategories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApiShope.Controllers.PasswordController",
@@ -81,7 +244,7 @@
     "Parameters": [
       {
         "Name": "password",
-        "Type": "Entities.Password",
+        "Type": "Entities.PasswordDTO",
         "IsRequired": true
       }
     ],
@@ -98,42 +261,16 @@
     ]
   },
   {
-    "ContainingType": "WebApiShope.Controllers.ProductsController",
+    "ContainingType": "WebApiShope.Controllers.PlatformsController",
     "Method": "Get",
-    "RelativePath": "api/Products",
+    "RelativePath": "api/Platforms",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "minPrice",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "maxPrice",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "limit",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "paging",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "categoryID",
-        "Type": "System.Int32[]",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Entities.Product, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DTO.PlatformsDTO, DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -144,16 +281,22 @@
     ]
   },
   {
-    "ContainingType": "WebApiShope.Controllers.UsersController",
-    "Method": "Get",
-    "RelativePath": "api/Users",
-    "HttpMethod": "GET",
+    "ContainingType": "WebApiShope.Controllers.PlatformsController",
+    "Method": "Post",
+    "RelativePath": "api/Platforms",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "platform",
+        "Type": "DTO.AddPlatformDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "DTO.PlatformsDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -162,6 +305,49 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.PlatformsController",
+    "Method": "Put",
+    "RelativePath": "api/Platforms/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "platform",
+        "Type": "DTO.PlatformsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.PlatformsController",
+    "Method": "Delete",
+    "RelativePath": "api/Platforms/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApiShope.Controllers.UsersController",
@@ -173,13 +359,13 @@
     "Parameters": [
       {
         "Name": "userFromUser",
-        "Type": "Entities.User",
+        "Type": "DTO.RegisterUserDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.User",
+        "Type": "DTO.UserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -205,7 +391,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.User",
+        "Type": "DTO.UserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -230,7 +416,7 @@
       },
       {
         "Name": "user",
-        "Type": "Entities.User",
+        "Type": "DTO.UpdateUserDTO",
         "IsRequired": true
       }
     ],
@@ -246,33 +432,13 @@
     "Parameters": [
       {
         "Name": "logInUser",
-        "Type": "Entities.LoginUser",
+        "Type": "Entities.LoginUserDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.User",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebApiShope.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiShope.WeatherForecast, WebApiShope, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "DTO.UserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -34,3 +34,5 @@ E:\project_from_git\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Se
 E:\project_from_git\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\refint\Services.dll
 E:\project_from_git\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.pdb
 E:\project_from_git\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\ref\Services.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\DTO.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\DTO.pdb

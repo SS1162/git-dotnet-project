@@ -17,5 +17,13 @@ public partial class User
 
     public string LastName { get; set; }
 
+    public string Phone { get; set; }
+
+    public short? BasicId { get; set; }
+
+    public virtual BasicSite Basic { get; set; }
+
+    public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
+
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

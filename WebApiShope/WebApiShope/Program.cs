@@ -5,23 +5,34 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRepositoriesUsers, RepositoriesUsers>();
+
 builder.Services.AddScoped<IUsersService, UsersService>();
-builder.Services.AddScoped<IPasswordService,PasswordService>();
-builder.Services.AddScoped<ICategoriesRepositoriy, CategoriesRepositoriy>();
 
-builder.Services.AddScoped<ICategoriesService, CategoriesService>();
+builder.Services.AddScoped<IPasswordsService,PasswordsService>();
 
-builder.Services.AddScoped<IOrdersRepositoriy, OrdersRepositoriy>();
+builder.Services.AddScoped<IPlatformsReposetory, PlatformsReposetory>();
 
-builder.Services.AddScoped<IOrdersService, OrdersService>();
-builder.Services.AddScoped<IProductsRepositoriy, ProductsRepositoriy>();
+builder.Services.AddScoped<IPlatformsServise, PlatformsServise>();
 
-builder.Services.AddScoped<IProductsService, ProductsService>();
+builder.Services.AddScoped<IProductsReposetory, ProductsReposetory>();
 
+
+builder.Services.AddScoped<IMainCategoriesServise, MainCategoriesServise>();
+
+builder.Services.AddScoped<IMainCategoryReposetory, MainCategoryReposetory>();
+
+builder.Services.AddScoped<ICategoriesServise, CategoriesServise>();
+
+
+builder.Services.AddScoped<ICategoriesReposetory, CategoriesReposetory>();
+
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
 builder.Services.AddDbContext<MyShop330683525Context>(option => option.UseSqlServer
-("Data Source=srv2\\pupils;Initial Catalog=MyShopShany2026;Integrated Security=True;Trust Server Certificate=True"));
+("Data Source=DESKTOP-R5RADSP;Initial Catalog=MyPromptShop;Integrated Security=True;Trust Server Certificate=True"));
+
 // Add services to the container.
 
 builder.Services.AddControllers();

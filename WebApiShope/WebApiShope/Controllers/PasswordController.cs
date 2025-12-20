@@ -9,18 +9,18 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class PasswordController : ControllerBase
     {
-        private PasswordService passwordService = new PasswordService();
+        private PasswordsService passwordService = new PasswordsService();
         // GET: api/<PasswordController>
-       
+
 
         // POST api/<PasswordController>
         [HttpPost]
-        public int Post([FromBody] Password password)
+        public int Post([FromBody] PasswordDTO password)
         {
             return passwordService.CheckPasswordStrength(password);
         }
 
         // PUT api/<PasswordController>/5
-       
+
     }
 }

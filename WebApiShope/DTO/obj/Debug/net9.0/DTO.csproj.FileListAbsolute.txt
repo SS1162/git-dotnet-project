@@ -1,0 +1,12 @@
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.deps.json
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.pdb
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.sourcelink.json
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\refint\DTO.dll
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.pdb
+E:\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\ref\DTO.dll

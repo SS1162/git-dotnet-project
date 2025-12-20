@@ -2,6 +2,7 @@
 using System.Text.Json;
 using Services;
 using Entities;
+using DTO;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebApiShope.Controllers
@@ -12,28 +13,22 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IUsersService iusersService;
+        private IUsersService _IUsersService;
 
-        private IPasswordService ipasswordService;
-        public UsersController(IUsersService iusersService, IPasswordService ipasswordService)
+        private IPasswordsService _IPasswordsService;
+        public UsersController(IUsersService iusersService, IPasswordsService ipasswordsService)
         {
-            this.iusersService = iusersService;
-            this.ipasswordService= ipasswordService;
+            this._IUsersService = iusersService;
+            this._IPasswordsService = ipasswordsService;
         }
-        // GET: api/<UsersController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
+     
 
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> Get(int id)
+        public async Task<ActionResult<UserDTO>> Get(int id)
         {
-            
-            User user= await iusersService.GetByIDUsersService(id);
+
+            UserDTO user = await _IUsersService.GetByIDUsersService(id);
             if (user == null)
             {
                 return NoContent();
@@ -49,9 +44,9 @@ namespace WebApiShope.Controllers
 
         [HttpPost("loginFunction")]
         
-        public async Task<ActionResult<User>> PostLogin([FromBody] LoginUser logInUser)
+        public async Task<ActionResult<UserDTO>> PostLogin([FromBody] LoginUserDTO logInUser)
         {
-            User user = await iusersService.LoginUsersService(logInUser);
+            UserDTO user = await _IUsersService.LoginUsersService(logInUser);
             if (user == null)
             {
                 return Unauthorized();
@@ -59,41 +54,47 @@ namespace WebApiShope.Controllers
             }
             else
             {
-                return CreatedAtAction(nameof(Get), new { id = user.UserId }, user);
+                return CreatedAtAction(nameof(Get), new { id = user.UserID}, user);
             }
 
         }
 
 
         [HttpPost]
-        public async Task<ActionResult<User>> Post([FromBody] User userFromUser)
+        public async Task<ActionResult<UserDTO>> Post([FromBody] RegisterUserDTO userFromUser)
         {
-            Password passwordForCheckStrength = new Password();
-            passwordForCheckStrength.UserPassward = userFromUser.Password;
-            if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) <2)
+
+
+            PasswordDTO passwordForCheckStrength = new PasswordDTO();
+            passwordForCheckStrength.UserPassward = userFromUser.UserPassward;
+            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength) <2)
             {
                 return BadRequest();
             }
 
-            User userFromDatabase = await iusersService.AddNewUsersService(userFromUser);
+            UserDTO userFromDatabase = await _IUsersService.AddNewUsersService(userFromUser);
             if (userFromDatabase == null)
-                return NoContent();
-            return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserId }, userFromDatabase);
+                return BadRequest();
+            return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserID }, userFromDatabase);
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public   ActionResult Put(int id, [FromBody] User user)
+
+        async public Task<ActionResult> Put(int id, [FromBody] UpdateUserDTO user)
         {
-            Password passwordForCheckStrength = new Password();
+            //לחסום החלפה של שם משתמש
+            PasswordDTO passwordForCheckStrength = new PasswordDTO();
             passwordForCheckStrength.UserPassward = user.Password;
-            if (ipasswordService.CheckPasswordStrength(passwordForCheckStrength) < 2)
+            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength) < 2)
             {
                 return BadRequest();
             }
-            iusersService.UpdateUsersService(id, user);
+
+
+            await _IUsersService.UpdateUsersService(id, user);
             return Ok();
         }
 
-    
+
     }
 }

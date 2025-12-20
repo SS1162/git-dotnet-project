@@ -13,11 +13,11 @@ public partial class Product
 
     public string ProductsName { get; set; }
 
-    public string ProductsDescreption { get; set; }
-
     public double Price { get; set; }
 
-    public string ImgUrl { get; set; }
+    public string ProductPrompt { get; set; }
+
+    public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
     public virtual Category Category { get; set; }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {}
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

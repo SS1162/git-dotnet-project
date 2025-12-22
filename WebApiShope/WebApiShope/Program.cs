@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NLog.Web;
 using Repositories;
 using Services;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -17,6 +18,13 @@ builder.Services.AddScoped<IPlatformsServise, PlatformsServise>();
 builder.Services.AddScoped<IProductsReposetory, ProductsReposetory>();
 
 
+
+builder.Services.AddScoped<IBasicSitesServise, BasicSitesServise>();
+
+
+builder.Services.AddScoped<IBasicSitesReposetory, BasicSitesReposetory>();
+
+
 builder.Services.AddScoped<IMainCategoriesServise, MainCategoriesServise>();
 
 builder.Services.AddScoped<IMainCategoryReposetory, MainCategoryReposetory>();
@@ -25,6 +33,8 @@ builder.Services.AddScoped<ICategoriesServise, CategoriesServise>();
 
 
 builder.Services.AddScoped<ICategoriesReposetory, CategoriesReposetory>();
+
+builder.Services.AddScoped<IProductsServise, ProductsServise>();
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -39,7 +49,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
 
-
+builder.Host.UseNLog();
 var app = builder.Build();
 
 

@@ -6,7 +6,7 @@ namespace Repositories
     {
         Task<Product> AddProductsReposetory(Product product);
         Task<bool> DeleteProductsReposetory(int id);
-        Task<IEnumerable<Product>> GetProductsReposetory();
+        Task<IEnumerable<Product>> GetProductsReposetory(int categoryID);
         Task UpdateProductsReposetory(int id, Product product);
     }
 }

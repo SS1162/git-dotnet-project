@@ -16,9 +16,9 @@ namespace Repositories
             this._DBContext = _DBContext;
         }
 
-        async public Task<IEnumerable<Product>> GetProductsReposetory()
+        async public Task<IEnumerable<Product>> GetProductsReposetory(int categoryID)
         {
-            return await _DBContext.Products.Include(x => x.Category).ToListAsync();
+            return await _DBContext.Products.Include(x => x.Category).Where(x=>x.CategoryId== categoryID).ToListAsync();
         }
 
         async public Task<Product> AddProductsReposetory(Product product)

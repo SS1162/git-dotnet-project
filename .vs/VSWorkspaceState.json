@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\WebApiShope",
+    "\\WebApiShope\\WebApiShope",
     "\\WebApiShope\\WebApiShope\\Controllers",
     "\\WebApiShope\\WebApiShope\\wwwroot"
   ],
-  "SelectedNode": "\\WebApiShope\\WebApiShope.sln",
+  "SelectedNode": "\\WebApiShope\\WebApiShope\\wwwroot\\home.html",
   "PreviewInSolutionExplorer": false
 }

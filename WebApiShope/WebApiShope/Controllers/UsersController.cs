@@ -3,6 +3,7 @@ using System.Text.Json;
 using Services;
 using Entities;
 using DTO;
+using NLog.Web;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebApiShope.Controllers
@@ -16,10 +17,14 @@ namespace WebApiShope.Controllers
         private IUsersService _IUsersService;
 
         private IPasswordsService _IPasswordsService;
-        public UsersController(IUsersService iusersService, IPasswordsService ipasswordsService)
+
+        ILogger<UsersController> _logger;
+
+        public UsersController(IUsersService iusersService, IPasswordsService ipasswordsService, ILogger<UsersController> _logger)
         {
             this._IUsersService = iusersService;
             this._IPasswordsService = ipasswordsService;
+            this._logger = _logger;  
         }
      
 
@@ -54,6 +59,7 @@ namespace WebApiShope.Controllers
             }
             else
             {
+                _logger.LogInformation($"login with:user name:{user.UserName} user firs name:{user.FirstName} user las name:{user.LastName},user phone:{user.Phone},user ID:{user.UserID}");
                 return CreatedAtAction(nameof(Get), new { id = user.UserID}, user);
             }
 

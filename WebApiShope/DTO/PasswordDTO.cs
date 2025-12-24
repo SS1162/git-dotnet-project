@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Entities
 {
     public record PasswordDTO
-    {
-        public string UserPassward { get; set; }
+    (
+         string UserPassward 
         
-    }
+    );
 }

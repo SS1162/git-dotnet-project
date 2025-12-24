@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public record SiteTypeDTO
-    {
-        public int SiteTypeID { get; set; }
+    (
+         int SiteTypeID ,
 
-        public string SiteTypeName { get; set; }
+        string SiteTypeName ,
 
 
 
-        public string SiteTypeDescreption { get; set; }
-        public float Price { get; set; }
+        string SiteTypeDescreption ,
+
+        float Price 
        
 
-    }
+    );
 }

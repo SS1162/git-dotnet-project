@@ -3,21 +3,21 @@
 namespace DTO
 {
     public record RegisterUserDTO
-    {
+    (
         [EmailAddress]
         [Required]
-        public string UserName { get; set; }
+         string UserName ,
         [Required]
-        public string UserPassward { get; set; }
+         string UserPassward ,
 
        
-        public string FirstName { get; set; }
+         string FirstName ,
 
 
-        public string LastName { get; set; }
+         string LastName ,
 
         [Phone]
-        public string Phone { get; set; }
+         string Phone 
 
-    }
+   );
 }

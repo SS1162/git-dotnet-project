@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public  record AddPlatformDTO
-    {
-        public string PlatformName { get; set; }
-    }
+    (
+        string PlatformName 
+    );
 }

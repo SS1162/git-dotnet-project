@@ -8,17 +8,17 @@ namespace DTO
 {
 
     public record BasicSiteDTO
-    {
-        public int BasicSiteID { get; set; }
-        public string SiteName { get; set; }
-        public string UserDescreption { get; set; }
-        public string PlatformName { get; set; }
+    (
+        int BasicSiteID ,
+        string SiteName ,
+        string UserDescreption ,
+        string PlatformName ,
 
-        public string SiteTypeName { get; set; }
+        string SiteTypeName ,
 
-        public int PlatformID { get; set; }
+        int PlatformID ,
 
-        public int SiteTypeID { get; set; }
-        public string SiteTypeDescreption { get; set; }
-    }
+        int SiteTypeID ,
+         string SiteTypeDescreption 
+    );
 }

@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public record Orders
-    {
+    public record OrdersDTO
+    (
         [Required]
-        public int UserID { get; set; }
+         int UserID,
 
         [Required]
-        public float OrderSum { get; set; }
+         float OrderSum,
 
         [Required]
-        public int BasicID { get; set; }
+         int BasicID,
 
         [Required]
-        public List<AddToCartDTO> Products { get; set; }
-    }
+         List<AddToCartDTO> Products
+        );
 }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public record MainCategoriesDTO
-    {
-        public int MainCategoryID { get; set; }
+    (
+         int MainCategoryID ,
 
-        public string MainCategoryName { get; set; }
-    }
+         string MainCategoryName 
+    );
 }

@@ -8,19 +8,18 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public record CategoryDTO
-    {
+    (
         [Required]
-        public int CategoryID { get; set; }
+         int CategoryID ,
 
         [Required]
-        public int MainCategoryID { get; set; }
+         int MainCategoryID ,
 
         [Required]
-        public string CategoryName { get; set; }
-
+         string CategoryName ,
         [Required]
-        public string ImgUrl { get; set; }
+         string ImgUrl ,
         [Required]
-        public string CategoryDescreption { get; set; }
-    }
+         string CategoryDescreption 
+    );
 }

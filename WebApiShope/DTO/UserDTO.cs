@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public record UserDTO
-    {
+    (
         [Required]
-        public string UserID { get; set; }
+         string UserID ,
 
         [EmailAddress]
         [Required]
-        public string UserName { get; set; }
+         string UserName ,
  
-        public string FirstName { get; set; }
+         string FirstName ,
 
 
-        public string LastName { get; set; }
+         string LastName ,
 
         [Phone]
-        public string Phone { get; set; }
+         string Phone 
 
-    }
+    );
 }

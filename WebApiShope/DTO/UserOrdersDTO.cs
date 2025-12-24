@@ -7,24 +7,20 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public  record UserOrdersDTO
-    {
-        public int UserID{ get; set; }
+    (
+         int UserID,
 
-        public int OrderID { get; set; }
-        public DateTime OrderDate { get; set; }
-        public float OrderSum { get; set; }
-        public string SiteName { get; set; }
-        public string SiteTypeName { get; set; }
-        public string SiteTypeDescreption { get; set; }
-        public string StatusName { get; set; }
-        public PlatformsDTO PlatformName { get; set; }
-        public int LenOrderItems { get; set; }
-        public string ReviewID { get; set; }
-        public float Stars { get; set; }
-        public string ReviewImg { get; set; }
-
-
-
-
-    }
+         int OrderID ,
+         DateTime OrderDate ,
+         float OrderSum ,
+         string SiteName ,
+         string SiteTypeName ,
+         string SiteTypeDescreption ,
+         string StatusName ,
+         PlatformsDTO PlatformName ,
+         int LenOrderItems ,
+         string ReviewID ,
+         float Stars ,
+         string ReviewImg 
+    );
 }

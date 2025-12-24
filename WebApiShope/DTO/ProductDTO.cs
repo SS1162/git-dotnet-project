@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public record ProductDTO
-    {
-        public int ProductsID { get; set; }
-        public int CategoryID { get; set; }
-        public string ProductsName { get; set; }
-        public string CategoryName { get; set; }
-        public string ImgUrl { get; set; }
-        public float Price { get; set; }
+    (
+         int ProductsID ,
+         int CategoryID ,
+         string ProductsName ,
+         string CategoryName ,
+         string ImgUrl ,
+         float Price 
 
-
+);
 
             
 
-    }
+    
 }

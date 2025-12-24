@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 namespace DTO
 {
      public record AddCategoryDTO
-    {
+    (
         [Required]
-        public int MainCategoryID { get; set; }
-        [Required]
-
-        public string CategoryName { get; set; }
+         int MainCategoryID ,
         [Required]
 
-        public string ImgUrl { get; set; }
+         string CategoryName,
         [Required]
-        public string CategoryDescreption { get; set; }
-    }
+
+         string ImgUrl,
+        [Required]
+         string CategoryDescreption
+    );
 }

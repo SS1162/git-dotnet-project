@@ -9,13 +9,13 @@ namespace Entities
 {
    
     public record LoginUserDTO
-    {
+    (
 
         [EmailAddress]
         [Required]
-        public string UserName { get; set; }
+         string UserName ,
         [Required]
-        public string UserPassward { get; set; }
+         string UserPassward 
 
-    }
+    );
 }

@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public record UpdateUserDTO
-    {
+    (
         [Required]
-        public short UserId { get; set; }
+         short UserId ,
         [Required]
-        public string Password { get; set; }
+         string Password ,
         [EmailAddress]
         [Required]
-        public string UserName { get; set; }
+         string UserName ,
 
-        public string FirstName { get; set; }
+         string FirstName ,
 
-        public string LastName { get; set; }
+         string LastName ,
         [Phone]
-        public string Phone { get; set; }
-    }
+         string Phone 
+    );
 }

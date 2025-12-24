@@ -7,25 +7,25 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public record OrderItemDTO
-    {
+    (
 
-        public int OrderItemID { get; set; }
+        int OrderItemID ,
 
-        public string UserDescription { get; set; }
+        string UserDescription ,
 
-        public string PlatformName { get; set; }
+        string PlatformName ,
 
-        public int ProductsName { get; set; }
+        int ProductsName ,
 
-        public float Price { get; set; }
+        float Price ,
 
-        public string CategoryName { get; set; }
+        string CategoryName ,
 
-        public string ImgUrl { get; set; }
+        string ImgUrl ,
 
-        public string CategoryDescreption { get; set; }
+        string CategoryDescreption 
 
     
 
-    }
+    );
 }

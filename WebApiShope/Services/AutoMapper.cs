@@ -70,6 +70,19 @@ namespace Services
 
             CreateMap<UpdateBasicSiteDTO, BasicSite>();
 
+            CreateMap<Order, OrdersDTO>().ReverseMap();
+
+            CreateMap<FullOrderDTO, Order>().ReverseMap();
+
+            CreateMap<Order, OrderItemDTO>();
+
+            CreateMap<AddReviewDTO, Review>();
+
+            CreateMap<Review, ReviewDTO>().ReverseMap();
+
+
+            CreateMap<SiteType, SiteTypeDTO>().ReverseMap();
+
         }
    
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DTO
 {
     public class ManegerMainCategoryDTO
-    {
-        public string MainCategoryName { get; set; }
-    }
+    (
+         string MainCategoryName 
+    );
 }

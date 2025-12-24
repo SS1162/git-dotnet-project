@@ -18,8 +18,22 @@ builder.Services.AddScoped<IPlatformsServise, PlatformsServise>();
 builder.Services.AddScoped<IProductsReposetory, ProductsReposetory>();
 
 
+builder.Services.AddScoped<IReviewsServise, ReviewsServise>();
+
+builder.Services.AddScoped<ISiteTypesRepository, SiteTypesRepository>();
+builder.Services.AddScoped<ICartsReposetory, CartsReposetory>();
+
+builder.Services.AddScoped<IOrdersServise, OrdersServise>();
+
+builder.Services.AddScoped<IOrdersReposetory, OrdersReposetory>();
+
+
+builder.Services.AddScoped<IReviewsReposetory, ReviewsReposetory>();
 
 builder.Services.AddScoped<IBasicSitesServise, BasicSitesServise>();
+
+
+builder.Services.AddScoped<ISiteTypesService, SiteTypesService>();
 
 
 builder.Services.AddScoped<IBasicSitesReposetory, BasicSitesReposetory>();

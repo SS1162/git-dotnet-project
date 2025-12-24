@@ -22,3 +22,15 @@ E:\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\En
 E:\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\refint\Entities.dll
 E:\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.pdb
 E:\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\ref\Entities.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\bin\Debug\net9.0\Entities.deps.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\bin\Debug\net9.0\Entities.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\bin\Debug\net9.0\Entities.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.AssemblyInfoInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.AssemblyInfo.cs
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.sourcelink.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\refint\Entities.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\Entities.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Entities\obj\Debug\net9.0\ref\Entities.dll

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj": {}
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj": {}
   },
   "projects": {
-    "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
-        "projectName": "Entities",
-        "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\330683525\\.nuget\\packages\\",
-        "outputPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\obj\\",
+        "projectUniqueName": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\DTO.csproj",
+        "projectName": "DTO",
+        "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\330683525\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj",
-        "projectName": "Repositories",
-        "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\330683525\\.nuget\\packages\\",
-        "outputPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\obj\\",
+        "projectUniqueName": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\330683525\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -92,15 +91,79 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj"
+              "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Entities\\Entities.csproj"
               }
             }
           }
@@ -150,24 +213,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj": {
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\330683525\\.nuget\\packages\\",
-        "outputPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\obj\\",
+        "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\330683525\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -176,15 +239,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj": {
-                "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj"
+              "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\DTO.csproj"
+              },
+              "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -205,6 +270,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Google.GenAI": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
             "zxcvbn-core": {
               "target": "Package",
               "version": "[7.0.92, )"
@@ -226,24 +299,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj": {
+    "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
         "projectName": "WebApiShope",
-        "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
-        "packagesPath": "C:\\Users\\330683525\\.nuget\\packages\\",
-        "outputPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\obj\\",
+        "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\330683525\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -252,15 +325,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj": {
-                "projectPath": "E:\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj"
+              "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\DTO\\DTO.csproj"
+              },
+              "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\Services.csproj"
               }
             }
           }
@@ -284,6 +359,14 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "NLog.MailKit": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -309,7 +392,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,6 +1,5 @@
-﻿using Entities;
+﻿using DTO;
 using Microsoft.AspNetCore.Mvc;
-using Repositories;
 using Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,42 +10,52 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-
-
-        private IOrdersService iordersService;
-        public OrdersController(IOrdersService iordersService)
+        IOrdersServise _OrdersServise;
+        public OrdersController(IOrdersServise _OrdersServise)
         {
-            this.iordersService = iordersService;
+            this._OrdersServise= _OrdersServise;
         }
-
-
-      
-
-
+        // GET: api/<OrdersController>
+        [HttpGet("{orderId}/orderItems")]
+        async public Task<ActionResult<IEnumerable<OrderItemDTO>>> Get([FromBody] int orderId)
+        {
+            var orderItems = await _OrdersServise.GetOrderItemsServise(orderId);
+            if (orderItems == null )
+            {
+                return NotFound($"No order items found for Order ID {orderId}");
+            }
+            return Ok(orderItems);
+        }
 
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
-        async public Task<ActionResult<Order>> Get(int id)
+        public async Task<ActionResult<FullOrderDTO>> GetByID(int id)
         {
-
-         Order  temp = await iordersService.ReturnOrderByIdService(id);
-            if (temp==null)
+            FullOrderDTO order = await _OrdersServise.GetByIdOrderServise(id);
+            if (order == null)
             {
                 return NoContent();
             }
-            return temp;
+            return Ok(order);
         }
 
-
+        // POST api/<OrdersController>
         [HttpPost]
-        async public Task<ActionResult<Order>> Post([FromBody] Order order )
+        public async Task<ActionResult<FullOrderDTO>> Post([FromBody] OrdersDTO order)
         {
+            FullOrderDTO orderThatCreated =await _OrdersServise.AddOrderServise(order);
+            return CreatedAtAction(nameof(GetByID), new { id = orderThatCreated.OrderID}, orderThatCreated);
 
-            Order temp= await iordersService.AddOrdersService(order);
-
-
-            return CreatedAtAction(nameof(Get), new { id = temp.OrderId }, temp);    
         }
 
+        // PUT api/<OrdersController>/5
+        [HttpPut("{id}")]
+        async public Task Put(int id, [FromBody] FullOrderDTO order)
+        {
+            await _OrdersServise.UpdateStatusServise(id, order);
+
+        }
+
+        
     }
 }

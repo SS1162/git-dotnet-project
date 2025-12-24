@@ -11,11 +11,25 @@ public partial class Order
 
     public DateOnly? OrderDate { get; set; }
 
-    public short OrderSum { get; set; }
+    public double OrderSum { get; set; }
 
     public short UserId { get; set; }
 
+    public short BasicId { get; set; }
+
+    public string FinalPrompt { get; set; }
+
+    public short? StatusId { get; set; }
+
+    public short? ReviewId { get; set; }
+
+    public virtual BasicSite Basic { get; set; }
+
     public virtual ICollection<OrdersItem> OrdersItems { get; set; } = new List<OrdersItem>();
+
+    public virtual Review Review { get; set; }
+
+    public virtual Status Status { get; set; }
 
     public virtual User User { get; set; }
 }

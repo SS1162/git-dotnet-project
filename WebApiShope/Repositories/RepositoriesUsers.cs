@@ -27,27 +27,34 @@ namespace Repositories
         //Get by ID  new user 
         public async Task<User?> GetByIDUsersRepositories(int id)
         {
+          
+            return  await _MyShop330683525Context.Users.FindAsync(Convert.ToInt16(id));
 
-           return  await _MyShop330683525Context.Users.FindAsync(id);
+        }
 
-        
-
+        public async Task<bool> CheckIfUsersInsistalrady(User user)
+        {
+           var resulte =await _MyShop330683525Context.Users.FirstOrDefaultAsync(x => x.UserName == user.UserName);
+            if(resulte == null)
+            {
+                return true;
+            }
+            return false;
         }
 
         ////Post login user
 
-        public async Task<User?> LoginUsersRepositories(LoginUser LogInUser)
+        public async Task<User?> LoginUsersRepositories(User LogInUser)
         {
             var user = await _MyShop330683525Context.Users.FirstOrDefaultAsync(x => LogInUser.UserName == x.UserName &&
-            LogInUser.UserPassward == x.Password);
+            LogInUser.Password == x.Password);
             return user;
         }
 
         //Put 
-        public async void UpdateUsersRepositories(int id, User user)
+        public async Task UpdateUsersRepositories(int id, User user)
         {
-            //var userForUpdate= await _MyShop330683525Context.Users.FindAsync(id);
-            // userForUpdate.
+            
             _MyShop330683525Context.Users.Update(user);
             _MyShop330683525Context.SaveChanges();
 

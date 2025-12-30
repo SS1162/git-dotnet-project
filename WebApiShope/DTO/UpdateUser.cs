@@ -11,7 +11,7 @@ namespace DTO
     (
         [Required]
          short UserId ,
-        [Required]
+
          string Password ,
         [EmailAddress]
         [Required]

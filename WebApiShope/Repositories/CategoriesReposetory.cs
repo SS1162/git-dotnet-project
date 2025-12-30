@@ -15,9 +15,19 @@ namespace Repositories
         {
             this._DBContext = _DBContext;
         }
-        async public Task<IEnumerable<Category>> GetCategoriesReposetory(int paging, int limit, string? search, int? minPrice, int? MaxPrice, int? mainCategoryID)
+        async public Task<(IEnumerable<Category>items,int totalCount)> GetCategoriesReposetory(int numberOfPages, int mainCategoryID, int pageSize, string? search)
         {
-            return await _DBContext.Categories.ToListAsync();
+
+            var quary = _DBContext.Categories.Where(
+                category =>
+                (category.MainCategoryId == mainCategoryID) &&
+                ((search == null) ? (true) : (category.CategoryName.Contains(search) || category.CategoryDescreption.Contains(search))))
+                .OrderBy(x=>x.CategoryName);
+
+            int totalcount = await quary.CountAsync();
+            List<Category> items =await  quary.Skip((numberOfPages - 1) * pageSize).Take(pageSize).ToListAsync();
+
+            return (items, totalcount);
         }
 
         async public Task<Category?> GetByIDCategoriesReposetory(int id)
@@ -55,5 +65,7 @@ namespace Repositories
             return false;
 
         }
+
+
     }
 }

@@ -12,9 +12,9 @@ namespace Services
     public class MainCategoriesServise :IMainCategoriesServise
     {
 
-        IMainCategoryReposetory _IMainCategoryReposetory;
+        IMainCategoriesReposetory _IMainCategoryReposetory;
         IMapper _Imapper;
-        public MainCategoriesServise(IMainCategoryReposetory _IMainCategoryReposetory, IMapper _Imapper)
+        public MainCategoriesServise(IMainCategoriesReposetory _IMainCategoryReposetory, IMapper _Imapper)
         {
             this._IMainCategoryReposetory = _IMainCategoryReposetory;
             this._Imapper = _Imapper;

@@ -16,6 +16,11 @@ namespace Repositories
             this._DBContext = _DBContext;
         }
 
+        async public Task<Platform?> GetByIDPlatformsReposetory(int id)
+        {
+            return await _DBContext.Platforms.FirstOrDefaultAsync(x => x.PlatformId == id);
+        }
+
         async public Task<IEnumerable<Platform>> GetPlatformsReposetory()
         {
             return await _DBContext.Platforms.ToListAsync();

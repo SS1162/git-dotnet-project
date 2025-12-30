@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public record PasswordDTO
-    (
-         string UserPassward 
+    public class PasswordDTO
+    {
+        public string UserPassward { get; set; }
+
+
+       }
+         
         
-    );
+    
 }

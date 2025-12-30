@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\promptsshop\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED0A37A0-83C7-4C32-9020-D45AB55477A5}|Tests\\Tests.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\promptsshop\\project_from_git\\git-dot.net-project\\webapishope\\tests\\integrationtestfixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0A37A0-83C7-4C32-9020-D45AB55477A5}|Tests\\Tests.csproj|solutionrelative:tests\\integrationtestfixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\promptsshop\\project_from_git\\git-dot.net-project\\webapishope\\services\\iordersservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|solutionrelative:services\\iordersservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED0A37A0-83C7-4C32-9020-D45AB55477A5}|Tests\\Tests.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\promptsshop\\project_from_git\\git-dot.net-project\\webapishope\\tests\\ordersreposetoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0A37A0-83C7-4C32-9020-D45AB55477A5}|Tests\\Tests.csproj|solutionrelative:tests\\ordersreposetoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\promptsshop\\project_from_git\\git-dot.net-project\\webapishope\\services\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F29AEE33-D7EE-49A9-8AEC-BE604D506FE1}|Services\\Services.csproj|solutionrelative:services\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\promptsshop\\project_from_git\\git-dot.net-project\\webapishope\\webapishope\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56ABC19C-21A0-4AFF-8A93-7EB3106DEFF3}|WebApiShope\\WebApiShope.csproj|solutionrelative:webapishope\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED0A37A0-83C7-4C32-9020-D45AB55477A5}|Tests\\Tests.csproj|c:\\users\\1\\dropbox\\my pc (desktop-r5radsp)\\desktop\\promptsshop\\project_from_git\\git-dot.net-project\\webapishope\\tests\\ordersrepofixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0A37A0-83C7-4C32-9020-D45AB55477A5}|Tests\\Tests.csproj|solutionrelative:tests\\ordersrepofixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,55 +42,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IOrdersServise.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\IOrdersServise.cs",
-              "RelativeDocumentMoniker": "Services\\IOrdersServise.cs",
-              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\IOrdersServise.cs",
-              "RelativeToolTip": "Services\\IOrdersServise.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:52:24.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "WebApiShope\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "WebApiShope\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAADYAAABAAAAAAAAAAA==",
+              "Title": "IntegrationTestFixture.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Tests\\IntegrationTestFixture.cs",
+              "RelativeDocumentMoniker": "Tests\\IntegrationTestFixture.cs",
+              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Tests\\IntegrationTestFixture.cs",
+              "RelativeToolTip": "Tests\\IntegrationTestFixture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:37:40.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Program.cs",
-              "RelativeDocumentMoniker": "WebApiShope\\Program.cs",
-              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\Program.cs",
-              "RelativeToolTip": "WebApiShope\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:04:14.518Z",
+              "WhenOpened": "2025-12-30T23:50:05.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AutoMapper.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\AutoMapper.cs",
-              "RelativeDocumentMoniker": "Services\\AutoMapper.cs",
-              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Services\\AutoMapper.cs",
-              "RelativeToolTip": "Services\\AutoMapper.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAQwEoAAAAiAAAAAAAAAA==",
+              "Title": "OrdersRepoFixture.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Tests\\OrdersRepoFixture.cs",
+              "RelativeDocumentMoniker": "Tests\\OrdersRepoFixture.cs",
+              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Tests\\OrdersRepoFixture.cs",
+              "RelativeToolTip": "Tests\\OrdersRepoFixture.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAswBwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T22:51:56.331Z",
+              "WhenOpened": "2025-12-30T23:37:49.103Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersReposetoryUnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Tests\\OrdersReposetoryUnitTest.cs",
+              "RelativeDocumentMoniker": "Tests\\OrdersReposetoryUnitTest.cs",
+              "ToolTip": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Tests\\OrdersReposetoryUnitTest.cs",
+              "RelativeToolTip": "Tests\\OrdersReposetoryUnitTest.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T23:37:27.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

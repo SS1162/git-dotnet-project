@@ -10,25 +10,32 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        ICategoriesServise _ICategoriesServise;
-        public CategoriesController(ICategoriesServise _ICategoriesServise) {
-            this._ICategoriesServise = _ICategoriesServise;
+        ICategoriesServise _categoriesServise;
+        public CategoriesController(ICategoriesServise categoriesServise) {
+            this._categoriesServise = categoriesServise;
         }
         // GET: api/<CategoryController>
         [HttpGet]
-        async public Task<ActionResult<IEnumerable<CategoryDTO>>> Get(int paging, int limit, string? search, int? minPrice, int? MaxPrice, int? mainCategoryID)
+        async public Task<ActionResult<ResponePage<CategoryDTO>>> GetCategoriesByMainCategoryID(int numberOfPages, int mainCategoryID, int pageSize, string? search)
         {
-            IEnumerable<CategoryDTO> categoryList=await _ICategoriesServise.GetCategoriesServise(paging, limit, search, minPrice, MaxPrice, mainCategoryID);
-            if (categoryList == null)
+            Resulte<ResponePage<CategoryDTO>> respone = await _categoriesServise.GetCategoriesServise(numberOfPages, mainCategoryID, pageSize, search);
+            if(!respone.IsSuccess)
+            {
+                return BadRequest(respone.ErrorMessage);
+            }
+            if (!respone.Data.Data.Any())
+            {
                 return NoContent();
-            return Ok(categoryList);
+            }
+           
+            return Ok(respone.Data);
         }
 
         // GET api/<CategoryController>/5
         [HttpGet("{id}")]
-        async public Task<ActionResult<CategoryDTO>> GetByID(int id)
+        async public Task<ActionResult<CategoryDTO>> GetCategoryByCategoryID(int id)
         {
-            CategoryDTO category =await _ICategoriesServise.GetByIDCategoriesServise(id);
+            CategoryDTO category =await _categoriesServise.GetByIDCategoriesServise(id);
             if(category==null)
             {
                 return NoContent();
@@ -38,24 +45,24 @@ namespace WebApiShope.Controllers
 
         // POST api/<CategoryController>
         [HttpPost]
-       async  public Task<ActionResult<CategoryDTO>> Post([FromBody] AddCategoryDTO category)
+       async  public Task<ActionResult<CategoryDTO>> AddCategory([FromBody] AddCategoryDTO category)
         {
-            CategoryDTO categoryConstructedObject=await _ICategoriesServise.AddCategoriesServise(category);
-            return CreatedAtAction(nameof(GetByID), new { id = categoryConstructedObject.CategoryID }, categoryConstructedObject);
+            CategoryDTO categoryConstructedObject=await _categoriesServise.AddCategoriesServise(category);
+            return CreatedAtAction(nameof(GetCategoryByCategoryID), new { id = categoryConstructedObject.CategoryID }, categoryConstructedObject);
         }
 
         // PUT api/<CategoryController>/5
         [HttpPut("{id}")]
-        async public Task Put(int id, [FromBody] CategoryDTO category)
+        async public Task UpdateCategory(int id, [FromBody] CategoryDTO category)
         {
-            await _ICategoriesServise.UpdateCategoriesServise(id, category);
+            await _categoriesServise.UpdateCategoriesServise(id, category);
         }
 
         // DELETE api/<CategoryController>/5
         [HttpDelete("{id}")]
-        async public Task<ActionResult> Delete(int id )
+        async public Task<ActionResult> DeleteCategoty(int id )
         {
-            bool flag=await _ICategoriesServise.DeleteIDCategoriesServise(id);
+            bool flag=await _categoriesServise.DeleteIDCategoriesServise(id);
             if(flag)
             {
                 return Ok();

@@ -8,5 +8,6 @@ namespace Repositories
         Task<bool> DeletePlatformReposetory(int id);
         Task<IEnumerable<Platform>> GetPlatformsReposetory();
         Task UpdatePlatformReposetory(int id, Platform platform);
+        Task<Platform?> GetByIDPlatformsReposetory(int id);
     }
 }

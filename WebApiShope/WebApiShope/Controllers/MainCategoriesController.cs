@@ -10,18 +10,18 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class MainCategoriesController : ControllerBase
     {
-        IMainCategoriesServise _IMainCategoriesServise;
-        public MainCategoriesController(IMainCategoriesServise _mainCategoriesServise)
+        IMainCategoriesServise _mainCategoriesServise;
+        public MainCategoriesController(IMainCategoriesServise mainCategoriesServise)
         {
-            this._IMainCategoriesServise = _mainCategoriesServise;
+            this._mainCategoriesServise = mainCategoriesServise;
         }
 
         // GET: api/<MainCategoriesController>
         [HttpGet]
         async public Task<ActionResult<IEnumerable<MainCategoriesDTO>>> Get()
         {
-            IEnumerable<MainCategoriesDTO> MainCategoriesList = await _IMainCategoriesServise.GetMainCategoriesServises();
-            if (MainCategoriesList == null)
+            IEnumerable<MainCategoriesDTO> MainCategoriesList = await _mainCategoriesServise.GetMainCategoriesServises();
+            if (MainCategoriesList.Count()==0)
             {
                 return NoContent();
             }
@@ -33,7 +33,7 @@ namespace WebApiShope.Controllers
         [HttpPost]
         async public Task<ActionResult<MainCategoriesDTO>> Post([FromBody] ManegerMainCategoryDTO manegerMainCategory)
         {
-            MainCategoriesDTO mainCategoryConstructedObject = await _IMainCategoriesServise.AddMainCategoriesServises(manegerMainCategory);
+            MainCategoriesDTO mainCategoryConstructedObject = await _mainCategoriesServise.AddMainCategoriesServises(manegerMainCategory);
             return CreatedAtAction(nameof(Get), new { id = mainCategoryConstructedObject.MainCategoryID }, mainCategoryConstructedObject); 
         }
 
@@ -41,14 +41,14 @@ namespace WebApiShope.Controllers
         [HttpPut("{id}")]
         async public Task Put(int id, [FromBody] MainCategoriesDTO mainCategory)
         {
-            await _IMainCategoriesServise.UpdateMainCategoriesServises(id, mainCategory);
+            await _mainCategoriesServise.UpdateMainCategoriesServises(id, mainCategory);
         }
 
         // DELETE api/<MainCategoriesController>/5
         [HttpDelete("{id}")]
         async public Task<ActionResult> Delete(int id)
         {
-            bool flag = await _IMainCategoriesServise.DeleteMainCategoriesServises(id);
+            bool flag = await _mainCategoriesServise.DeleteMainCategoriesServises(id);
             if (flag)
             {
                 return Ok();

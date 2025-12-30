@@ -22,7 +22,7 @@ namespace Services
             CreateMap<RegisterUserDTO, User>()
                 .ForMember(
                 dest=>dest.Password,
-                opts=>opts.MapFrom(src=>src.UserPassward));
+                opts=>opts.MapFrom(src=>src.UserPassword));
 
             CreateMap<LoginUserDTO, User>().ForMember(
                 dest => dest.Password,
@@ -82,6 +82,13 @@ namespace Services
 
 
             CreateMap<SiteType, SiteTypeDTO>().ReverseMap();
+
+            CreateMap<CartItem, CartItemDTO>().ReverseMap();
+
+            CreateMap<AddToCartDTO, CartItem>();
+
+            
+
 
         }
    

@@ -1,5 +1,6 @@
 ﻿using DTO;
 using Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 using System.Threading.Tasks;
@@ -12,19 +13,19 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class BasicSiteController : ControllerBase
     {
-        IBasicSitesServise _IBasicSitesServise;
-        public BasicSiteController(IBasicSitesServise _IBasicSitesServise)
+        IBasicSitesServise _basicSitesServise;
+        public BasicSiteController(IBasicSitesServise basicSitesServise)
         {
-            this._IBasicSitesServise = _IBasicSitesServise;
+            this._basicSitesServise = basicSitesServise;
 
         }
 
       
         // GET api/<BasicSiteController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BasicSiteDTO>> GetByID(int id)
+        public async Task<ActionResult<BasicSiteDTO>> GetBasicSiteByID(int id)
         {
-            BasicSiteDTO basicSite = await _IBasicSitesServise.GetByIDbasicSiteServise(id);
+            BasicSiteDTO basicSite = await _basicSitesServise.GetByIDbasicSiteServise(id);
             if (basicSite == null)
             {
                 return NoContent();
@@ -34,18 +35,29 @@ namespace WebApiShope.Controllers
 
         // POST api/<BasicSiteController>
         [HttpPost]
-        async public Task<ActionResult<BasicSiteDTO>> Post([FromBody] AddBasicSiteDTO basicSite)
+        async public Task<ActionResult<BasicSiteDTO>> AddBasicSite([FromBody] AddBasicSiteDTO basicSite)
         {
-            BasicSiteDTO basicSiteConstructedObject = await _IBasicSitesServise.AddBasicSiteServise(basicSite);
-            return CreatedAtAction(nameof(GetByID), new { id = basicSiteConstructedObject.BasicSiteID }, basicSiteConstructedObject);
+           Resulte<BasicSiteDTO> basicSiteConstructedObject = await _basicSitesServise.AddBasicSiteServise(basicSite);
+            if (!basicSiteConstructedObject.IsSuccess)
+            {
+                return BadRequest(basicSiteConstructedObject.ErrorMessage);
+            }
+            else
+                return CreatedAtAction(nameof(GetBasicSiteByID), new { id = basicSiteConstructedObject.Data.BasicSiteID }, basicSiteConstructedObject.Data);
         
         }
 
         // PUT api/<BasicSiteController>/5
         [HttpPut("{id}")]
-        async public Task Put(int id, [FromBody] UpdateBasicSiteDTO basicSite)
+        async public Task<ActionResult> UpdateBasicSite(int id, [FromBody] UpdateBasicSiteDTO basicSite)
         {
-            await _IBasicSitesServise.UpdateBasicSiteServise(id, basicSite);
+            Resulte<BasicSiteDTO?> resulteFromController = await _basicSitesServise.UpdateBasicSiteServise(id, basicSite);
+            if (!resulteFromController.IsSuccess)
+            {
+                return BadRequest(resulteFromController.ErrorMessage);
+            }
+            else return Ok();
+
         }
 
        

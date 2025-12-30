@@ -11,12 +11,18 @@ namespace Repositories
     {
 
         MyShop330683525Context _DBcontext;
-        ICartsReposetory _CartsReposetory;
+        ICartsReposetory _cartsReposetory;
 
-        public OrdersReposetory(MyShop330683525Context _DBcontext, ICartsReposetory _CartsReposetory)
+        public OrdersReposetory(MyShop330683525Context _DBcontext, ICartsReposetory cartsReposetory)
         {
             this._DBcontext = _DBcontext;
-            this._CartsReposetory = _CartsReposetory;
+            this._cartsReposetory = cartsReposetory;
+        }
+
+        public OrdersReposetory(MyShop330683525Context _DBcontext)
+        {
+            this._DBcontext = _DBcontext;
+       
         }
 
         public async Task<Order> GetOrderByIdReposetory(int id)
@@ -30,7 +36,7 @@ namespace Repositories
 
             await _DBcontext.Orders.AddAsync(order);
             await _DBcontext.SaveChangesAsync();
-            await _CartsReposetory.DeleteUserCartReposetory((List<CartItem>)order.OrdersItems);
+            await _cartsReposetory.DeleteUserCartReposetory(order.UserId);
             return order;
         }
 
@@ -48,7 +54,11 @@ namespace Repositories
                 .Where(oi => oi.OrderId == orderId)
                 .ToListAsync();
         }
+
+
+
+
     }
 
 }
-}
+

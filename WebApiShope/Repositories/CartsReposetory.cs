@@ -57,16 +57,17 @@ namespace Repositories
 
         }
         //       מוחקת סל ומוסיפה הזמנות
-        public async Task DeleteUserCartReposetory(List<CartItem> cartList)
+        public async Task DeleteUserCartReposetory(int userID)
         {
-            
-            for (int i = 0; i < cartList.Count(); i++)
+            List<CartItem> itemList = await _DBcontext.CartItems.Where(x => x.UserId == userID).ToListAsync();
+            for (int i = 0; i < itemList.Count(); i++)
             {
-                _DBcontext.CartItems.Remove(cartList[i]);
+
+                _DBcontext.CartItems.Remove(itemList[i]);
             }
             await _DBcontext.SaveChangesAsync();
         }
-        public async Task<bool> DeleteUserCartReposetory(int Id)
+        public async Task<bool> DeleteUserCartItemReposetory(int Id)
         {
             var cartItemsObjectToDelete = await _DBcontext.CartItems.FirstOrDefaultAsync(x => x.CartId == Id);
 

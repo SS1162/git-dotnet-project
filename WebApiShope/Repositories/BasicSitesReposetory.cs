@@ -11,9 +11,9 @@ namespace Repositories
     public class BasicSitesReposetory : IBasicSitesReposetory
     {
         MyShop330683525Context _DBContext;
-        public BasicSitesReposetory(MyShop330683525Context _DBContext)
+        public BasicSitesReposetory(MyShop330683525Context DBContext)
         {
-            this._DBContext = _DBContext;
+            this._DBContext = DBContext;
         }
         async public Task<BasicSite?> GetByIDBasicSiteReposetory(int id)
         {

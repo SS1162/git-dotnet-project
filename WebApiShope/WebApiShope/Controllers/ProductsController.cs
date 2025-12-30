@@ -11,20 +11,26 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        IProductsServise _IProductsServise;
+        IProductsServise _productsServise;
 
-        public ProductsController(IProductsServise _IProductsServise)
+        public ProductsController(IProductsServise productsServise)
         {
-            this._IProductsServise = _IProductsServise; 
+            this._productsServise = productsServise; 
         }
         // GET: api/<ProductsController>
         [HttpGet]
-        async public Task<ActionResult<IEnumerable<ProductDTO>>> Get(int categoryID)
+        async public Task<ActionResult<Resulte<ResponePage<ProductDTO>>>> Get(int categoryID, int numOfPages, int PageSize, string? search, int? minPrice, int? MaxPrice, bool? orderByPrice, bool? desc)
         {
-            IEnumerable<ProductDTO> productsList = await _IProductsServise.GetProductsServise(categoryID);
-            if (productsList == null)
+            Resulte<ResponePage<ProductDTO>> respone = await _productsServise.GetProductsServise( categoryID,  numOfPages,  PageSize,  search,  minPrice,   MaxPrice,  orderByPrice,   desc);
+           if(!respone.IsSuccess)
+            {
+                return BadRequest(respone.ErrorMessage);
+            }
+           if(!respone.Data.Data.Any())
+            {
                 return NoContent();
-            return Ok(productsList);
+            }
+            return Ok(respone.Data);
         }
 
     
@@ -33,7 +39,7 @@ namespace WebApiShope.Controllers
         async public Task<ActionResult<ProductDTO>> Post([FromBody] AddProductDTO product)
         {
 
-            ProductDTO productConstructedObject = await _IProductsServise.AddProductServise(product);
+            ProductDTO productConstructedObject = await _productsServise.AddProductServise(product);
             return CreatedAtAction(nameof(Get), new { id = productConstructedObject.ProductsID }, productConstructedObject);
         
         }
@@ -42,7 +48,7 @@ namespace WebApiShope.Controllers
         [HttpPut("{id}")]
         async public Task Put(int id, [FromBody] UpdateProductDTO productToUpdate )
         {
-            await _IProductsServise.UpdateProductServise(id, productToUpdate);
+            await _productsServise.UpdateProductServise(id, productToUpdate);
 
         }
 
@@ -51,7 +57,7 @@ namespace WebApiShope.Controllers
         async public Task<ActionResult> Delete(int id)
         {
 
-            bool flag = await _IProductsServise.DeleteIDProductServise(id);
+            bool flag = await _productsServise.DeleteIDProductServise(id);
             if (flag)
             {
                 return Ok();

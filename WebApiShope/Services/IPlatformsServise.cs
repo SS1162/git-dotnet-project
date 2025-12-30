@@ -1,4 +1,5 @@
 ﻿using DTO;
+using Entities;
 
 namespace Services
 {
@@ -8,5 +9,6 @@ namespace Services
         Task<bool> DeletePlatformServise(int id);
         Task<IEnumerable<PlatformsDTO>> GetPlatformsServise();
         Task UpdatePlatformServise(int id, PlatformsDTO platform);
+      
     }
 }

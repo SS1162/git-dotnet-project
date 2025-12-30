@@ -15,17 +15,39 @@ namespace Services
     {
         ICategoriesReposetory _ICategoriesReposetory;
         IMapper _Imapper;
-        public CategoriesServise(ICategoriesReposetory _ICategoriesReposetory, IMapper _Imapper)
+       IMainCategoriesReposetory _mainCategoriesReposetory;   
+        public CategoriesServise(ICategoriesReposetory _ICategoriesReposetory, IMapper _Imapper ,
+              IMainCategoriesReposetory mainCategoriesReposetory)
         {
             this._Imapper = _Imapper;
             this._ICategoriesReposetory = _ICategoriesReposetory;
+            this._mainCategoriesReposetory = mainCategoriesReposetory;
         }
 
-        async public Task<IEnumerable<CategoryDTO>> GetCategoriesServise(int paging, int limit, string? search, int? minPrice, int? MaxPrice, int? mainCategoryID)
+        async public Task<Resulte<ResponePage<CategoryDTO>>> GetCategoriesServise(int numberOfPages, int mainCategoryID, int pageSize, string? search)
         {
+            MainCategory? checkIfMainCategoryInsist = await _mainCategoriesReposetory.GetByIdMainCategoriesReposetoty(mainCategoryID);
+            if (checkIfMainCategoryInsist == null)
+            {
+                Resulte<ResponePage<CategoryDTO>>.Failure("Main category id isn't insist");
+            }
+            if (pageSize>50)
+            {
+                Resulte<ResponePage<CategoryDTO>>.Failure("The page Size is too big");
+            }
 
-            List<Category> CategoryFromReposetory = (List<Category>)await _ICategoriesReposetory.GetCategoriesReposetory(paging, limit, search, minPrice, MaxPrice, mainCategoryID);
-            return _Imapper.Map<List<CategoryDTO>>(CategoryFromReposetory);
+            (IEnumerable<Category>,int) responeFromReposetory= await _ICategoriesReposetory.GetCategoriesReposetory( numberOfPages,  mainCategoryID, pageSize,  search);
+
+            ResponePage<CategoryDTO> responeToClient = new ResponePage<CategoryDTO>();
+            responeToClient.Data = _Imapper.Map<IEnumerable<CategoryDTO>>(responeFromReposetory.Item1);
+            responeToClient.TotalItems= responeFromReposetory.Item2;
+            responeToClient.CurrentPage = numberOfPages;
+            responeToClient.PageSize = pageSize;
+            responeToClient.HasPreviousPage = numberOfPages > 0;
+            responeToClient.HasNextPage = (numberOfPages - 1) * pageSize > responeFromReposetory.Item2;
+
+
+            return Resulte < ResponePage < CategoryDTO >> .Success(responeToClient);
         }
 
         async public Task<CategoryDTO> GetByIDCategoriesServise(int id)

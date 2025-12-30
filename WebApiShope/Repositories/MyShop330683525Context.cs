@@ -12,6 +12,11 @@ public partial class MyShop330683525Context : DbContext
         : base(options)
     {
     }
+    
+    public MyShop330683525Context()
+    {
+
+    }
 
     public virtual DbSet<BasicSite> BasicSites { get; set; }
 

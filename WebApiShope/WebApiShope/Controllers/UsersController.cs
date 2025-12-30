@@ -26,7 +26,17 @@ namespace WebApiShope.Controllers
             this._IPasswordsService = ipasswordsService;
             this._logger = _logger;  
         }
-     
+
+        [HttpGet]
+        public async Task<bool> CheckIfTheUserInsist(string userName)
+        {
+            return await _IUsersService.CheckIfUsersInsistalradyServise(userName);
+        }
+
+
+
+
+
 
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
@@ -72,32 +82,41 @@ namespace WebApiShope.Controllers
 
 
             PasswordDTO passwordForCheckStrength = new PasswordDTO();
-            passwordForCheckStrength.UserPassward = userFromUser.UserPassward;
+            passwordForCheckStrength.UserPassward = userFromUser.UserPassword;
             if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength) <2)
             {
                 return BadRequest();
             }
-
+           
             UserDTO userFromDatabase = await _IUsersService.AddNewUsersService(userFromUser);
-            if (userFromDatabase == null)
+            if (userFromDatabase==null)
+            {
                 return BadRequest();
-            return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserID }, userFromDatabase);
+            }
+                return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserID }, userFromDatabase);
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-
         async public Task<ActionResult> Put(int id, [FromBody] UpdateUserDTO user)
         {
-            //לחסום החלפה של שם משתמש
+
+
+            if (id != user.UserId)
+                return BadRequest("the user.userID and the user are diffrent ");
+         
             PasswordDTO passwordForCheckStrength = new PasswordDTO();
             passwordForCheckStrength.UserPassward = user.Password;
             if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength) < 2)
             {
-                return BadRequest();
+                return BadRequest("the password is too low");
             }
 
 
-            await _IUsersService.UpdateUsersService(id, user);
+            bool flag =await _IUsersService.UpdateUsersService(id, user);
+            if(!flag)
+            {
+                return BadRequest();
+            }
             return Ok();
         }
 

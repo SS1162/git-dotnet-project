@@ -7,6 +7,6 @@ namespace Services
         Task<UserDTO> AddNewUsersService(RegisterUserDTO registerUser);
         Task<UserDTO> GetByIDUsersService(int id);
         Task<UserDTO> LoginUsersService(LoginUserDTO logInUser);
-        Task UpdateUsersService(int id, UpdateUserDTO userToUpdate);
+        Task<bool> UpdateUsersService(int id, UpdateUserDTO userToUpdate);
     }
 }

@@ -13,7 +13,7 @@ namespace Repositories
             this._MyShop330683525Context = _MyShop330683525Context;
         }
 
-        //M:\web api\project_from_git\git-dot.net-project\WebApiShope\Repositories\users.txt
+        
         //Post new user 
         async public Task<User> AddNewUsersRepositories(User user)
         {
@@ -42,7 +42,7 @@ namespace Repositories
             return false;
         }
 
-        ////Post login user
+        
 
         public async Task<User?> LoginUsersRepositories(User LogInUser)
         {

@@ -36,16 +36,14 @@ namespace WebApiShope.Controllers
             UserDTO user = await _IUsersService.GetByIDUsersService(id);
             if (user == null)
             {
-                return NoContent();
+                return NotFound("User not found");
             }
             else
                 return user;
         }
 
 
-        // POST api/<UsersController>
-
-        //POST request
+        
 
         [HttpPost("loginFunction")]
         
@@ -93,12 +91,13 @@ namespace WebApiShope.Controllers
             passwordForCheckStrength.UserPassward = user.Password;
             if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength) < 2)
             {
-                return BadRequest();
+                return BadRequest("Password is not strong enough");
             }
 
-
-            await _IUsersService.UpdateUsersService(id, user);
-            return Ok();
+            bool isUpdated = await _IUsersService.UpdateUsersService(id, user);
+            if (!isUpdated)
+                return NotFound("User not found");
+            return Ok("User updated successfully");
         }
 
 

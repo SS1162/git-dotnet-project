@@ -48,12 +48,15 @@ namespace Services
             return  userToConroller;
         }
 
-         async public Task UpdateUsersService(int id, UpdateUserDTO userToUpdate)
+         async public Task<bool> UpdateUsersService(int id, UpdateUserDTO userToUpdate)
         {
+            User userFromRepo = await _irepositoriesUsers.GetByIDUsersRepositories(id);
+            if (userFromRepo == null)
+                return false;
 
-
-            User userToRposetory = _Imapper.Map<User>(userToUpdate);
-            await _irepositoriesUsers.UpdateUsersRepositories(id, userToRposetory);
+            User userToRepository = _Imapper.Map<User>(userToUpdate);
+            await _irepositoriesUsers.UpdateUsersRepositories(id, userToRepository);
+            return true;
         }
 
     }

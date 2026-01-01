@@ -11,8 +11,7 @@ namespace DTO
     (
         [Required]
          int UserID,
-
-        [Required]
+         [Required]
          float OrderSum,
 
         [Required]

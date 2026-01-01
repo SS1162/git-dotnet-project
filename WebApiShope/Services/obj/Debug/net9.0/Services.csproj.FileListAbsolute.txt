@@ -56,3 +56,43 @@ C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\refint\Services.dll
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.pdb
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\ref\Services.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.sourcelink.json
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\refint\Services.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Services.deps.json
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Services.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Services.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\DTO.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Entities.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Repositories.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\DTO.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Repositories.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Entities.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+E:\לסמינר\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\ref\Services.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Services.deps.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Services.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Services.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\DTO.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Entities.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Repositories.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\DTO.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Repositories.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\bin\Debug\net9.0\Entities.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.sourcelink.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\refint\Services.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\Services.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\Services\obj\Debug\net9.0\ref\Services.dll

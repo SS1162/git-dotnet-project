@@ -4,14 +4,18 @@ namespace Repositories
 {
     public interface ICartsReposetory
     {
-        Task ChangeProductToNotValidReposetory(int Id, CartItem cartItem);
-        Task ChangeProductToValidReposetory(int Id, CartItem cartItem);
+        Task ChangeProductToNotValidReposetory(int Id);
+        Task ChangeProductToValidReposetory(int Id);
         Task<CartItem> CreateUserCartReposetory(CartItem cartItem);
-        Task<bool> DeleteUserCartReposetory(int Id);
+        Task DeleteUserCartItemReposetory(int Id);
+        Task DeleteUserCartReposetory(int userID);
         Task<CartItem?> GetByIdReposetory(int id);
         Task<IEnumerable<CartItem>> GetByIDUserCartItemsReposetory(int Id);
         Task<CartItem?> GetByUserAndProductIdReposetory(int userId, int productId);
-        Task UpdateUserCartReposetory(CartItem cartItem);
-        Task DeleteUserCartReposetory(List<CartItem> cartList);
+
+        Task<CartItem?> CheckIfHasPlatformByPlatformID(int Id);
+
+        Task<CartItem?> CheckIfHasProductByProductID(int Id);
+
     }
 }

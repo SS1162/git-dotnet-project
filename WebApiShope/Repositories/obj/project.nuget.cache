@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S5xvOQAZeVA=",
+  "dgSpecHash": "bcOJexyMP/Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj",
+  "projectFilePath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\server\\git-dot.net-project\\WebApiShope\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

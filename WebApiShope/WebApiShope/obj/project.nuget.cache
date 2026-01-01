@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k7M2bH9/etU=",
+  "dgSpecHash": "kUdf5nqH3Cg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\project_from_git\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
+  "projectFilePath": "C:\\Users\\1\\Dropbox\\My PC (DESKTOP-R5RADSP)\\Desktop\\promptsShop\\server\\git-dot.net-project\\WebApiShope\\WebApiShope\\WebApiShope.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

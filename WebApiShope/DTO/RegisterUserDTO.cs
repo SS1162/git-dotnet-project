@@ -8,7 +8,7 @@ namespace DTO
         [Required]
          string UserName ,
         [Required]
-         string UserPassward ,
+         string UserPassword ,
 
        
          string FirstName ,

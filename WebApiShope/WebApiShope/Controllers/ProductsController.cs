@@ -11,52 +11,66 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        IProductsServise _IProductsServise;
+        IProductsServise _productsServise;
 
-        public ProductsController(IProductsServise _IProductsServise)
+        public ProductsController(IProductsServise productsServise)
         {
-            this._IProductsServise = _IProductsServise; 
+            this._productsServise = productsServise; 
         }
         // GET: api/<ProductsController>
         [HttpGet]
-        async public Task<ActionResult<IEnumerable<ProductDTO>>> Get(int categoryID)
+        async public Task<ActionResult<Resulte<ResponePage<ProductDTO>>>> Get(int categoryID, int numOfPages, int PageSize, string? search, int? minPrice, int? MaxPrice, bool? orderByPrice, bool? desc)
         {
-            IEnumerable<ProductDTO> productsList = await _IProductsServise.GetProductsServise(categoryID);
-            if (productsList == null)
+            Resulte<ResponePage<ProductDTO>> respone = await _productsServise.GetProductsServise( categoryID,  numOfPages,  PageSize,  search,  minPrice,   MaxPrice,  orderByPrice,   desc);
+           if(!respone.IsSuccess)
+            {
+                return BadRequest(respone.ErrorMessage);
+            }
+           if(!respone.Data.Data.Any())
+            {
                 return NoContent();
-            return Ok(productsList);
+            }
+            return Ok(respone.Data);
         }
 
     
         // POST api/<ProductsController>
         [HttpPost]
-        async public Task<ActionResult<ProductDTO>> Post([FromBody] AddProductDTO product)
+        async public Task<ActionResult<ProductDTO>> AddProduct([FromBody] AddProductDTO product)
         {
 
-            ProductDTO productConstructedObject = await _IProductsServise.AddProductServise(product);
-            return CreatedAtAction(nameof(Get), new { id = productConstructedObject.ProductsID }, productConstructedObject);
+            Resulte<ProductDTO> reaspone = await _productsServise.AddProductServise(product);
+            if (!reaspone.IsSuccess)
+            { 
+                return BadRequest(reaspone.ErrorMessage);
+            }
+            return CreatedAtAction(nameof(Get), new { id = reaspone.Data.ProductsID }, reaspone.Data);
         
         }
 
         // PUT api/<ProductsController>/5
         [HttpPut("{id}")]
-        async public Task Put(int id, [FromBody] UpdateProductDTO productToUpdate )
+        async public Task<ActionResult> UpdateProduct(int id, [FromBody] UpdateProductDTO productToUpdate )
         {
-            await _IProductsServise.UpdateProductServise(id, productToUpdate);
-
+            Resulte<ProductDTO> reaspone = await _productsServise.UpdateProductServise(id, productToUpdate);
+            if (!reaspone.IsSuccess)
+            {
+                return BadRequest(reaspone.ErrorMessage);
+            }
+            return Ok();
         }
 
         // DELETE api/<ProductsController>/5
         [HttpDelete("{id}")]
-        async public Task<ActionResult> Delete(int id)
+        async public Task<ActionResult> DeleteProduct(int id)
         {
 
-            bool flag = await _IProductsServise.DeleteIDProductServise(id);
-            if (flag)
+            Resulte<ProductDTO> reaspone = await _productsServise.DeleteIDProductServise(id);
+            if (!reaspone.IsSuccess)
             {
-                return Ok();
+                return BadRequest(reaspone.ErrorMessage);
             }
-            return BadRequest();
+            return Ok();
         }
     }
     

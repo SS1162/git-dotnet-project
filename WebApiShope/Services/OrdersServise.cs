@@ -13,40 +13,134 @@ namespace Services
     public class OrdersServise : IOrdersServise
     {
 
-        IOrdersReposetory _OrderRepository;
+        IOrdersReposetory _orderRepository;
         IMapper _mapper;
+        IUsersReposetory _usersReposetory;
+        IBasicSitesReposetory _basicSitesReposetory;
+        IProductsReposetory _productsReposetory;
+        IStatusesReposetory _statusesReposetory;
 
 
-        public OrdersServise(IOrdersReposetory _OrderRepository, IMapper _mapper)
+        public OrdersServise(IOrdersReposetory orderRepository, IMapper mapper, IUsersReposetory usersReposetory, IBasicSitesReposetory basicSitesReposetory, IProductsReposetory productsReposetory, IStatusesReposetory statusesReposetory)
         {
-            this._OrderRepository = _OrderRepository;
-            this._mapper = _mapper;
+            this._orderRepository = orderRepository;
+            this._mapper = mapper;
+            this._usersReposetory = usersReposetory;
+            this._basicSitesReposetory = basicSitesReposetory;
+            this._productsReposetory = productsReposetory;
+            this._statusesReposetory = statusesReposetory;
         }
 
         public async Task<FullOrderDTO> GetByIdOrderServise(int id)
         {
-            Order order = await _OrderRepository.GetOrderByIdReposetory(id);
-
+            Order order = await _orderRepository.GetOrderByIdReposetory(id);
             return _mapper.Map<FullOrderDTO>(order);
         }
-        public async Task<FullOrderDTO> AddOrderServise(OrdersDTO dto)
+
+        public async Task<Resulte<FullOrderDTO>> AddOrderServise(OrdersDTO dto)
         {
+            User? checkIfUserInsist = await _usersReposetory.GetByIDUsersRepositories(dto.UserID);
+            if (checkIfUserInsist == null)
+            {
+                Resulte<FullOrderDTO>.Failure("The user id not insist");
+            }
+
+            BasicSite? checkIfIBasicSitensist = await _basicSitesReposetory.GetByIDBasicSiteReposetory(dto.BasicID);
+            if (checkIfIBasicSitensist == null)
+            {
+                Resulte<FullOrderDTO>.Failure("The basic site id not insist");
+            }
+
+            double sum = 0;
+            for (int i = 0; i < dto.Products.Count(); i++)
+            {
+
+                Product? checkProductPrice = await _productsReposetory.GetByIDProductsReposetory(dto.Products[i].ProductsID);
+                if (checkProductPrice == null)
+                {
+                    return Resulte<FullOrderDTO>.Failure("The product list is incorect");
+                }
+                sum += checkProductPrice.Price;
+            }
+
+            if (dto.OrderSum != sum)
+            {
+                return Resulte<FullOrderDTO>.Failure("The sum is incorect");
+            }
+
+
             Order orderToReposetory = _mapper.Map<Order>(dto);
-            Order orderFromReposetory = await _OrderRepository.AddOrderReposetory(orderToReposetory);
-            return _mapper.Map<FullOrderDTO>(orderFromReposetory);
+            orderToReposetory.StatusId = 1;
+            Order orderFromReposetory = await _orderRepository.AddOrderReposetory(orderToReposetory);
+            return Resulte<FullOrderDTO>.Success(_mapper.Map<FullOrderDTO>(orderFromReposetory));
         }
-        public async Task UpdateStatusServise(int id , FullOrderDTO order)
+
+        public async Task<Resulte<FullOrderDTO>> UpdateStatusServise(int id, FullOrderDTO order)
         {
+            if (id != order.OrderID)
+            {
+                return Resulte<FullOrderDTO>.Failure("The ids are diffrent");
+            }
+            Order checkIfIOrderinsist = await _orderRepository.GetOrderByIdReposetory(id);
+            if (checkIfIOrderinsist == null)
+            {
+                return Resulte<FullOrderDTO>.Failure("The order ids isn't exist");
+            }
+
+            User? checkIfUserInsist = await _usersReposetory.GetByIDUsersRepositories(order.UserID);
+            if (checkIfUserInsist == null)
+            {
+                Resulte<FullOrderDTO>.Failure("The user id not insist");
+            }
+
+            BasicSite? checkIfIBasicSitensist = await _basicSitesReposetory.GetByIDBasicSiteReposetory(order.BasicID);
+            if (checkIfIBasicSitensist == null)
+            {
+                Resulte<FullOrderDTO>.Failure("The basic site id not insist");
+            }
+
+            Status? checkIfIStatusensist = await _statusesReposetory.GetStatusByID(order.Status);
+            if (checkIfIBasicSitensist == null)
+            {
+                Resulte<FullOrderDTO>.Failure("The basic site id not insist");
+            }
+
+            double sum = 0;
+            for (int i = 0; i < order.Products.Count(); i++)
+            {
+
+                Product? checkProductPrice = await _productsReposetory.GetByIDProductsReposetory(order.Products[i].ProductsID);
+                if (checkProductPrice == null)
+                {
+                    return Resulte<FullOrderDTO>.Failure("The product list is incorect");
+                }
+                sum += checkProductPrice.Price;
+            }
+
+            if (order.OrderSum != sum)
+            {
+                return Resulte<FullOrderDTO>.Failure("The sum is incorect");
+            }
+
             Order orderToReposetory = _mapper.Map<Order>(order);
-            await _OrderRepository.UpdateStatusReposetory(id,orderToReposetory);
+            await _orderRepository.UpdateStatusReposetory(id, orderToReposetory);
+            return Resulte<FullOrderDTO>.Success(null);
         }
 
-        public async Task<IEnumerable<OrderItemDTO>> GetOrderItemsServise(int orderId)
+        public async Task<Resulte<IEnumerable<OrderItemDTO>>> GetOrderItemsServise(int orderId)
         {
-            var orderItems = await _OrderRepository.GetOrderItemsReposetory(orderId);
+            Order checkIfIOrderinsist = await _orderRepository.GetOrderByIdReposetory(orderId);
+            if (checkIfIOrderinsist == null)
+            {
+                return Resulte<IEnumerable<OrderItemDTO>>.Failure("The order ids isn't exist");
+            }
 
-            return _mapper.Map<IEnumerable<OrderItemDTO>>(orderItems);
+            IEnumerable<OrdersItem> orderItems = await _orderRepository.GetOrderItemsReposetory(orderId);
+
+            return Resulte<IEnumerable<OrderItemDTO>>.Success(_mapper.Map<IEnumerable<OrderItemDTO>>(orderItems));
         }
+
+
     }
 
 }

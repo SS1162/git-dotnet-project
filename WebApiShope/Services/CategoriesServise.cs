@@ -13,51 +13,101 @@ namespace Services
 {
     public class CategoriesServise : ICategoriesServise
     {
-        ICategoriesReposetory _ICategoriesReposetory;
-        IMapper _Imapper;
-        public CategoriesServise(ICategoriesReposetory _ICategoriesReposetory, IMapper _Imapper)
+        ICategoriesReposetory _categoriesReposetory;
+        IMapper _mapper;
+        IMainCategoriesReposetory _mainCategoriesReposetory;
+        IProductsReposetory _productsReposetory;
+        public CategoriesServise(ICategoriesReposetory categoriesReposetory, IMapper mapper,
+              IMainCategoriesReposetory mainCategoriesReposetory, IProductsReposetory productsReposetory)
         {
-            this._Imapper = _Imapper;
-            this._ICategoriesReposetory = _ICategoriesReposetory;
+            this._mapper = mapper;
+            this._categoriesReposetory = categoriesReposetory;
+            this._mainCategoriesReposetory = mainCategoriesReposetory;
+            this._productsReposetory = productsReposetory;
         }
 
-        async public Task<IEnumerable<CategoryDTO>> GetCategoriesServise(int paging, int limit, string? search, int? minPrice, int? MaxPrice, int? mainCategoryID)
+        async public Task<Resulte<ResponePage<CategoryDTO>>> GetCategoriesServise(int numberOfPages, int mainCategoryID, int pageSize, string? search)
         {
+            MainCategory? checkIfMainCategoryInsist = await _mainCategoriesReposetory.GetByIdMainCategoriesReposetoty(mainCategoryID);
+            if (checkIfMainCategoryInsist == null)
+            {
+                Resulte<ResponePage<CategoryDTO>>.Failure("Main category id isn't insist");
+            }
+            if (pageSize > 50)
+            {
+                Resulte<ResponePage<CategoryDTO>>.Failure("The page Size is too big");
+            }
+            (IEnumerable<Category>, int) responeFromReposetory = await _categoriesReposetory.GetCategoriesReposetory(numberOfPages, mainCategoryID, pageSize, search);
 
-            List<Category> CategoryFromReposetory = (List<Category>)await _ICategoriesReposetory.GetCategoriesReposetory(paging, limit, search, minPrice, MaxPrice, mainCategoryID);
-            return _Imapper.Map<List<CategoryDTO>>(CategoryFromReposetory);
+            ResponePage<CategoryDTO> responeToClient = new ResponePage<CategoryDTO>();
+            responeToClient.Data = _mapper.Map<IEnumerable<CategoryDTO>>(responeFromReposetory.Item1);
+            responeToClient.TotalItems = responeFromReposetory.Item2;
+            responeToClient.CurrentPage = numberOfPages;
+            responeToClient.PageSize = pageSize;
+            responeToClient.HasPreviousPage = numberOfPages > 0;
+            responeToClient.HasNextPage = (numberOfPages - 1) * pageSize > responeFromReposetory.Item2;
+            return Resulte<ResponePage<CategoryDTO>>.Success(responeToClient);
         }
 
         async public Task<CategoryDTO> GetByIDCategoriesServise(int id)
         {
-            Category CategoryFromReposetory = await _ICategoriesReposetory.GetByIDCategoriesReposetory(id);
-            return _Imapper.Map<CategoryDTO>(CategoryFromReposetory);
-
+            Category? CategoryFromReposetory = await _categoriesReposetory.GetByIDCategoriesReposetory(id);
+            return _mapper.Map<CategoryDTO>(CategoryFromReposetory);
         }
 
-        async public Task UpdateCategoriesServise(int id, CategoryDTO categoryToUpdate)
+        async public Task<Resulte<CategoryDTO?>> UpdateCategoriesServise(int id, CategoryDTO categoryToUpdate)
         {
-            Category categoryToReposetory = _Imapper.Map<Category>(categoryToUpdate);
+            if (id != categoryToUpdate.CategoryID)
+            {
+                Resulte<CategoryDTO>.Failure("The ids are diffrent");
+            }
+            MainCategory? checkIfMainCategoryInsist = await _mainCategoriesReposetory.GetByIdMainCategoriesReposetoty(categoryToUpdate.MainCategoryID);
+            if (checkIfMainCategoryInsist == null)
+            {
+                Resulte<CategoryDTO>.Failure("Main category id isn't insist");
+            }
+
+            Category? checkIfCategoryInsist = await _categoriesReposetory.GetByIDCategoriesReposetory(id);
+            if (checkIfCategoryInsist == null)
+            {
+                Resulte<CategoryDTO>.Failure("Category id isn't insist");
+            }
+            Category categoryToReposetory = _mapper.Map<Category>(categoryToUpdate);
             //למלא פרומפט עם gemini
             categoryToReposetory.CategoryPrompt = "vfsghhfg";
-            await _ICategoriesReposetory.UpdateCategoriesReposetory(id, categoryToReposetory);
-
+            await _categoriesReposetory.UpdateCategoriesReposetory(id, categoryToReposetory);
+            return Resulte<CategoryDTO>.Success(null);
         }
 
-
-        async public Task<CategoryDTO> AddCategoriesServise(AddCategoryDTO categoryToUpdate)
+        async public Task<Resulte<CategoryDTO>> AddCategoriesServise(AddCategoryDTO categoryToAdd)
         {
-            Category categoryToReposetory = _Imapper.Map<Category>(categoryToUpdate);
+
+            MainCategory? checkIfMainCategoryInsist = await _mainCategoriesReposetory.GetByIdMainCategoriesReposetoty(categoryToAdd.MainCategoryID);
+            if (checkIfMainCategoryInsist == null)
+            {
+                Resulte<CategoryDTO>.Failure("Main category id isn't insist");
+            }
+            Category categoryToReposetory = _mapper.Map<Category>(categoryToAdd);
             //למלא פרומפט עם gemini
             categoryToReposetory.CategoryPrompt = "gfasdfghfh";
-            Category categoryFromReposetory = await _ICategoriesReposetory.AddCategoriesReposetory(categoryToReposetory);
+            Category categoryFromReposetory = await _categoriesReposetory.AddCategoriesReposetory(categoryToReposetory);
 
-            return _Imapper.Map<CategoryDTO>(categoryFromReposetory);
+            return Resulte<CategoryDTO>.Success(_mapper.Map<CategoryDTO>(categoryFromReposetory));
         }
-        async public Task<bool> DeleteIDCategoriesServise(int id)
+        async public Task<Resulte<CategoryDTO>> DeleteIDCategoriesServise(int id)
         {
-           
-            return await _ICategoriesReposetory.DeleteIDCategoriesReposetory(id);
+            Product? checkIfProductInsist = await _productsReposetory.HasProductsToCatrgoryReposetory(id);
+            if (checkIfProductInsist != null)
+            {
+                Resulte<CategoryDTO>.Failure("There is product that reference to this category");
+            }
+            Category? checkIfCategoryInsist = await _categoriesReposetory.GetByIDCategoriesReposetory(id);
+            if (checkIfCategoryInsist == null)
+            {
+                Resulte<CategoryDTO>.Failure("Category id isn't insist");
+            }
+            await _categoriesReposetory.DeleteIDCategoriesReposetory(id);
+            return Resulte<CategoryDTO>.Success(null);
         }
 
     }

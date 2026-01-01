@@ -7,43 +7,97 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Services
 {
-    public class BasicSitesServise : IBasicSitesServise
+    public class BasicSitesServise :IBasicSitesServise
     {
-
-        IBasicSitesReposetory _IBasicSitesReposetory;
-        IMapper _IMapper;
-        public BasicSitesServise(IMapper _Imapper, IBasicSitesReposetory _IBasicSitesReposetory)
+        ISiteTypesRepository _siteTypesRepository;
+        IBasicSitesReposetory _basicSitesReposetory;
+        IMapper _mapper;
+        IPlatformsReposetory _platformsReposetory;
+        public BasicSitesServise(IMapper mapper, IBasicSitesReposetory basicSitesReposetory, ISiteTypesRepository siteTypesRepository
+            ,IPlatformsReposetory platformsReposetory)
         {
-            this._IMapper = _Imapper;
-            this._IBasicSitesReposetory = _IBasicSitesReposetory;
+            this._mapper = mapper;
+            this._basicSitesReposetory = basicSitesReposetory;
+            this._siteTypesRepository = siteTypesRepository;
+            this._platformsReposetory = platformsReposetory;
         }
 
 
         async public Task<BasicSiteDTO> GetByIDbasicSiteServise(int id)
         {
-            BasicSite basicSiteFromReposetory = await _IBasicSitesReposetory.GetByIDBasicSiteReposetory(id);
-            return _IMapper.Map<BasicSiteDTO>(basicSiteFromReposetory);
+            BasicSite? basicSiteFromReposetory = await _basicSitesReposetory.GetByIDBasicSiteReposetory(id);
+            return _mapper.Map<BasicSiteDTO>(basicSiteFromReposetory);
 
         }
 
-        async public Task UpdateBasicSiteServise(int id, UpdateBasicSiteDTO basicSiteToUpdate)
+        async public Task<Resulte<BasicSiteDTO?>> UpdateBasicSiteServise(int id, UpdateBasicSiteDTO basicSiteToUpdate)
         {
-            BasicSite basicSiteToReposetory = _IMapper.Map<BasicSite>(basicSiteToUpdate);
-            await _IBasicSitesReposetory.UpdateBasicSiteReposetory(id, basicSiteToReposetory);
+            if(id!= basicSiteToUpdate.BasicSiteID)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The IDs are diffrent");
+            }
+            BasicSite? checkIfBasicSiteInsist = await _basicSitesReposetory.GetByIDBasicSiteReposetory(id);
+            Platform ? platformToCheckId = await _platformsReposetory.GetByIDPlatformsReposetory(basicSiteToUpdate.PlatformID);
+            SiteType? checkIfIsEmptySiteType = await _siteTypesRepository.GetSiteTypeByIdReposetory((int)basicSiteToUpdate.SiteTypeID);
+            if (checkIfBasicSiteInsist == null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Basic Site ID isn't insist");
+            }
+            if (checkIfIsEmptySiteType == null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Type syte ID isn't insist");
+            }
+            else if (platformToCheckId == null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The platforme ID isn't insist");
+            }
+            else if (checkIfIsEmptySiteType.SiteTypeName != "Empty" && basicSiteToUpdate.UserDescreption != null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Type syte ID isn't empty so you shudn't include user descreption");
+            }
+            else if (checkIfIsEmptySiteType.SiteTypeName == "Empty" && basicSiteToUpdate.UserDescreption == null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Type syte ID is empty so you must include user descreption");
+            }
 
+            BasicSite basicSiteToReposetory = _mapper.Map<BasicSite>(basicSiteToUpdate);
+
+            await _basicSitesReposetory.UpdateBasicSiteReposetory(id, basicSiteToReposetory);
+            return Resulte<BasicSiteDTO?>.Success(null);
         }
 
 
-        async public Task<BasicSiteDTO> AddBasicSiteServise(AddBasicSiteDTO BasicSiteToUpdate)
+        async public Task<Resulte<BasicSiteDTO?>> AddBasicSiteServise(AddBasicSiteDTO BasicSiteToAdd)
         {
-            BasicSite basicSiteToReposetory = _IMapper.Map<BasicSite>(BasicSiteToUpdate);
+            Platform? platformToCheckId = await _platformsReposetory.GetByIDPlatformsReposetory(BasicSiteToAdd.PlatformID);
+            SiteType? checkIfIsEmptySiteType = await _siteTypesRepository.GetSiteTypeByIdReposetory((int)BasicSiteToAdd.SiteTypeID);
+            if (checkIfIsEmptySiteType == null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Type syte ID isn't insist");
+            }
+            else if (checkIfIsEmptySiteType == null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Type syte ID isn't insist");
+            }
+            else if (checkIfIsEmptySiteType.SiteTypeName != "Empty" && BasicSiteToAdd.UserDescreption != null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Type syte ID isn't empty so you shudn't include user descreption");
+            }
+            else if (checkIfIsEmptySiteType.SiteTypeName == "Empty" && BasicSiteToAdd.UserDescreption == null)
+            {
+                return Resulte<BasicSiteDTO?>.Failure("The Type syte ID is empty so you must include user descreption");
+            }
+            BasicSite basicSiteToReposetory = _mapper.Map<BasicSite>(BasicSiteToAdd);
 
-            BasicSite basicSiteFromReposetory = await _IBasicSitesReposetory.AddBasicSiteReposetory(basicSiteToReposetory);
+            BasicSite basicSiteFromReposetory = await _basicSitesReposetory.AddBasicSiteReposetory(basicSiteToReposetory);
 
-            return _IMapper.Map<BasicSiteDTO>(basicSiteFromReposetory);
+            BasicSiteDTO objectThatCreated = _mapper.Map<BasicSiteDTO>(basicSiteFromReposetory);
+
+            return Resulte<BasicSiteDTO?>.Success(objectThatCreated);
         }
     }
 }

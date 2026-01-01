@@ -5,9 +5,10 @@ namespace Repositories
     public interface ICategoriesReposetory
     {
         Task<Category> AddCategoriesReposetory(Category categoryToUpdate);
-        Task<bool> DeleteIDCategoriesReposetory(int id);
+        Task DeleteIDCategoriesReposetory(int id);
         Task<Category?> GetByIDCategoriesReposetory(int id);
-        Task<IEnumerable<Category>> GetCategoriesReposetory(int paging, int limit, string? search, int? minPrice, int? MaxPrice, int? mainCategoryID);
+        Task<(IEnumerable<Category> items, int totalCount)> GetCategoriesReposetory(int numberOfPages, int mainCategoryID, int pageSize, string? search);
         Task UpdateCategoriesReposetory(int id, Category categoryToUpdate);
+        Task<Category?> GetByMainCategoriesIDReposetory(int id);
     }
 }

@@ -1,9 +1,10 @@
-﻿using Entities;
+﻿using DTO;
+using Entities;
 
 namespace Services
 {
     public interface IPasswordsService
     {
-        int CheckPasswordStrength(PasswordDTO password);
+        Resulte<int> CheckPasswordStrength(PasswordDTO password);
     }
 }

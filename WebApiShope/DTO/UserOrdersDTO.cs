@@ -17,7 +17,7 @@ namespace DTO
          string SiteTypeName ,
          string SiteTypeDescreption ,
          string StatusName ,
-         PlatformsDTO PlatformName ,
+         string PlatformName ,
          int LenOrderItems ,
          string ReviewID ,
          float Stars ,

@@ -4,8 +4,8 @@ namespace Services
 {
     public interface IBasicSitesServise
     {
-        Task<BasicSiteDTO> AddBasicSiteServise(AddBasicSiteDTO BasicSiteToUpdate);
+        Task<Resulte<BasicSiteDTO?>> AddBasicSiteServise(AddBasicSiteDTO BasicSiteToAdd);
         Task<BasicSiteDTO> GetByIDbasicSiteServise(int id);
-        Task UpdateBasicSiteServise(int id, UpdateBasicSiteDTO basicSiteToUpdate);
+        Task<Resulte<BasicSiteDTO?>> UpdateBasicSiteServise(int id, UpdateBasicSiteDTO basicSiteToUpdate);
     }
 }

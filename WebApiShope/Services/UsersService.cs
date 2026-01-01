@@ -6,34 +6,45 @@ namespace Services
 {
     public class UsersService : IUsersService
     {//get by id
-        private IRepositoriesUsers _irepositoriesUsers;
+        private IUsersReposetory _UsersReposetory;
         private IMapper _Imapper;
-        public UsersService(IRepositoriesUsers irepositoriesUsers, IMapper imapper)
+        public UsersService(IUsersReposetory irepositoriesUsers, IMapper imapper)
         {
-            this._irepositoriesUsers = irepositoriesUsers;
+            this._UsersReposetory = irepositoriesUsers;
             this._Imapper = imapper;
         }
         public async Task<UserDTO> GetByIDUsersService(int id)
         {
             
-            User user = await _irepositoriesUsers.GetByIDUsersRepositories(id);
+            User? user = await _UsersReposetory.GetByIDUsersRepositories(id);
             UserDTO userToController = _Imapper.Map<UserDTO>(user);
             return userToController;
         }
         //post new user
-        public async Task<UserDTO> AddNewUsersService(RegisterUserDTO registerUser)
+        public async Task<UserDTO?> AddNewUsersService(RegisterUserDTO registerUser)
         {
 
-
             User userToReposetory = _Imapper.Map<User>(registerUser);
-            bool flag = await _irepositoriesUsers.CheckIfUsersInsistalrady(userToReposetory);
-            if (flag)
+            bool flag = await _UsersReposetory.CheckIfUsersInsistalrady(userToReposetory.UserName);
+            if (!flag)
                 return null;
-            User userFromReposetory= await _irepositoriesUsers.AddNewUsersRepositories(userToReposetory);
+            userToReposetory.UserName = userToReposetory.UserName.ToLower();
+            User userFromReposetory= await _UsersReposetory.AddNewUsersRepositories(userToReposetory);
 
             UserDTO userToController = _Imapper.Map<UserDTO>(userFromReposetory);
             return userToController;
         }
+
+        public async Task<bool> CheckIfUsersInsistalradyServise(string user)
+        {
+
+           
+            return await _UsersReposetory.CheckIfUsersInsistalrady(user);
+            
+        }
+
+
+
 
         //post login user
         public async Task<UserDTO> LoginUsersService(LoginUserDTO logInUser)
@@ -41,19 +52,27 @@ namespace Services
             User userToRposetory = _Imapper.Map<User>(logInUser);
 
 
-            User userFromRposetory= await _irepositoriesUsers.LoginUsersRepositories(userToRposetory);
+            User? userFromRposetory= await _UsersReposetory.LoginUsersRepositories(userToRposetory);
 
             UserDTO userToConroller = _Imapper.Map<UserDTO>(userFromRposetory);
 
             return  userToConroller;
         }
 
-         async public Task UpdateUsersService(int id, UpdateUserDTO userToUpdate)
+         async public Task<bool> UpdateUsersService(int id, UpdateUserDTO userToUpdate)
         {
 
+            if (id != userToUpdate.UserId)
+                return false;
 
             User userToRposetory = _Imapper.Map<User>(userToUpdate);
-            await _irepositoriesUsers.UpdateUsersRepositories(id, userToRposetory);
+            User? checkUserValidtion = await _UsersReposetory.GetByIDUsersRepositories(id);
+            if (checkUserValidtion == null)
+                return false;
+            if (checkUserValidtion.UserName != userToRposetory.UserName)
+                return false;
+            await _UsersReposetory.UpdateUsersRepositories(id, userToRposetory);
+            return true;
         }
 
     }

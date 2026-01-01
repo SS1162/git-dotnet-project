@@ -432,3 +432,245 @@ C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Management.dll
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net7.0\System.Management.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.AssemblyReference.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rpswa.dswa.cache.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.GeneratedMSBuildEditorConfig.editorconfig
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfoInputs.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfo.cs
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.CoreCompileInputs.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cs
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.sourcelink.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\refint\WebApiShope.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\nlog.config
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.Development.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.endpoints.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.runtime.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.exe
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.deps.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.runtimeconfig.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\AutoMapper.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Azure.Core.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Azure.Identity.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.Apis.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.Apis.Auth.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.Apis.Core.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.GenAI.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\MailKit.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.OpenApi.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\MimeKit.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Newtonsoft.Json.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.Extensions.Logging.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.MailKit.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.Web.AspNetCore.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.ClientModel.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.CodeDom.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Drawing.Common.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Formats.Asn1.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Management.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Memory.Data.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Runtime.Caching.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Security.Permissions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Text.Json.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Windows.Extensions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\zxcvbn-core.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net7.0\System.Management.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\DTO.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Entities.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Repositories.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Services.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\DTO.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Services.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Entities.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Repositories.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjimswa.dswa.cache.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\scopedcss\bundle\WebApiShope.styles.css
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-n350s6bwi4.gz
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-45uml5en9f.gz
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\kywtz0k3b1-926qatez2q.gz
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\0x50lmts09-y9je9hresg.gz
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\p2q1bi05pu-el05w88rxu.gz
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-2m5udnyv8i.gz
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.development.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiSh.AC9D74B4.Up2Date
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\nlog.config
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\appsettings.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.endpoints.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.staticwebassets.runtime.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.exe
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.deps.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.runtimeconfig.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\WebApiShope.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Azure.Core.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.Apis.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.Apis.Auth.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.Apis.Core.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Google.GenAI.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\MailKit.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\MimeKit.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.Extensions.Logging.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.MailKit.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\NLog.Web.AspNetCore.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.ClientModel.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.CodeDom.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Drawing.Common.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Formats.Asn1.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Management.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Memory.Data.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Runtime.Caching.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Security.Permissions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Text.Json.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\zxcvbn-core.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\DTO.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Entities.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Repositories.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Services.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\DTO.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Services.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Entities.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\Repositories.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.AssemblyReference.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfoInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.AssemblyInfo.cs
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.csproj.CoreCompileInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.sourcelink.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\scopedcss\bundle\WebApiShope.styles.css
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9jsd5l5yfo-n350s6bwi4.gz
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\wr74lhltk8-45uml5en9f.gz
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\kywtz0k3b1-926qatez2q.gz
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\0x50lmts09-y9je9hresg.gz
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\p2q1bi05pu-el05w88rxu.gz
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\compressed\9z8w1zi8tu-2m5udnyv8i.gz
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiSh.AC9D74B4.Up2Date
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\refint\WebApiShope.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll

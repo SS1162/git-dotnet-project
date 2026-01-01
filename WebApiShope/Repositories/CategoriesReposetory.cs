@@ -15,11 +15,28 @@ namespace Repositories
         {
             this._DBContext = _DBContext;
         }
-        async public Task<IEnumerable<Category>> GetCategoriesReposetory(int paging, int limit, string? search, int? minPrice, int? MaxPrice, int? mainCategoryID)
+        async public Task<(IEnumerable<Category>items,int totalCount)> GetCategoriesReposetory(int numberOfPages, int mainCategoryID, int pageSize, string? search)
         {
-            return await _DBContext.Categories.ToListAsync();
+
+            var quary = _DBContext.Categories.Where(
+                category =>
+                (category.MainCategoryId == mainCategoryID) &&
+                ((search == null) ? (true) : (category.CategoryName.Contains(search) || category.CategoryDescreption.Contains(search))))
+                .OrderBy(x=>x.CategoryName);
+
+            int totalcount = await quary.CountAsync();
+            List<Category> items =await  quary.Skip((numberOfPages - 1) * pageSize).Take(pageSize).ToListAsync();
+
+            return (items, totalcount);
         }
 
+
+
+        async public Task<Category?> GetByMainCategoriesIDReposetory(int id)
+        {
+            return await _DBContext.Categories.FirstOrDefaultAsync(x => x.MainCategoryId == id);
+
+        }
         async public Task<Category?> GetByIDCategoriesReposetory(int id)
         {
             return await _DBContext.Categories.FirstOrDefaultAsync(x => x.CategoryId == id);
@@ -41,19 +58,14 @@ namespace Repositories
             return categoryToUpdate;
 
         }
-        async public Task<bool> DeleteIDCategoriesReposetory(int id)
+        async public Task DeleteIDCategoriesReposetory(int id)
         {
-            var Category = await _DBContext.Categories.FirstOrDefaultAsync(x => x.CategoryId == id);
+            Category category = await _DBContext.Categories.FirstOrDefaultAsync(x => x.CategoryId == id);
            
-            var listOfForginKeyObjects = await _DBContext.Products.Where(x => x.CategoryId == id).ToListAsync();
-            if (listOfForginKeyObjects.Count == 0 &&Category!=null)
-            {
-                _DBContext.Categories.Remove(Category);
+                _DBContext.Categories.Remove(category);
                 await _DBContext.SaveChangesAsync();
-                return true;
-            }
-            return false;
-
         }
+
+
     }
 }

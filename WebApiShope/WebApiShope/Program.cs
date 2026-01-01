@@ -5,7 +5,7 @@ using Services;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<IRepositoriesUsers, RepositoriesUsers>();
+builder.Services.AddScoped<IUsersReposetory, UsersReposetory>();
 
 builder.Services.AddScoped<IUsersService, UsersService>();
 
@@ -27,6 +27,7 @@ builder.Services.AddScoped<IOrdersServise, OrdersServise>();
 
 builder.Services.AddScoped<IOrdersReposetory, OrdersReposetory>();
 
+builder.Services.AddScoped<IStatusesReposetory, StatusesReposetory>();
 
 builder.Services.AddScoped<IReviewsReposetory, ReviewsReposetory>();
 
@@ -41,7 +42,7 @@ builder.Services.AddScoped<IBasicSitesReposetory, BasicSitesReposetory>();
 
 builder.Services.AddScoped<IMainCategoriesServise, MainCategoriesServise>();
 
-builder.Services.AddScoped<IMainCategoryReposetory, MainCategoryReposetory>();
+builder.Services.AddScoped<IMainCategoriesReposetory, MainCategoriesReposetory>();
 
 builder.Services.AddScoped<ICategoriesServise, CategoriesServise>();
 
@@ -50,9 +51,17 @@ builder.Services.AddScoped<ICategoriesReposetory, CategoriesReposetory>();
 
 builder.Services.AddScoped<IProductsServise, ProductsServise>();
 
+builder.Services.AddScoped<ICartItemServise, CartItemServise>();
+
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+        policy => policy.WithOrigins("http://localhost:5000") 
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+});
 
 builder.Services.AddDbContext<MyShop330683525Context>(option => option.UseSqlServer
 ("Data Source=DESKTOP-R5RADSP;Initial Catalog=MyPromptShop;Integrated Security=True;Trust Server Certificate=True"));
@@ -73,11 +82,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
+       
     });
+
+  
 }
 
 
 // Configure the HTTP request pipeline.
+app.UseCors("AllowAngular");
 
 app.UseHttpsRedirection();
 

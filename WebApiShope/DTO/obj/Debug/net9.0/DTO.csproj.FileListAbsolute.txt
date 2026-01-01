@@ -22,3 +22,27 @@ C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\refint\DTO.dll
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.pdb
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\project_from_git\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\ref\DTO.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.deps.json
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.sourcelink.json
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\refint\DTO.dll
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.pdb
+E:\לסמינר\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\ref\DTO.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.deps.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\bin\Debug\net9.0\DTO.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.sourcelink.json
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\refint\DTO.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\DTO.pdb
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\DTO\obj\Debug\net9.0\ref\DTO.dll

@@ -11,9 +11,9 @@ namespace Repositories
     public class BasicSitesReposetory : IBasicSitesReposetory
     {
         MyShop330683525Context _DBContext;
-        public BasicSitesReposetory(MyShop330683525Context _DBContext)
+        public BasicSitesReposetory(MyShop330683525Context DBContext)
         {
-            this._DBContext = _DBContext;
+            this._DBContext = DBContext;
         }
         async public Task<BasicSite?> GetByIDBasicSiteReposetory(int id)
         {
@@ -23,6 +23,12 @@ namespace Repositories
 
         }
 
+        async public Task<BasicSite?> CheckIfHasPlatformByPlatformID(int id)
+        {
+            return await _DBContext.BasicSites.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == id);
+          
+
+        }
 
         async public Task UpdateBasicSiteReposetory(int id, BasicSite basicSiteToUpdate)
         {

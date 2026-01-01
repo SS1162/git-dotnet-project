@@ -13,13 +13,11 @@ namespace DTO
          int OrderID, 
         [Required]
          int UserID,
-
-        [Required]
+         [Required]
          float OrderSum,
 
         [Required]
          int BasicID,
-
          [Required]
          int Status,
 

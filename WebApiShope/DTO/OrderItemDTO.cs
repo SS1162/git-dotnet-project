@@ -23,9 +23,9 @@ namespace DTO
 
         string ImgUrl ,
 
-        string CategoryDescreption 
+        string CategoryDescreption ,
 
-    
+        int orderID
 
     );
 }

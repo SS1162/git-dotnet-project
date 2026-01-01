@@ -21,7 +21,6 @@ namespace DTO
 
          string CategoryDescreption ,
 
-        
          int Valid ,
 
          string UserDescription ,

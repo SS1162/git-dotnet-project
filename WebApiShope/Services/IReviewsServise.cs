@@ -4,8 +4,8 @@ namespace Services
 {
     public interface IReviewsServise
     {
-        Task<ReviewDTO> AddReviewServise(int orderId, AddReviewDTO review);
-        Task<ReviewDTO> GetReviewByOrderIdServise(int orderId);
-        Task UpdateReviewServise(int id, ReviewDTO review);
+        Task<Resulte<ReviewDTO>> AddReviewServise(int orderId, AddReviewDTO review);
+        Task<Resulte<ReviewDTO>> GetReviewByOrderIdServise(int orderId);
+        Task<Resulte<ReviewDTO>> UpdateReviewServise(int id, ReviewDTO review);
     }
 }

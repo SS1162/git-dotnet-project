@@ -164,4 +164,23 @@ public class MainCategoryGetTests : IClassFixture<MainCategoryRepoFixture>
         Assert.Null(result); // ב-Entity Framework, FirstOrDefault מחזיר Null כשאין התאמה
     }
 
+    [Fact]
+    public async Task DeleteMainCategory_HappyPath_CallsRemoveAndSave()
+    {
+        // Arrange
+        int idToDelete = 1;
+
+        // Act
+        await _repository.DeleteMainCategoriesReposetoty(idToDelete);
+
+        // Assert
+        // 1. מוודאים שה-Context קיבל הוראה למחוק (Remove) עם ישות כלשהי מסוג MainCategory
+        _fixture.MockContext.Verify(m => m.Remove(It.IsAny<MainCategory>()), Times.Once());
+
+        // 2. מוודאים שבוצעה פקודת שמירה (SaveChangesAsync)
+        _fixture.MockContext.Verify(m => m.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once());
+    }
+
+
+
 }

@@ -25,15 +25,13 @@ namespace Repositories
        
         }
 
-        public async Task<Order> GetOrderByIdReposetory(int id)
+        public async Task<Order?> GetOrderByIdReposetory(int id)
         {
             return await _DBcontext.Orders.FirstOrDefaultAsync(order => order.OrderId == id);
         }
 
         public async Task<Order> AddOrderReposetory(Order order)
         {
-
-
             await _DBcontext.Orders.AddAsync(order);
             await _DBcontext.SaveChangesAsync();
             await _cartsReposetory.DeleteUserCartReposetory(order.UserId);
@@ -55,7 +53,15 @@ namespace Repositories
                 .ToListAsync();
         }
 
+        public async Task<OrdersItem?> CheckIfHasPlatformByPlatformID(int platformID)
+        {
+            return await _DBcontext.OrdersItems.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == platformID);
+        }
 
+        public async Task<OrdersItem?> CheckIfHasProductByProductID(int ProductsId)
+        {
+            return await _DBcontext.OrdersItems.FirstOrDefaultAsync(x => x.ProductsId == ProductsId);
+        }
 
 
     }

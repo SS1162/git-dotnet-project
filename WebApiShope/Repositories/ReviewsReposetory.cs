@@ -27,12 +27,17 @@ namespace Repositories
             return review;
         }
 
+
+        public async Task<Review?> GetByidReviewReposetory(int id)
+        {
+            return await _DBcontext.Reviews.FirstOrDefaultAsync(x => x.ReviewId == id);
+        }
+
         public async Task<Review> GetReviewByOrderIdReposetory(int orderId)
         {
             Order orderForReviews = await _DBcontext.Orders.FirstOrDefaultAsync(r => r.OrderId == orderId);
-            if (orderForReviews != null)
                 return await _DBcontext.Reviews.FirstOrDefaultAsync(r => r.ReviewId == orderForReviews.ReviewId);
-            return null;
+         
         }
 
         public async Task UpdateReviewReposetory(int id ,Review review)

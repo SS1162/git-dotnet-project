@@ -222,5 +222,66 @@ namespace Tests
             Assert.Single(result);
             Assert.Equal("SEO Optimization", result.First().UserDescription);
         }
+
+        // --- Tests for CheckIfHasProductByProductID ---
+
+        [Fact]
+        public async Task CheckIfHasProductByProductID_ProductExists_ReturnsOrdersItem()
+        {
+            // Arrange
+            // ב-Fixture הגדרת פריט עם ProductsId = 50
+            int existingProductId = 50;
+
+            // Act
+            var result = await _repository.CheckIfHasProductByProductID(existingProductId);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(existingProductId, result.ProductsId);
+            Assert.Equal(1, result.OrderId); // וידוא שזה שייך להזמנה הנכונה מהרשימה
+        }
+
+        [Fact]
+        public async Task CheckIfHasProductByProductID_ProductDoesNotExist_ReturnsNull()
+        {
+            // Arrange
+            int nonExistingProductId = 999;
+
+            // Act
+            var result = await _repository.CheckIfHasProductByProductID(nonExistingProductId);
+
+            // Assert
+            Assert.Null(result);
+        }
+
+        // --- Tests for CheckIfHasPlatformByPlatformID ---
+
+        [Fact]
+        public async Task CheckIfHasPlatformByPlatformID_PlatformExists_ReturnsOrdersItem()
+        {
+            // Arrange
+            // ב-Fixture הגדרת פריטים עם BasicSitesPlatforms = 1
+            int existingPlatformId = 1;
+
+            // Act
+            var result = await _repository.CheckIfHasPlatformByPlatformID(existingPlatformId);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(existingPlatformId, result.BasicSitesPlatforms);
+        }
+
+        [Fact]
+        public async Task CheckIfHasPlatformByPlatformID_PlatformDoesNotExist_ReturnsNull()
+        {
+            // Arrange
+            int nonExistingPlatformId = 888;
+
+            // Act
+            var result = await _repository.CheckIfHasPlatformByPlatformID(nonExistingPlatformId);
+
+            // Assert
+            Assert.Null(result);
+        }
     }
 }

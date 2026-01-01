@@ -1,21 +1,17 @@
-﻿using System;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
+using Moq;
+using Moq.EntityFrameworkCore;
+using Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+
 
 namespace Tests
 {
-    using Entities;
-    using Microsoft.EntityFrameworkCore;
-    using Moq;
-    using Moq.EntityFrameworkCore;
-    using Repositories;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading;
-
+ 
     public class OrderRepoFixture : IDisposable
     {
         public List<Order> OrdersList { get; private set; }

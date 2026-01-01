@@ -12,43 +12,87 @@ namespace  Services
 {
     public class PlatformsServise : IPlatformsServise
     {
-        IPlatformsReposetory _IPlatformsReposetory;
-        IMapper _Imapper;
-        public PlatformsServise(IPlatformsReposetory _IPlatformsReposetory, IMapper _Imapper)
+        IPlatformsReposetory _platformsReposetory;
+        IMapper _mapper;
+        IBasicSitesReposetory _basicSitesReposetory;
+        ICartsReposetory _cartsReposetory;
+        IOrdersReposetory _ordersReposetory;
+        public PlatformsServise(IPlatformsReposetory platformsReposetory, IMapper mapper, IBasicSitesReposetory basicSitesReposetory, ICartsReposetory cartsReposetory, IOrdersReposetory ordersReposetory)
         {
 
-            this._IPlatformsReposetory = _IPlatformsReposetory;
-            this._Imapper = _Imapper;
+            this._platformsReposetory = platformsReposetory;
+            this._mapper = mapper;
+            this._basicSitesReposetory = basicSitesReposetory;
+            this._cartsReposetory = cartsReposetory;
+            this._ordersReposetory = ordersReposetory;
         }
 
         async public Task<IEnumerable<PlatformsDTO>> GetPlatformsServise()
         {
-
-            IEnumerable<Platform> platformList = await _IPlatformsReposetory.GetPlatformsReposetory();
-
-            return _Imapper.Map<IEnumerable<PlatformsDTO>>(platformList);
+            IEnumerable<Platform> platformList = await _platformsReposetory.GetPlatformsReposetory();
+            return _mapper.Map<IEnumerable<PlatformsDTO>>(platformList);
         }
 
         async public Task<PlatformsDTO> AddPlatformServise(AddPlatformDTO platformToAdd)
         {
-            Platform PlatformToReposetory = _Imapper.Map<Platform>(platformToAdd);
+
+            Platform PlatformToReposetory = _mapper.Map<Platform>(platformToAdd);
             //add prompt with gemini
             PlatformToReposetory.PlatformsPrompt = "fdfbnfgn";
-            Platform platformFromReposetory = await _IPlatformsReposetory.AddPlatformReposetory(PlatformToReposetory);
-            return _Imapper.Map<PlatformsDTO>(platformFromReposetory);
+            Platform platformFromReposetory = await _platformsReposetory.AddPlatformReposetory(PlatformToReposetory);
+            return _mapper.Map<PlatformsDTO>(platformFromReposetory);
         }
 
-        async public Task UpdatePlatformServise(int id, PlatformsDTO platform)
+        async public Task<Resulte<PlatformsDTO>> UpdatePlatformServise(int id, PlatformsDTO platform)
         {
-            Platform PlatformToReposetory = _Imapper.Map<Platform>(platform);
+            if (id != platform.PlatformID)
+            {
+                Resulte<PlatformsDTO>.Failure("The id's are diffrent");
+            }
+            Platform? checkIfPlatformExist = await _platformsReposetory.GetByIDPlatformsReposetory(id);
+            if (checkIfPlatformExist == null)
+            {
+                Resulte<PlatformsDTO>.Failure("The platform id isn't exist");
+            }
+
+            Platform PlatformToReposetory = _mapper.Map<Platform>(platform);
             //add prompt with gemini
             PlatformToReposetory.PlatformsPrompt = "fdfbnfgn";
-            await _IPlatformsReposetory.UpdatePlatformReposetory(id, PlatformToReposetory);
+            await _platformsReposetory.UpdatePlatformReposetory(id, PlatformToReposetory);
+
+            return Resulte<PlatformsDTO>.Success(null);
         }
 
-        async public Task<bool> DeletePlatformServise(int id)
+        async public Task<Resulte<PlatformsDTO>> DeletePlatformServise(int id)
         {
-            return await _IPlatformsReposetory.DeletePlatformReposetory(id);
+
+            Platform? checkIfPlatformExist = await _platformsReposetory.GetByIDPlatformsReposetory(id);
+            if (checkIfPlatformExist == null)
+            {
+                return Resulte<PlatformsDTO>.Failure("The Platform id not exist");
+            }
+            BasicSite? BasicSite = await _basicSitesReposetory.CheckIfHasPlatformByPlatformID(id);
+            if (BasicSite != null)
+            {
+                return Resulte<PlatformsDTO>.Failure("The is a basic site that refernce to the platform");
+            }
+
+
+            CartItem? checkIfCartItemExist = await _cartsReposetory.CheckIfHasPlatformByPlatformID(id);
+            if (checkIfCartItemExist != null)
+            {
+                return Resulte<PlatformsDTO>.Failure("The is a cart items that refernce to the platform");
+            }
+
+
+            OrdersItem checkIfOrderItemExist = await _ordersReposetory.CheckIfHasPlatformByPlatformID(id);
+            if (checkIfOrderItemExist != null)
+            {
+                return Resulte<PlatformsDTO>.Failure("The is a order items that refernce to the platform");
+            }
+
+            await _platformsReposetory.DeletePlatformReposetory(id);
+            return Resulte<PlatformsDTO>.Success(null);
         }
     }
 }

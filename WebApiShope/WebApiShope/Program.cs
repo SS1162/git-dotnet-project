@@ -27,6 +27,7 @@ builder.Services.AddScoped<IOrdersServise, OrdersServise>();
 
 builder.Services.AddScoped<IOrdersReposetory, OrdersReposetory>();
 
+builder.Services.AddScoped<IStatusesReposetory, StatusesReposetory>();
 
 builder.Services.AddScoped<IReviewsReposetory, ReviewsReposetory>();
 

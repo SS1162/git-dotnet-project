@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using DTO;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,16 +10,28 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class PasswordController : ControllerBase
     {
-        private PasswordsService passwordService = new PasswordsService();
+        IPasswordsService _passwordService; 
+
+
+        public PasswordController(IPasswordsService passwordService)
+        {
+            this._passwordService = passwordService;
+        }
         // GET: api/<PasswordController>
 
 
         // POST api/<PasswordController>
         [HttpPost]
-        public int Post([FromBody] PasswordDTO password)
+        public ActionResult<int> CheckPasswordStrength([FromBody] PasswordDTO password)
         {
-            return passwordService.CheckPasswordStrength(password);
+           Resulte<int> respone=_passwordService.CheckPasswordStrength(password);
+            if (!respone.IsSuccess ) 
+            {
+                return BadRequest(respone.ErrorMessage);
+            }
+            return Ok(respone.Data);
         }
+
 
         // PUT api/<PasswordController>/5
 

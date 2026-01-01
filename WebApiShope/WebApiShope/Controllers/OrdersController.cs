@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using Azure;
+using DTO;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 
@@ -10,28 +11,31 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        IOrdersServise _OrdersServise;
-        public OrdersController(IOrdersServise _OrdersServise)
+        IOrdersServise _ordersServise;
+        public OrdersController(IOrdersServise ordersServise)
         {
-            this._OrdersServise= _OrdersServise;
+            this._ordersServise = ordersServise;
         }
         // GET: api/<OrdersController>
         [HttpGet("{orderId}/orderItems")]
-        async public Task<ActionResult<IEnumerable<OrderItemDTO>>> Get([FromBody] int orderId)
+        async public Task<ActionResult<IEnumerable<OrderItemDTO>>> GetOrdersItems([FromBody] int orderId)
         {
-            var orderItems = await _OrdersServise.GetOrderItemsServise(orderId);
-            if (orderItems == null )
+            Resulte<IEnumerable<OrderItemDTO>> reaspone = await _ordersServise.GetOrderItemsServise(orderId);
+            if (!reaspone.IsSuccess  )
             {
-                return NotFound($"No order items found for Order ID {orderId}");
+                return BadRequest(reaspone.ErrorMessage);
             }
-            return Ok(orderItems);
+            if (reaspone.Data.Any())
+            {
+                return NoContent(); 
+            }
+            return Ok(reaspone.Data);
         }
-
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<FullOrderDTO>> GetByID(int id)
         {
-            FullOrderDTO order = await _OrdersServise.GetByIdOrderServise(id);
+            FullOrderDTO order = await _ordersServise.GetByIdOrderServise(id);
             if (order == null)
             {
                 return NoContent();
@@ -41,21 +45,29 @@ namespace WebApiShope.Controllers
 
         // POST api/<OrdersController>
         [HttpPost]
-        public async Task<ActionResult<FullOrderDTO>> Post([FromBody] OrdersDTO order)
+        public async Task<ActionResult<FullOrderDTO>> AddOrder([FromBody] OrdersDTO order)
         {
-            FullOrderDTO orderThatCreated =await _OrdersServise.AddOrderServise(order);
-            return CreatedAtAction(nameof(GetByID), new { id = orderThatCreated.OrderID}, orderThatCreated);
+
+            Resulte<FullOrderDTO> reaspone =await _ordersServise.AddOrderServise(order);
+            if (!reaspone.IsSuccess)
+            {
+                return BadRequest(reaspone.ErrorMessage);
+            }
+          
+            return CreatedAtAction(nameof(GetByID), new { id = reaspone.Data.OrderID}, reaspone.Data);
 
         }
 
         // PUT api/<OrdersController>/5
         [HttpPut("{id}")]
-        async public Task Put(int id, [FromBody] FullOrderDTO order)
+        async public Task<ActionResult> UpdateStatuse(int id, [FromBody] FullOrderDTO order)
         {
-            await _OrdersServise.UpdateStatusServise(id, order);
-
+            Resulte<FullOrderDTO> reaspone=await _ordersServise.UpdateStatusServise(id, order);
+            if (!reaspone.IsSuccess)
+            {
+                return BadRequest(reaspone.ErrorMessage);
+            }
+            return Ok();
         }
-
-        
     }
 }

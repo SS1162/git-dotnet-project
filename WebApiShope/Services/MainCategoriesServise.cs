@@ -9,50 +9,72 @@ using Entities;
 using AutoMapper;
 namespace Services
 {
-    public class MainCategoriesServise :IMainCategoriesServise
+    public class MainCategoriesServise : IMainCategoriesServise
     {
 
-        IMainCategoriesReposetory _IMainCategoryReposetory;
-        IMapper _Imapper;
-        public MainCategoriesServise(IMainCategoriesReposetory _IMainCategoryReposetory, IMapper _Imapper)
+        IMainCategoriesReposetory _mainCategoryReposetory;
+        ICategoriesReposetory _categoriesReposetory;
+        IMapper _mapper;
+        public MainCategoriesServise(IMainCategoriesReposetory mainCategoryReposetory, IMapper mapper, ICategoriesReposetory categoriesReposetory)
         {
-            this._IMainCategoryReposetory = _IMainCategoryReposetory;
-            this._Imapper = _Imapper;
+            this._mainCategoryReposetory = mainCategoryReposetory;
+            this._mapper = mapper;
+            this._categoriesReposetory = categoriesReposetory;
+
         }
         async public Task<IEnumerable<MainCategoriesDTO>> GetMainCategoriesServises()
         {
-           List<MainCategory> MainCategoriesListFromReposetory = (List<MainCategory>)await _IMainCategoryReposetory.GetMainCategoriesReposetoty();
-
-            List<MainCategoriesDTO> MainCategoriesListToController = _Imapper.Map<List<MainCategoriesDTO>>(MainCategoriesListFromReposetory);
+            IEnumerable<MainCategory> MainCategoriesListFromReposetory = await _mainCategoryReposetory.GetMainCategoriesReposetoty();
+            IEnumerable<MainCategoriesDTO> MainCategoriesListToController = _mapper.Map<IEnumerable<MainCategoriesDTO>>(MainCategoriesListFromReposetory);
             return MainCategoriesListToController;
-
         }
 
 
         async public Task<MainCategoriesDTO> AddMainCategoriesServises(ManegerMainCategoryDTO manegerMainCategory)
         {
-            MainCategory mainCategoryToReposetory = _Imapper.Map<MainCategory>(manegerMainCategory);
+            MainCategory mainCategoryToReposetory = _mapper.Map<MainCategory>(manegerMainCategory);
             //הכנסה של פרומפט ע"י gemini
-        
-
-            MainCategory mainCategoryFromeposetory = await _IMainCategoryReposetory.AddMainCategoriesReposetoty(mainCategoryToReposetory);
-            return _Imapper.Map<MainCategoriesDTO>(mainCategoryFromeposetory);
+            MainCategory mainCategoryFromeposetory = await _mainCategoryReposetory.AddMainCategoriesReposetoty(mainCategoryToReposetory);
+            return _mapper.Map<MainCategoriesDTO>(mainCategoryFromeposetory);
         }
 
-        async public Task UpdateMainCategoriesServises(int id, MainCategoriesDTO MainCategoriesFromController)
+        async public Task<Resulte<MainCategoriesDTO>> UpdateMainCategoriesServises(int id, MainCategoriesDTO MainCategoriesFromController)
         {
+            if (id != MainCategoriesFromController.MainCategoryID)
+            {
+                return Resulte<MainCategoriesDTO>.Failure("The ids are diffrent");
+            }
 
-            MainCategory mainCategoryToReposetory = _Imapper.Map<MainCategory>(MainCategoriesFromController);
+            MainCategory? checkIfMainCategoryInsist = await _mainCategoryReposetory.GetByIdMainCategoriesReposetoty(id);
+
+            if (checkIfMainCategoryInsist == null)
+            {
+                return Resulte<MainCategoriesDTO>.Failure("The main category's id is not found");
+            }
+
+            MainCategory mainCategoryToReposetory = _mapper.Map<MainCategory>(MainCategoriesFromController);
             //הכנסה של פרומפט ע"י gemini
-            
-            await _IMainCategoryReposetory.UpdateMainCategoriesReposetoty(id, mainCategoryToReposetory);
+
+            await _mainCategoryReposetory.UpdateMainCategoriesReposetoty(id, mainCategoryToReposetory);
+            return Resulte<MainCategoriesDTO>.Success(null);
         }
 
-        async public Task<bool> DeleteMainCategoriesServises(int id)
+        async public Task<Resulte<MainCategoriesDTO>> DeleteMainCategoriesServises(int id)
         {
+            Category? checkIfThereIsCategories = await _categoriesReposetory.GetByMainCategoriesIDReposetory(id);
+            if (checkIfThereIsCategories != null)
+            {
+                Resulte<MainCategoriesDTO>.Failure("The is categories that refernce to that main category");
+            }
 
+            MainCategory? checkIfMainCategoriesInsist = await _mainCategoryReposetory.GetByIdMainCategoriesReposetoty(id);
+            if (checkIfMainCategoriesInsist != null)
+            {
+                Resulte<MainCategoriesDTO>.Failure("The main categoty not found ");
+            }
+            await _mainCategoryReposetory.DeleteMainCategoriesReposetoty(id);
+            return Resulte<MainCategoriesDTO>.Success(null);
 
-            return await _IMainCategoryReposetory.DeleteMainCategoriesReposetoty(id);    
         }
     }
 }

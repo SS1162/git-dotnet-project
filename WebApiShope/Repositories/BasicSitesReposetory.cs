@@ -23,6 +23,12 @@ namespace Repositories
 
         }
 
+        async public Task<BasicSite?> CheckIfHasPlatformByPlatformID(int id)
+        {
+            return await _DBContext.BasicSites.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == id);
+          
+
+        }
 
         async public Task UpdateBasicSiteReposetory(int id, BasicSite basicSiteToUpdate)
         {

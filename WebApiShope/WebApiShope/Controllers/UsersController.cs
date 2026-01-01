@@ -83,7 +83,7 @@ namespace WebApiShope.Controllers
 
             PasswordDTO passwordForCheckStrength = new PasswordDTO();
             passwordForCheckStrength.UserPassward = userFromUser.UserPassword;
-            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength) <2)
+            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength).Data <2)
             {
                 return BadRequest();
             }
@@ -106,7 +106,7 @@ namespace WebApiShope.Controllers
          
             PasswordDTO passwordForCheckStrength = new PasswordDTO();
             passwordForCheckStrength.UserPassward = user.Password;
-            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength) < 2)
+            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength).Data < 2)
             {
                 return BadRequest("the password is too low");
             }

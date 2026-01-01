@@ -47,27 +47,37 @@ namespace WebApiShope.Controllers
         [HttpPost]
        async  public Task<ActionResult<CategoryDTO>> AddCategory([FromBody] AddCategoryDTO category)
         {
-            CategoryDTO categoryConstructedObject=await _categoriesServise.AddCategoriesServise(category);
-            return CreatedAtAction(nameof(GetCategoryByCategoryID), new { id = categoryConstructedObject.CategoryID }, categoryConstructedObject);
+            Resulte<CategoryDTO> categoryConstructedObject=await _categoriesServise.AddCategoriesServise(category);
+            if(!categoryConstructedObject.IsSuccess)
+            {
+                return BadRequest(categoryConstructedObject.ErrorMessage);
+            }
+
+            return CreatedAtAction(nameof(GetCategoryByCategoryID), new { id = categoryConstructedObject.Data.CategoryID }, categoryConstructedObject.Data);
         }
 
         // PUT api/<CategoryController>/5
         [HttpPut("{id}")]
-        async public Task UpdateCategory(int id, [FromBody] CategoryDTO category)
+        async public Task<ActionResult> UpdateCategory(int id, [FromBody] CategoryDTO category)
         {
-            await _categoriesServise.UpdateCategoriesServise(id, category);
+            Resulte<CategoryDTO> respone = await _categoriesServise.UpdateCategoriesServise(id, category);
+            if (!respone.IsSuccess)
+            {
+                return BadRequest(respone.ErrorMessage);
+            }
+            return Ok();
         }
 
         // DELETE api/<CategoryController>/5
         [HttpDelete("{id}")]
         async public Task<ActionResult> DeleteCategoty(int id )
         {
-            bool flag=await _categoriesServise.DeleteIDCategoriesServise(id);
-            if(flag)
+            Resulte<CategoryDTO> respone = await _categoriesServise.DeleteIDCategoriesServise(id);
+            if (!respone.IsSuccess)
             {
-                return Ok();
+                return BadRequest(respone.ErrorMessage);
             }
-            return BadRequest();
+            return Ok();
         }
     }
 }

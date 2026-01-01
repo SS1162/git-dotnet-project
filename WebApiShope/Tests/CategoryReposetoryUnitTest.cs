@@ -182,5 +182,25 @@ namespace Tests
                 await _repository.AddCategoriesReposetory(category)
             );
         }
+
+
+        [Fact]
+        public async Task DeleteCategory_HappyPath_CallsRemoveAndSave()
+        {
+            // Arrange
+            int categoryIdToDelete = 1;
+
+            // Act
+            await _repository.DeleteIDCategoriesReposetory(categoryIdToDelete);
+
+            // Assert
+            // 1. בדיקה שבוצעה קריאה ל-Remove עם ישות כלשהי מסוג Category
+            _fixture.MockContext.Verify(m => m.Categories.Remove(It.IsAny<Category>()), Times.Once());
+
+            // 2. אימות שבוצעה פקודת שמירה ל-DB
+            _fixture.MockContext.Verify(m => m.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once());
+        }
+
+       
     }
 }

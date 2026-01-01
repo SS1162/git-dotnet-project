@@ -4,10 +4,19 @@ namespace Services
 {
     public interface ICartItemServise
     {
-        Task<CartItemDTO> CreateUserCartServise(AddToCartDTO dto);
-        Task<bool> DeleteUserCartServise(int cartItemId);
+        Task<Resulte<CartItemDTO?>> ChangeProductToNotValidCartServise(int cartItemId);
+        Task<Resulte<CartItemDTO?>> ChangeProductToValidCartServise(int cartItemId);
+      
+
+
+
+        Task<Resulte<CartItemDTO?>> DeleteUserCartServise(int cartItemId);
+
+
+        Task<Resulte<CartItemDTO>> CreateUserCartServise(AddToCartDTO dto);
         Task<CartItemDTO?> GetByIdServise(int id);
-        Task<IEnumerable<CartItemDTO>?> GetUserCartServise(int userId);
-        Task<CartItemDTO> UpdateUserCartServise(CartItemDTO dto);
+
+
+        Task<Resulte<IEnumerable<CartItemDTO>>> GetUserCartServise(int userId);
     }
 }

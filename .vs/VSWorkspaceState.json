@@ -2,10 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\WebApiShope",
+    "\\WebApiShope\\Services",
+    "\\WebApiShope\\Tests",
     "\\WebApiShope\\WebApiShope",
     "\\WebApiShope\\WebApiShope\\Controllers",
     "\\WebApiShope\\WebApiShope\\wwwroot"
   ],
-  "SelectedNode": "\\WebApiShope\\WebApiShope.sln",
+  "SelectedNode": "\\WebApiShope\\Tests\\MainCategoryRepoIntegrationTest.cs",
   "PreviewInSolutionExplorer": false
 }

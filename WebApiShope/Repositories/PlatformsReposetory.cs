@@ -39,36 +39,11 @@ namespace Repositories
             await _DBContext.SaveChangesAsync();
         }
 
-        async public Task<bool> DeletePlatformReposetory(int id)
+        async public Task DeletePlatformReposetory(int id)
         {
-            var platformObjectToDelete = await _DBContext.Platforms.FirstOrDefaultAsync(x => x.PlatformId == id);
-
-            var BasicSite = await _DBContext.BasicSites.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == id);
-            if (BasicSite != null)
-            {
-                return false;
-            }
-
-
-            var cartItem = await _DBContext.CartItems.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == id);
-            if (cartItem != null)
-            {
-                return false;
-            }
-
-
-            var oredersItem = await _DBContext.OrdersItems.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == id);
-            if (oredersItem != null)
-            {
-                return false;
-            }
-            if (platformObjectToDelete == null)
-            {
-                return false;
-            }
+            Platform platformObjectToDelete = await _DBContext.Platforms.FirstOrDefaultAsync(x => x.PlatformId == id);
             _DBContext.Platforms.Remove(platformObjectToDelete);
             await _DBContext.SaveChangesAsync();
-            return true;
         }
     }
 }

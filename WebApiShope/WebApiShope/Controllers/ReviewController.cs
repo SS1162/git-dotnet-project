@@ -10,35 +10,44 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class ReviewController : ControllerBase
     {
-        IReviewsServise _IReviewsServise;
+        IReviewsServise _reviewsServise;
         public ReviewController() { }
         // POST api/<OrdersController>/5/review   
         [HttpPost]
         public async Task<ActionResult<ReviewDTO>> AddReviewAsync(int orderId, AddReviewDTO dto)
         {
-            ReviewDTO newReview = await _IReviewsServise.AddReviewServise(orderId, dto);
-            return CreatedAtAction(nameof(GetReviewByOrderId), new { id = orderId }, newReview);
+            Resulte<ReviewDTO> respone = await _reviewsServise.AddReviewServise(orderId, dto);
+            if(!respone.IsSuccess)
+            {
+                return BadRequest(respone.ErrorMessage);
+            }
+            return CreatedAtAction(nameof(GetReviewByOrderId), new { id = orderId }, respone.Data);
         }
 
         // GET api/<OrdersController>/5/review
         [HttpGet("{id}")]
         public async Task<ActionResult<ReviewDTO>> GetReviewByOrderId([FromBody] int orderId)
         {
-            ReviewDTO review = await _IReviewsServise.GetReviewByOrderIdServise(orderId);
-            if (review == null)
+            Resulte<ReviewDTO> respone = await _reviewsServise.GetReviewByOrderIdServise(orderId);
+            if (!respone.IsSuccess)
             {
-                return NotFound();
+                return BadRequest(respone.ErrorMessage);
             }
-            return Ok(review);
+            return Ok(respone.Data);
         }
 
         // PUT api/<OrdersController>/5/review
         [HttpPut("{id}")]
-        public async Task UpdateReviewAsync(int id,[FromBody] ReviewDTO dto)
+        public async Task<ActionResult> UpdateReviewAsync(int id,[FromBody] ReviewDTO dto)
         {
-           
-            await _IReviewsServise.UpdateReviewServise(id,dto);
-            
+
+            Resulte<ReviewDTO> respone = await _reviewsServise.UpdateReviewServise(id,dto);
+            if (!respone.IsSuccess)
+            {
+                return BadRequest(respone.ErrorMessage);
+            }
+            return Ok();
+
         }
 
      

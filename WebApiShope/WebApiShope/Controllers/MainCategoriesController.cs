@@ -20,18 +20,18 @@ namespace WebApiShope.Controllers
         [HttpGet]
         async public Task<ActionResult<IEnumerable<MainCategoriesDTO>>> Get()
         {
-            IEnumerable<MainCategoriesDTO> MainCategoriesList = await _mainCategoriesServise.GetMainCategoriesServises();
-            if (MainCategoriesList.Count()==0)
+            IEnumerable<MainCategoriesDTO> MainCategories = await _mainCategoriesServise.GetMainCategoriesServises();
+            if (!MainCategories.Any())
             {
                 return NoContent();
             }
-            return Ok(MainCategoriesList);
+            return Ok(MainCategories);
         }
 
 
         // POST api/<MainCategoriesController>
         [HttpPost]
-        async public Task<ActionResult<MainCategoriesDTO>> Post([FromBody] ManegerMainCategoryDTO manegerMainCategory)
+        async public Task<ActionResult<MainCategoriesDTO>> AddMainCategory([FromBody] ManegerMainCategoryDTO manegerMainCategory)
         {
             MainCategoriesDTO mainCategoryConstructedObject = await _mainCategoriesServise.AddMainCategoriesServises(manegerMainCategory);
             return CreatedAtAction(nameof(Get), new { id = mainCategoryConstructedObject.MainCategoryID }, mainCategoryConstructedObject); 
@@ -39,19 +39,24 @@ namespace WebApiShope.Controllers
 
         // PUT api/<MainCategoriesController>/5
         [HttpPut("{id}")]
-        async public Task Put(int id, [FromBody] MainCategoriesDTO mainCategory)
+        async public Task<ActionResult> UpdateMainCategory(int id, [FromBody] MainCategoriesDTO mainCategory)
         {
-            await _mainCategoriesServise.UpdateMainCategoriesServises(id, mainCategory);
+            Resulte<MainCategoriesDTO> respone= await _mainCategoriesServise.UpdateMainCategoriesServises(id, mainCategory);
+            if(!respone.IsSuccess)
+            {
+                return BadRequest(respone.ErrorMessage);    
+            }
+            return Ok();
         }
 
         // DELETE api/<MainCategoriesController>/5
         [HttpDelete("{id}")]
         async public Task<ActionResult> Delete(int id)
         {
-            bool flag = await _mainCategoriesServise.DeleteMainCategoriesServises(id);
-            if (flag)
+            Resulte<MainCategoriesDTO> respone = await _mainCategoriesServise.DeleteMainCategoriesServises(id);
+            if (!respone.IsSuccess)
             {
-                return Ok();
+                return BadRequest(respone.ErrorMessage);
             }
             return BadRequest();
         }

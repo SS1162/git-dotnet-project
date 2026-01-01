@@ -48,17 +48,11 @@ namespace Repositories
 
 
         //עדיין אין בדיקות
-        async public Task<bool> DeleteMainCategoriesReposetoty(int id)
+        async public Task DeleteMainCategoriesReposetoty(int id)
         {
-            var mainCategory = await _DBContext.MainCategories.FirstOrDefaultAsync(x=>x.MainCategoryId==id);
-            var listOfForginKeyObjects = await _DBContext.Categories.Where(x => x.MainCategoryId == id).ToListAsync();
-            if (listOfForginKeyObjects.Count==0 && mainCategory != null)
-            {
-                _DBContext.MainCategories.Remove(mainCategory);
-                await _DBContext.SaveChangesAsync();
-                return true;
-            }
-            return false;
+            MainCategory mainCategory = await _DBContext.MainCategories.FirstOrDefaultAsync(x=>x.MainCategoryId==id);
+            _DBContext.Remove(mainCategory);
+            await _DBContext.SaveChangesAsync();
         }
 
 

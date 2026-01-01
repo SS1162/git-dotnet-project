@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using DTO;
+﻿using DTO;
+using Entities;
+using Microsoft.AspNetCore.Mvc;
 using Services;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,11 +11,11 @@ namespace WebApiShope.Controllers
     public class CartsItemsController : ControllerBase
     {
 
-        ICartItemServise _CartItemServise;
+        ICartItemServise _cartItemServise;
 
-        public CartsItemsController(ICartItemServise _CartItemServise)
+        public CartsItemsController(ICartItemServise cartItemServise)
         {
-            this._CartItemServise = _CartItemServise;
+            this._cartItemServise = cartItemServise;
         }
         // GET: api/<CartsItemsController>
 
@@ -25,17 +26,25 @@ namespace WebApiShope.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CartItemDTO>>> GetUserCart([FromQuery] int userId)
         {
-            var cartItems = await _CartItemServise.GetUserCartServise(userId);
-            if (cartItems == null )
+            Resulte<IEnumerable<CartItemDTO>> cartItems = await _cartItemServise.GetUserCartServise(userId);
+            if (!cartItems.IsSuccess)
+            {
+                return BadRequest(cartItems.ErrorMessage);
+            }
+            if (cartItems.Data==null)
             {
                 return NotFound();
             }
-            return Ok(cartItems);
+            return Ok(cartItems.Data);
         }
+
+
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<CartItemDTO>> GetById(int id)
         {
-            CartItemDTO? cartItem = await _CartItemServise.GetByIdServise(id);
+            CartItemDTO? cartItem = await _cartItemServise.GetByIdServise(id);
             if (cartItem == null)
             {
                 return NotFound();
@@ -45,38 +54,55 @@ namespace WebApiShope.Controllers
 
         // POST api/<CartsItemsController>
         [HttpPost]
-        public async Task<ActionResult<CartItemDTO>> CreateUserCart([FromBody]  AddToCartDTO dto)
+        public async Task<ActionResult<CartItemDTO>> CreateUserCart([FromBody] AddToCartDTO dto)
         {
-            CartItemDTO newCartItem = await _CartItemServise.CreateUserCartServise(dto);
-            if (newCartItem != null)
+            Resulte<CartItemDTO> newCartItem = await _cartItemServise.CreateUserCartServise(dto);
+            if (!newCartItem.IsSuccess)
             {
-                return CreatedAtAction(nameof(GetById), new { id = newCartItem.CartID }, newCartItem);
+                return BadRequest(newCartItem.ErrorMessage);
             }
-            return BadRequest("Cart item already exists for this user and product.");
+
+            return CreatedAtAction(nameof(GetById), new { id = newCartItem.Data.CartID }, newCartItem.Data);
+
         }
 
-        // PUT api/<CartsController/5
-        [HttpPut]
-        public async Task<ActionResult<CartItemDTO>> UpdateUserCartAsync([FromBody] CartItemDTO dto)
-        {
-            var updatedCartItem = await _CartItemServise.UpdateUserCartServise(dto);
-            if (updatedCartItem == null)
-            {
-                return NotFound();
-            }
-            return Ok(updatedCartItem);
-        }
-
+        
         // DELETE api/<CartsItemsController>/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUserCartAsync(int id)
+        public async Task<IActionResult> DeleteUserCart(int id)
         {
-            bool succeeded = await _CartItemServise.DeleteUserCartServise(id);
-            if (!succeeded)
+             Resulte<CartItemDTO?> resulte = await _cartItemServise.DeleteUserCartServise(id);
+            if (!resulte.IsSuccess)
             {
-                return NotFound();
+                return BadRequest(resulte.ErrorMessage);
             }
-            return NoContent();
+            return Ok();
+        }
+
+
+        [HttpPut("changeToValid/{id}")]
+
+        public async Task<IActionResult> ChangeProductToValid(int id)
+        {
+            Resulte<CartItemDTO?> resulte = await _cartItemServise.ChangeProductToValidCartServise(id);
+            if (!resulte.IsSuccess)
+            {
+                return BadRequest(resulte.ErrorMessage);
+            }
+            return Ok();
+        }
+
+
+        [HttpPut("changeToNotValid/{id}")]
+
+        public async Task<IActionResult> ChangeProductToNotValid(int id)
+        {
+            Resulte<CartItemDTO?> resulte = await _cartItemServise.ChangeProductToNotValidCartServise(id);
+            if (!resulte.IsSuccess)
+            {
+                return BadRequest(resulte.ErrorMessage);
+            }
+            return Ok();
         }
     }
 }

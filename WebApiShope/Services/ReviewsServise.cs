@@ -12,37 +12,66 @@ namespace Services
 {
     public class ReviewsServise : IReviewsServise
     {
-        IReviewsReposetory _ReviewsReposetory;
+        IReviewsReposetory _reviewsReposetory;
         IMapper _mapper;
+        IOrdersReposetory _ordersReposetory;
 
 
-        public ReviewsServise(IReviewsReposetory _ReviewsReposetory, IMapper _mapper)
+        public ReviewsServise(IReviewsReposetory reviewsReposetory, IMapper mapper, IOrdersReposetory ordersReposetory)
         {
-            this._ReviewsReposetory = _ReviewsReposetory;
-            this._mapper = _mapper;
+            this._reviewsReposetory = reviewsReposetory;
+            this._mapper = mapper;
+            _ordersReposetory = ordersReposetory;
         }
-        public async Task<ReviewDTO> AddReviewServise(int orderId, AddReviewDTO review)
+        public async Task<Resulte<ReviewDTO>> AddReviewServise(int orderId, AddReviewDTO review)
         {
-            Review existingReview = await _ReviewsReposetory.GetReviewByOrderIdReposetory(orderId);
+            if (orderId != review.OrderId)
+            {
+                return Resulte<ReviewDTO>.Failure("The id's are diffrent");
+            }
+            Order? checkIfThereIsExistingOrder = await _ordersReposetory.GetOrderByIdReposetory(orderId);
+            if (checkIfThereIsExistingOrder == null)
+            {
+                return Resulte<ReviewDTO>.Failure("There isn't exist order with that ID");
+            }
+            Review existingReview = await _reviewsReposetory.GetReviewByOrderIdReposetory(orderId);
             if (existingReview != null)
             {
-                return null;
+                return Resulte<ReviewDTO>.Failure("There is already review");
             }
             Review reviewToReposetory = _mapper.Map<Review>(review);
-            Review reviewFromReposetory = await _ReviewsReposetory.AddReviewReposetory(reviewToReposetory);
-            return _mapper.Map<ReviewDTO>(reviewFromReposetory);
+            Review reviewFromReposetory = await _reviewsReposetory.AddReviewReposetory(reviewToReposetory);
+            return Resulte<ReviewDTO>.Success(_mapper.Map<ReviewDTO>(reviewFromReposetory));
         }
 
-        public async Task<ReviewDTO> GetReviewByOrderIdServise(int orderId)
+        public async Task<Resulte<ReviewDTO>> GetReviewByOrderIdServise(int orderId)
         {
-            Review review = await _ReviewsReposetory.GetReviewByOrderIdReposetory(orderId);
 
-            return _mapper.Map<ReviewDTO>(review);
+            Order? checkIfThereIsExistingOrder = await _ordersReposetory.GetOrderByIdReposetory(orderId);
+            if (checkIfThereIsExistingOrder == null)
+            {
+                return Resulte<ReviewDTO>.Failure("There isn't exist order with that ID");
+            }
+            Review review = await _reviewsReposetory.GetReviewByOrderIdReposetory(orderId);
+
+            return Resulte<ReviewDTO>.Success(_mapper.Map<ReviewDTO>(review));
         }
-        public async Task UpdateReviewServise(int id, ReviewDTO review)
+        public async Task<Resulte<ReviewDTO>> UpdateReviewServise(int id, ReviewDTO review)
         {
+
+            if (id != review.ReviewId)
+            {
+                return Resulte<ReviewDTO>.Failure("The id's are diffrent");
+            }
+           
+            Review? checkIfThereIsExistingReview = await _reviewsReposetory.GetByidReviewReposetory(id);
+            if (checkIfThereIsExistingReview == null)
+            {
+                return Resulte<ReviewDTO>.Failure("There isn't exist review with that ID");
+            }
             Review reviewToReposetory = _mapper.Map<Review>(review);
-            await _ReviewsReposetory.UpdateReviewReposetory(id, reviewToReposetory);
+            await _reviewsReposetory.UpdateReviewReposetory(id, reviewToReposetory);
+            return Resulte<ReviewDTO>.Success(null);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using DTO;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,16 @@ namespace Services
 {
     public class PasswordsService : IPasswordsService
     {
-        public int CheckPasswordStrength(PasswordDTO password)
+        public Resulte<int> CheckPasswordStrength(PasswordDTO password)
         {
+
+            if (password.UserPassward == "")
+            {
+                return Resulte<int>.Failure("The password field is empty");
+            }
             var result = Zxcvbn.Core.EvaluatePassword(password.UserPassward);
             int scoreOfPassword = result.Score;
-            return scoreOfPassword;
+             return Resulte<int>.Success(scoreOfPassword);
         }
 
     }

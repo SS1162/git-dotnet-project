@@ -45,6 +45,11 @@ namespace Repositories
             return (items, total);
         }
 
+        async public Task<Product?>  HasProductsToCatrgoryReposetory(int categoryID)
+        {
+            return await _DBContext.Products.FirstOrDefaultAsync(x => x.CategoryId == categoryID);
+        }
+
         async public Task<Product> AddProductsReposetory(Product product)
         {
             await _DBContext.Products.AddAsync(product);
@@ -58,31 +63,19 @@ namespace Repositories
             await _DBContext.SaveChangesAsync();
         }
 
-        async public Task<bool> DeleteProductsReposetory(int id)
+        async public Task<Product?> GetByIDProductsReposetory(int id)
         {
-            var productObjectToDelete = await _DBContext.Products.FirstOrDefaultAsync(x => x.ProductsId == id);
+           return await _DBContext.Products.FirstOrDefaultAsync(x=>x.ProductsId == id);
+        }
 
 
+        async public Task DeleteProductsReposetory(int id)
+        {
+            Product productObjectToDelete = await _DBContext.Products.FirstOrDefaultAsync(x => x.ProductsId == id);
 
-            var cartItem = await _DBContext.CartItems.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == id);
-            if (cartItem != null)
-            {
-                return false;
-            }
-
-
-            var oredersItem = await _DBContext.OrdersItems.FirstOrDefaultAsync(x => x.BasicSitesPlatforms == id);
-            if (oredersItem != null)
-            {
-                return false;
-            }
-            if (productObjectToDelete == null)
-            {
-                return false;
-            }
             _DBContext.Products.Remove(productObjectToDelete);
             await _DBContext.SaveChangesAsync();
-            return true;
+           
         }
 
 

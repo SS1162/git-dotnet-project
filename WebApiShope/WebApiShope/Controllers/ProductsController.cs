@@ -36,33 +36,41 @@ namespace WebApiShope.Controllers
     
         // POST api/<ProductsController>
         [HttpPost]
-        async public Task<ActionResult<ProductDTO>> Post([FromBody] AddProductDTO product)
+        async public Task<ActionResult<ProductDTO>> AddProduct([FromBody] AddProductDTO product)
         {
 
-            ProductDTO productConstructedObject = await _productsServise.AddProductServise(product);
-            return CreatedAtAction(nameof(Get), new { id = productConstructedObject.ProductsID }, productConstructedObject);
+            Resulte<ProductDTO> reaspone = await _productsServise.AddProductServise(product);
+            if (!reaspone.IsSuccess)
+            { 
+                return BadRequest(reaspone.ErrorMessage);
+            }
+            return CreatedAtAction(nameof(Get), new { id = reaspone.Data.ProductsID }, reaspone.Data);
         
         }
 
         // PUT api/<ProductsController>/5
         [HttpPut("{id}")]
-        async public Task Put(int id, [FromBody] UpdateProductDTO productToUpdate )
+        async public Task<ActionResult> UpdateProduct(int id, [FromBody] UpdateProductDTO productToUpdate )
         {
-            await _productsServise.UpdateProductServise(id, productToUpdate);
-
+            Resulte<ProductDTO> reaspone = await _productsServise.UpdateProductServise(id, productToUpdate);
+            if (!reaspone.IsSuccess)
+            {
+                return BadRequest(reaspone.ErrorMessage);
+            }
+            return Ok();
         }
 
         // DELETE api/<ProductsController>/5
         [HttpDelete("{id}")]
-        async public Task<ActionResult> Delete(int id)
+        async public Task<ActionResult> DeleteProduct(int id)
         {
 
-            bool flag = await _productsServise.DeleteIDProductServise(id);
-            if (flag)
+            Resulte<ProductDTO> reaspone = await _productsServise.DeleteIDProductServise(id);
+            if (!reaspone.IsSuccess)
             {
-                return Ok();
+                return BadRequest(reaspone.ErrorMessage);
             }
-            return BadRequest();
+            return Ok();
         }
     }
     

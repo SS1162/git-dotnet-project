@@ -6,41 +6,50 @@ namespace Services
 {
     public class UsersService : IUsersService
     {//get by id
-        private IUsersReposetory _UsersReposetory;
-        private IMapper _Imapper;
-        public UsersService(IUsersReposetory irepositoriesUsers, IMapper imapper)
+        private IUsersReposetory _usersReposetory;
+        private IMapper _mapper;
+        private IPasswordsService _passwordsService;
+        public UsersService(IUsersReposetory repositoriesUsers, IMapper mapper, IPasswordsService passwordsService)
         {
-            this._UsersReposetory = irepositoriesUsers;
-            this._Imapper = imapper;
+            this._usersReposetory = repositoriesUsers;
+            this._mapper = mapper;
+            this._passwordsService = passwordsService;
         }
         public async Task<UserDTO> GetByIDUsersService(int id)
         {
-            
-            User? user = await _UsersReposetory.GetByIDUsersRepositories(id);
-            UserDTO userToController = _Imapper.Map<UserDTO>(user);
+
+            User? user = await _usersReposetory.GetByIDUsersRepositories(id);
+            UserDTO userToController = _mapper.Map<UserDTO>(user);
             return userToController;
         }
         //post new user
-        public async Task<UserDTO?> AddNewUsersService(RegisterUserDTO registerUser)
+        public async Task<Resulte<UserDTO>> AddNewUsersService(RegisterUserDTO registerUser)
         {
+            PasswordDTO passwordForCheckStrength = new PasswordDTO();
+            passwordForCheckStrength.UserPassward = registerUser.UserPassword;
+            if (_passwordsService.CheckPasswordStrength(passwordForCheckStrength).Data < 2)
+            {
+                return Resulte<UserDTO>.Failure("The paasword is not strong enghth");
+            }
 
-            User userToReposetory = _Imapper.Map<User>(registerUser);
-            bool flag = await _UsersReposetory.CheckIfUsersInsistalrady(userToReposetory.UserName);
-            if (!flag)
-                return null;
+            User userToReposetory = _mapper.Map<User>(registerUser);
             userToReposetory.UserName = userToReposetory.UserName.ToLower();
-            User userFromReposetory= await _UsersReposetory.AddNewUsersRepositories(userToReposetory);
+            bool flag = await _usersReposetory.CheckIfUsersInsistalrady(userToReposetory.UserName);
+            if (!flag)
+                return Resulte<UserDTO>.Failure("The user insist alrady");
 
-            UserDTO userToController = _Imapper.Map<UserDTO>(userFromReposetory);
-            return userToController;
+            User userFromReposetory = await _usersReposetory.AddNewUsersRepositories(userToReposetory);
+
+            UserDTO userToController = _mapper.Map<UserDTO>(userFromReposetory);
+            return Resulte<UserDTO>.Success(userToController);
         }
 
         public async Task<bool> CheckIfUsersInsistalradyServise(string user)
         {
 
-           
-            return await _UsersReposetory.CheckIfUsersInsistalrady(user);
-            
+            user = user.ToLower();
+            return await _usersReposetory.CheckIfUsersInsistalrady(user);
+
         }
 
 
@@ -49,30 +58,40 @@ namespace Services
         //post login user
         public async Task<UserDTO> LoginUsersService(LoginUserDTO logInUser)
         {
-            User userToRposetory = _Imapper.Map<User>(logInUser);
+            User userToRposetory = _mapper.Map<User>(logInUser);
+            userToRposetory.UserName = userToRposetory.UserName.ToLower();
 
+            User? userFromRposetory = await _usersReposetory.LoginUsersRepositories(userToRposetory);
 
-            User? userFromRposetory= await _UsersReposetory.LoginUsersRepositories(userToRposetory);
+            UserDTO userToConroller = _mapper.Map<UserDTO>(userFromRposetory);
 
-            UserDTO userToConroller = _Imapper.Map<UserDTO>(userFromRposetory);
-
-            return  userToConroller;
+            return userToConroller;
         }
 
-         async public Task<bool> UpdateUsersService(int id, UpdateUserDTO userToUpdate)
+        async public Task<Resulte<UserDTO>> UpdateUsersService(int id, UpdateUserDTO userToUpdate)
         {
 
-            if (id != userToUpdate.UserId)
-                return false;
 
-            User userToRposetory = _Imapper.Map<User>(userToUpdate);
-            User? checkUserValidtion = await _UsersReposetory.GetByIDUsersRepositories(id);
+            PasswordDTO passwordForCheckStrength = new PasswordDTO();
+            passwordForCheckStrength.UserPassward = userToUpdate.Password;
+            if (_passwordsService.CheckPasswordStrength(passwordForCheckStrength).Data < 2)
+            {
+                Resulte<UserDTO>.Failure("The password is not strong enough");
+            }
+            if (id != userToUpdate.UserId)
+                Resulte<UserDTO>.Failure("The id'es are diffrent");
+
+            User userToRposetory = _mapper.Map<User>(userToUpdate);
+            User? checkUserValidtion = await _usersReposetory.GetByIDUsersRepositories(id);
             if (checkUserValidtion == null)
-                return false;
+                Resulte<UserDTO>.Failure("The user id dont exist");
+
             if (checkUserValidtion.UserName != userToRposetory.UserName)
-                return false;
-            await _UsersReposetory.UpdateUsersRepositories(id, userToRposetory);
-            return true;
+                Resulte<UserDTO>.Failure("The user name make diifrent");
+
+            await _usersReposetory.UpdateUsersRepositories(id, userToRposetory);
+            return Resulte<UserDTO>.Success(null);
+
         }
 
     }

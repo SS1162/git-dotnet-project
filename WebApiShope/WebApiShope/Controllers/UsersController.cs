@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using Services;
+﻿using DTO;
 using Entities;
-using DTO;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using NLog.Web;
+using Services;
+using System.Text.Json;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebApiShope.Controllers
@@ -14,23 +15,23 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IUsersService _IUsersService;
+        private IUsersService _usersService;
 
-        private IPasswordsService _IPasswordsService;
+      
 
         ILogger<UsersController> _logger;
 
-        public UsersController(IUsersService iusersService, IPasswordsService ipasswordsService, ILogger<UsersController> _logger)
+        public UsersController(IUsersService usersService, ILogger<UsersController> logger)
         {
-            this._IUsersService = iusersService;
-            this._IPasswordsService = ipasswordsService;
-            this._logger = _logger;  
+            this._usersService = usersService;
+           
+            this._logger = logger;  
         }
 
         [HttpGet]
         public async Task<bool> CheckIfTheUserInsist(string userName)
         {
-            return await _IUsersService.CheckIfUsersInsistalradyServise(userName);
+            return await _usersService.CheckIfUsersInsistalradyServise(userName);
         }
 
 
@@ -40,10 +41,10 @@ namespace WebApiShope.Controllers
 
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDTO>> Get(int id)
+        public async Task<ActionResult<UserDTO>> GetUserById(int id)
         {
 
-            UserDTO user = await _IUsersService.GetByIDUsersService(id);
+            UserDTO user = await _usersService.GetByIDUsersService(id);
             if (user == null)
             {
                 return NoContent();
@@ -61,7 +62,7 @@ namespace WebApiShope.Controllers
         
         public async Task<ActionResult<UserDTO>> PostLogin([FromBody] LoginUserDTO logInUser)
         {
-            UserDTO user = await _IUsersService.LoginUsersService(logInUser);
+            UserDTO user = await _usersService.LoginUsersService(logInUser);
             if (user == null)
             {
                 return Unauthorized();
@@ -70,52 +71,31 @@ namespace WebApiShope.Controllers
             else
             {
                 _logger.LogInformation($"login with:user name:{user.UserName} user firs name:{user.FirstName} user las name:{user.LastName},user phone:{user.Phone},user ID:{user.UserID}");
-                return CreatedAtAction(nameof(Get), new { id = user.UserID}, user);
+                return CreatedAtAction(nameof(GetUserById), new { id = user.UserID}, user);
             }
 
         }
 
 
         [HttpPost]
-        public async Task<ActionResult<UserDTO>> Post([FromBody] RegisterUserDTO userFromUser)
+        public async Task<ActionResult<UserDTO>> AddNewUser([FromBody] RegisterUserDTO userFromUser)
         {
-
-
-            PasswordDTO passwordForCheckStrength = new PasswordDTO();
-            passwordForCheckStrength.UserPassward = userFromUser.UserPassword;
-            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength).Data <2)
+            Resulte<UserDTO> reaspne = await _usersService.AddNewUsersService(userFromUser);
+            if(!reaspne.IsSuccess)
             {
-                return BadRequest();
+                return   BadRequest( reaspne.ErrorMessage);
             }
-           
-            UserDTO userFromDatabase = await _IUsersService.AddNewUsersService(userFromUser);
-            if (userFromDatabase==null)
-            {
-                return BadRequest();
-            }
-                return CreatedAtAction(nameof(Get), new { id = userFromDatabase.UserID }, userFromDatabase);
+                return CreatedAtAction(nameof(GetUserById), new { id = reaspne.Data.UserID }, reaspne.Data);
         }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
         async public Task<ActionResult> Put(int id, [FromBody] UpdateUserDTO user)
         {
 
-
-            if (id != user.UserId)
-                return BadRequest("the user.userID and the user are diffrent ");
-         
-            PasswordDTO passwordForCheckStrength = new PasswordDTO();
-            passwordForCheckStrength.UserPassward = user.Password;
-            if (_IPasswordsService.CheckPasswordStrength(passwordForCheckStrength).Data < 2)
+            Resulte < UserDTO >  reaspone= await _usersService.UpdateUsersService(id, user);
+            if (!reaspone.IsSuccess)
             {
-                return BadRequest("the password is too low");
-            }
-
-
-            bool flag =await _IUsersService.UpdateUsersService(id, user);
-            if(!flag)
-            {
-                return BadRequest();
+                return BadRequest(reaspone.ErrorMessage);
             }
             return Ok();
         }

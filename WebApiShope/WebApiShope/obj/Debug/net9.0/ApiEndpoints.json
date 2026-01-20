@@ -248,9 +248,24 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "category",
-        "Type": "DTO.AddCategoryDTO",
-        "IsRequired": true
+        "Name": "MainCategoryID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImgUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryDescreption",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -305,9 +320,29 @@
         "IsRequired": true
       },
       {
-        "Name": "category",
-        "Type": "DTO.CategoryDTO",
-        "IsRequired": true
+        "Name": "CategoryID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MainCategoryID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImgUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryDescreption",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -327,6 +362,134 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.GeminiController",
+    "Method": "Get",
+    "RelativePath": "api/Gemini/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.GeminiController",
+    "Method": "Put",
+    "RelativePath": "api/Gemini/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.GeminiController",
+    "Method": "Delete",
+    "RelativePath": "api/Gemini/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.GeminiController",
+    "Method": "Post",
+    "RelativePath": "api/Gemini/addNewProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShope.Controllers.GeminiController",
+    "Method": "Get",
+    "RelativePath": "api/Gemini/getUserProduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userRequest",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "WebApiShope.Controllers.MainCategoriesController",
@@ -918,13 +1081,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApiShope.Controllers.UsersController",
@@ -954,7 +1111,7 @@
   },
   {
     "ContainingType": "WebApiShope.Controllers.UsersController",
-    "Method": "Post",
+    "Method": "AddNewUser",
     "RelativePath": "api/Users",
     "HttpMethod": "POST",
     "IsController": true,
@@ -980,7 +1137,7 @@
   },
   {
     "ContainingType": "WebApiShope.Controllers.UsersController",
-    "Method": "Get",
+    "Method": "GetUserById",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "GET",
     "IsController": true,

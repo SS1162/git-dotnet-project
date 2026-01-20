@@ -6,6 +6,6 @@ namespace Services
     {
         Task<IEnumerable<SiteTypeDTO>?> GetAllSiteTypesServise();
         Task<SiteTypeDTO?> GetSiteTypesByIdServise(int id);
-        Task UpdateSiteTypesByMngServise(int id, SiteTypeDTO dto);
+        Task<Resulte<SiteTypeDTO>> UpdateSiteTypesByMngServise(int id, SiteTypeDTO dto);
     }
 }

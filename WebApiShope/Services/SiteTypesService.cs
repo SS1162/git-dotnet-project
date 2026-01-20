@@ -10,38 +10,42 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class SiteTypesService : ISiteTypesService
+    public class SiteTypesService :ISiteTypesService
     {
 
-        ISiteTypesRepository _SiteTypesRepository;
-        IMapper _Mapper;
+        ISiteTypesRepository _siteTypesRepository;
+        IMapper _mapper;
 
-        public SiteTypesService(ISiteTypesRepository _SiteTypesRepository, IMapper Mapper)
+        public SiteTypesService(ISiteTypesRepository siteTypesRepository, IMapper mapper)
         {
-            this._SiteTypesRepository = _SiteTypesRepository;
-            this._Mapper = Mapper;
+            this._siteTypesRepository = siteTypesRepository;
+            this._mapper = mapper;
         }
 
 
         public async Task<IEnumerable<SiteTypeDTO>?> GetAllSiteTypesServise()
         {
-            var siteTypes = await _SiteTypesRepository.GetAllSiteTypesReposetory();
+            var siteTypes = await _siteTypesRepository.GetAllSiteTypesReposetory();
 
-            return _Mapper.Map<IEnumerable<SiteTypeDTO>>(siteTypes);
+            return _mapper.Map<IEnumerable<SiteTypeDTO>>(siteTypes);
 
         }
         public async Task<SiteTypeDTO?> GetSiteTypesByIdServise(int id)
         {
-            SiteType? siteType = await _SiteTypesRepository.GetSiteTypeByIdReposetory(id);
-            return _Mapper.Map<SiteTypeDTO>(siteType);
+            SiteType? siteType = await _siteTypesRepository.GetSiteTypeByIdReposetory(id);
+            return _mapper.Map<SiteTypeDTO>(siteType);
         }
 
-        public async Task UpdateSiteTypesByMngServise(int id, SiteTypeDTO dto)
+        public async Task<Resulte<SiteTypeDTO>> UpdateSiteTypesByMngServise(int id, SiteTypeDTO dto)
         {
-            SiteType siteType = _Mapper.Map<SiteType>(dto);
-            await _SiteTypesRepository.UpdateSiteTypeByMngReposetory(id, siteType);
+            if (id != dto.SiteTypeID)
+            {
+                return Resulte<SiteTypeDTO>.Failure("The ide's are diffrent");
+            }
+            SiteType siteType = _mapper.Map<SiteType>(dto);
+            await _siteTypesRepository.UpdateSiteTypeByMngReposetory(id, siteType);
 
-            ;
+            return Resulte<SiteTypeDTO>.Success(null);
         }
 
 

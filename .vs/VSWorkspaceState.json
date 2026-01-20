@@ -3,11 +3,10 @@
     "",
     "\\WebApiShope",
     "\\WebApiShope\\Services",
-    "\\WebApiShope\\Tests",
     "\\WebApiShope\\WebApiShope",
     "\\WebApiShope\\WebApiShope\\Controllers",
     "\\WebApiShope\\WebApiShope\\wwwroot"
   ],
-  "SelectedNode": "\\WebApiShope\\Tests\\MainCategoryRepoIntegrationTest.cs",
+  "SelectedNode": "\\WebApiShope\\Services\\gemini.cs",
   "PreviewInSolutionExplorer": false
 }

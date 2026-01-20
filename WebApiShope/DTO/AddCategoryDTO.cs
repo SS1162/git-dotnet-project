@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Http;
 namespace DTO
 {
      public record AddCategoryDTO
@@ -16,7 +16,7 @@ namespace DTO
          string CategoryName,
         [Required]
 
-         string ImgUrl,
+         IFormFile ImgUrl,
         [Required]
          string CategoryDescreption
     );

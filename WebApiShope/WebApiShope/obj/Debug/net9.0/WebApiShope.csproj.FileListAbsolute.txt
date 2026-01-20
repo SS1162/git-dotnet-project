@@ -674,3 +674,4 @@ C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.ne
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.pdb
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\WebApiShope.genruntimeconfig.cache
 C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\obj\Debug\net9.0\ref\WebApiShope.dll
+C:\Users\1\Dropbox\My PC (DESKTOP-R5RADSP)\Desktop\promptsShop\server\git-dot.net-project\WebApiShope\WebApiShope\bin\Debug\net9.0\SixLabors.ImageSharp.dll

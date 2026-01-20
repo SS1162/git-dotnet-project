@@ -2,6 +2,7 @@
 using NLog.Web;
 using Repositories;
 using Services;
+using WebApiShope.MiddleWare;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,10 +18,20 @@ builder.Services.AddScoped<IPlatformsServise, PlatformsServise>();
 
 builder.Services.AddScoped<IProductsReposetory, ProductsReposetory>();
 
+builder.Services.AddScoped<Igemini, gemini>();
+
+
+builder.Services.AddScoped<IGeminiServise, GeminiServise>();
+
+
+builder.Services.AddScoped<IRatingsReposetory, RatingsReposetory>();
 
 builder.Services.AddScoped<IReviewsServise, ReviewsServise>();
 
 builder.Services.AddScoped<ISiteTypesRepository, SiteTypesRepository>();
+
+builder.Services.AddScoped<IRatingsServise, RatingsServise>();
+
 builder.Services.AddScoped<ICartsReposetory, CartsReposetory>();
 
 builder.Services.AddScoped<IOrdersServise, OrdersServise>();
@@ -33,12 +44,9 @@ builder.Services.AddScoped<IReviewsReposetory, ReviewsReposetory>();
 
 builder.Services.AddScoped<IBasicSitesServise, BasicSitesServise>();
 
-
 builder.Services.AddScoped<ISiteTypesService, SiteTypesService>();
 
-
 builder.Services.AddScoped<IBasicSitesReposetory, BasicSitesReposetory>();
-
 
 builder.Services.AddScoped<IMainCategoriesServise, MainCategoriesServise>();
 
@@ -74,6 +82,8 @@ builder.Services.AddOpenApi();
 
 builder.Host.UseNLog();
 var app = builder.Build();
+//app.UseErrorMiddleware();
+app.UseRatingMiddleware();
 
 
 if (app.Environment.IsDevelopment())
@@ -84,8 +94,6 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
        
     });
-
-  
 }
 
 
@@ -93,6 +101,8 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAngular");
 
 app.UseHttpsRedirection();
+
+
 
 app.UseStaticFiles();
 

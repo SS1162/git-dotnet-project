@@ -28,7 +28,7 @@ namespace Services
                 dest => dest.Password,
                 opts => opts.MapFrom(src => src.UserPassward));
 
-            
+            CreateMap<CategoryToUpdateDTO, Category>();
 
             CreateMap<MainCategory, MainCategoriesDTO>().ReverseMap();
 
@@ -39,7 +39,10 @@ namespace Services
 
             CreateMap<Category, CategoryDTO>().ReverseMap();
 
-            CreateMap<AddCategoryDTO, Category>();
+            CreateMap<AddCategoryDTO, Category>()
+                
+            .ForMember(dest=>dest.ImgUrl,
+            opts=>opts.MapFrom(src=>src.ImgUrl.FileName));
 
             CreateMap<Platform, PlatformsDTO>().ReverseMap();
 

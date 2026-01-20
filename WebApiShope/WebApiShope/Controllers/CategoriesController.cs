@@ -45,7 +45,7 @@ namespace WebApiShope.Controllers
 
         // POST api/<CategoryController>
         [HttpPost]
-       async  public Task<ActionResult<CategoryDTO>> AddCategory([FromBody] AddCategoryDTO category)
+       async  public Task<ActionResult<CategoryDTO>> AddCategory([FromForm] AddCategoryDTO category)
         {
             Resulte<CategoryDTO> categoryConstructedObject=await _categoriesServise.AddCategoriesServise(category);
             if(!categoryConstructedObject.IsSuccess)
@@ -58,7 +58,7 @@ namespace WebApiShope.Controllers
 
         // PUT api/<CategoryController>/5
         [HttpPut("{id}")]
-        async public Task<ActionResult> UpdateCategory(int id, [FromBody] CategoryDTO category)
+        async public Task<ActionResult> UpdateCategory(int id, [FromForm] CategoryToUpdateDTO category)
         {
             Resulte<CategoryDTO> respone = await _categoriesServise.UpdateCategoriesServise(id, category);
             if (!respone.IsSuccess)

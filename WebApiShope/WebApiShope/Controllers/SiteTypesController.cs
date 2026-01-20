@@ -11,17 +11,17 @@ namespace WebApiShope.Controllers
     [ApiController]
     public class SiteTypesController : ControllerBase
     {
-        ISiteTypesService _SiteTypesService;
-        public SiteTypesController(ISiteTypesService _SiteTypesService)
+        ISiteTypesService _siteTypesService;
+        public SiteTypesController(ISiteTypesService siteTypesService)
         {
-            this._SiteTypesService = _SiteTypesService;
+            this._siteTypesService = siteTypesService;
         }
         // GET: api/<SiteTypeController>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SiteTypeDTO>?>> GetAll()
         {
-            var siteTypes = await _SiteTypesService.GetAllSiteTypesServise();
-            if (siteTypes == null )
+            var siteTypes = await _siteTypesService.GetAllSiteTypesServise();
+            if (!siteTypes.Any() )
             {
                 return NotFound();
             }
@@ -33,7 +33,7 @@ namespace WebApiShope.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<SiteTypeDTO>> GetById(int id)
         {
-            SiteTypeDTO siteType = await _SiteTypesService.GetSiteTypesByIdServise(id);
+            SiteTypeDTO? siteType = await _siteTypesService.GetSiteTypesByIdServise(id);
             if(siteType == null )
                 return NotFound();
             return Ok(siteType);
@@ -46,9 +46,15 @@ namespace WebApiShope.Controllers
         }
 
         [HttpPut("{id}/manager")]
-        public async Task UpdateByMng(int id, SiteTypeDTO dto)
+        public async Task<ActionResult> UpdateByMng(int id, SiteTypeDTO dto)
         {
-             await _SiteTypesService.UpdateSiteTypesByMngServise(id, dto);
+
+             Resulte<SiteTypeDTO> reaspone=await _siteTypesService.UpdateSiteTypesByMngServise(id, dto);
+            if(!reaspone.IsSuccess)
+            {
+                return BadRequest(reaspone.ErrorMessage);
+            }
+            return Ok();    
         }
 
 

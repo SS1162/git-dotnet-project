@@ -11,44 +11,44 @@ builder.Services.AddScoped<IUsersService, UsersService>();
 
 builder.Services.AddScoped<IPasswordsService,PasswordsService>();
 
-builder.Services.AddScoped<IPlatformsReposetory, PlatformsReposetory>();
+builder.Services.AddScoped<IPlatformsRepository, PlatformsRepository>();
 
-builder.Services.AddScoped<IPlatformsServise, PlatformsServise>();
+builder.Services.AddScoped<IPlatformsService, PlatformsService>();
 
-builder.Services.AddScoped<IProductsReposetory, ProductsReposetory>();
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
 
 
-builder.Services.AddScoped<IReviewsServise, ReviewsServise>();
+builder.Services.AddScoped<IReviewsService, ReviewsService>();
 
 builder.Services.AddScoped<ISiteTypesRepository, SiteTypesRepository>();
-builder.Services.AddScoped<ICartsReposetory, CartsReposetory>();
+builder.Services.AddScoped<ICartsRepository, CartsRepository>();
 
-builder.Services.AddScoped<IOrdersServise, OrdersServise>();
+builder.Services.AddScoped<IOrdersService, OrdersService>();
 
-builder.Services.AddScoped<IOrdersReposetory, OrdersReposetory>();
+builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
 
 
-builder.Services.AddScoped<IReviewsReposetory, ReviewsReposetory>();
+builder.Services.AddScoped<IReviewsRepository, ReviewsRepository>();
 
-builder.Services.AddScoped<IBasicSitesServise, BasicSitesServise>();
+builder.Services.AddScoped<IBasicSitesService, BasicSitesService>();
 
 
 builder.Services.AddScoped<ISiteTypesService, SiteTypesService>();
 
 
-builder.Services.AddScoped<IBasicSitesReposetory, BasicSitesReposetory>();
+builder.Services.AddScoped<IBasicSitesRepository, BasicSitesRepository>();
 
 
-builder.Services.AddScoped<IMainCategoriesServise, MainCategoriesServise>();
+builder.Services.AddScoped<IMainCategoriesService, MainCategoriesService>();
 
-builder.Services.AddScoped<IMainCategoryReposetory, MainCategoryReposetory>();
+builder.Services.AddScoped<IMainCategoryRepository, MainCategoryRepository>();
 
-builder.Services.AddScoped<ICategoriesServise, CategoriesServise>();
+builder.Services.AddScoped<ICategoriesService, CategoriesService>();
 
 
-builder.Services.AddScoped<ICategoriesReposetory, CategoriesReposetory>();
+builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
 
-builder.Services.AddScoped<IProductsServise, ProductsServise>();
+builder.Services.AddScoped<IProductsService, ProductsService>();
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
